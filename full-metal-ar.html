@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><title>عربات تسوق معدنية — Full Preview (AR)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f5f6f8;font-family:'Inter',sans-serif;}
+.emxCartPage{--m3-background:#0a1f33;--m3-surface-container-low:#0d1c2d;--m3-surface-container:#122131;--m3-surface-container-high:#1c2b3c;--m3-card:#2A3544;--m3-on-background:#1c2b3c;--m3-on-surface:#16324a;--m3-on-surface-variant:#5b6b7d;--m3-outline-variant:#45474c;--m3-primary:#bec7db;--m3-secondary-container:#fe6b00;color:var(--m3-on-background);width:100%;box-sizing:border-box;background:linear-gradient(160deg,#fbfcfe 0%,#eef4fb 45%,#d9e6f5 100%);}
+.emxCartPage .emxHero{background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);padding:56px 40px;}
+.emxCartPage h1.emxPageTitle{font-size:36px;font-weight:800;letter-spacing:-.01em;margin:0;color:#f4f8ff;max-width:1200px;margin:0 auto;}
+.emxCartPage .emxContentWrap{padding:40px;max-width:1400px;margin:0 auto;}
+.emxCartPage .emxGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.emxCartPage .emxCard{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer;transition:border-color .3s ease,box-shadow .3s ease,background .3s ease;box-shadow:0 4px 18px -8px rgba(20,40,65,.18);contain:paint;transform:translateZ(0);}
+.emxCartPage .emxCard:hover{border-color:rgba(254,107,0,.45);box-shadow:0 10px 30px -10px rgba(20,40,65,.3);background:linear-gradient(160deg,rgba(255,255,255,.75) 0%,rgba(255,255,255,.5) 100%);}
+.emxCartPage .emxImgWrap{position:relative;width:100%;aspect-ratio:4/3;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.3);overflow:hidden;border-radius:10px 10px 14px 14px;}
+.emxCartPage .emxImgWrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.emxCartPage .emxCard:hover .emxImgWrap img{transform:scale(1.05);}
+.emxCartPage .emxDims{display:flex;justify-content:space-between;padding:10px 16px 10px;font-size:11px;letter-spacing:.04em;color:var(--m3-on-surface-variant);text-transform:uppercase;}
+.emxCartPage .emxContent{position:relative;flex:1;padding:16px 20px 20px;border-top:1px solid rgba(15,35,55,.1);display:flex;flex-direction:column;gap:6px;}
+.emxCartPage .emxEyebrow{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--m3-on-surface-variant);}
+.emxCartPage .emxCard h3{margin:2px 0 8px;font-size:17px;line-height:1.3;font-weight:700;color:var(--m3-on-surface);}
+.emxCartPage .emxSpecGrid{display:flex;flex-direction:column;}
+.emxCartPage .emxSpecGrid div{display:flex;justify-content:space-between;font-size:13px;color:var(--m3-on-surface-variant);border-bottom:1px solid rgba(15,35,55,.1);padding:7px 0;}
+.emxCartPage .emxSpecGrid div b{color:var(--m3-on-surface);font-weight:600;}
+.emxCartPage .emxSpecEmpty{font-size:13px;color:var(--m3-on-surface-variant);font-style:italic;padding:10px 0;}
+.emxCartPage .emxViewBtn{align-self:stretch;text-align:center;margin-top:auto;background:var(--m3-secondary-container);color:#fff;border:none;padding:10px 20px;border-radius:4px;font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;}
+.emxCartPage .emxViewBtn:hover{background:#e66000;}
+.emxCartPage .emxBanner{grid-column:1/-1;position:relative;overflow:hidden;border:1px solid rgba(15,35,55,.12);border-radius:12px;background:linear-gradient(160deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.35) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;box-shadow:0 4px 18px -8px rgba(20,40,65,.18);contain:paint;}
+.emxCartPage .emxBanner .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--m3-secondary-container);margin-bottom:10px;}
+.emxCartPage .emxBanner h3{margin:0 0 12px;font-size:26px;font-weight:700;color:var(--m3-on-surface);}
+.emxCartPage .emxBanner p{margin:0 0 20px;color:var(--m3-on-surface-variant);font-size:15px;line-height:1.6;max-width:46ch;}
+.emxCartPage .emxBanner .emxBannerImgWrap{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(15,35,55,.14);box-shadow:0 8px 24px -10px rgba(15,35,55,.28);background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);}
+.emxCartPage .emxBanner .emxBannerImgWrap::after{content:"";position:absolute;inset:0;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);pointer-events:none;}
+.emxCartPage .emxBanner img{display:block;width:100%;height:220px;object-fit:cover;}
+.emxLangSwitch{position:fixed;top:16px;right:16px;z-index:60;display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.85);border:1px solid rgba(15,35,55,.14);border-radius:999px;padding:6px 8px;box-shadow:0 4px 18px -8px rgba(20,40,65,.3);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-family:'Inter',sans-serif;}
+.emxLangSwitch .material-icons-placeholder{font-size:14px;color:#64748b;margin-inline-end:4px;}
+.emxLangSwitch a{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;color:#64748b;text-decoration:none;transition:background .15s,color .15s;}
+.emxLangSwitch a:hover{color:#16324a;}
+.emxLangSwitch a.emxLangActive{background:#fe6b00;color:#fff;}
+.emxCartPage .emxBtnPrimary{background:var(--m3-secondary-container);color:#fff;border:none;padding:12px 24px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:inline-block;}
+.emxCartPage .emxTrustStrip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+.emxCartPage .emxTrustItem{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(15,35,55,.12);border-radius:10px;padding:14px 16px;contain:paint;}
+.emxCartPage .emxTrustItem .emxTrustIcon{flex-shrink:0;width:38px;height:38px;border-radius:9px;background:rgba(254,107,0,.12);display:flex;align-items:center;justify-content:center;color:var(--m3-secondary-container);font-size:19px;}
+.emxCartPage .emxTrustItem span.emxTrustLabel{font-size:13.5px;font-weight:600;color:var(--m3-on-surface);line-height:1.3;}
+.emxCartPage .emxFilterBar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;padding:12px 16px;background:rgba(255,255,255,.4);border:1px solid rgba(15,35,55,.1);border-radius:10px;}
+.emxCartPage .emxFilterLabel{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--m3-on-surface-variant);margin-inline-end:4px;}
+.emxCartPage .emxFilterChip{border:1px solid rgba(15,35,55,.16);background:rgba(255,255,255,.6);color:var(--m3-on-surface);font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;transition:all .15s ease;}
+.emxCartPage .emxFilterChip:hover{border-color:var(--m3-secondary-container);}
+.emxCartPage .emxFilterChip.emxFilterActive{background:var(--m3-secondary-container);border-color:var(--m3-secondary-container);color:#fff;}
+.emxCartPage .emxFilterCount{margin-inline-start:auto;font-size:12px;color:var(--m3-on-surface-variant);}
+.emxCartPage .emxCard.emxHiddenByFilter{display:none;}
+@media (max-width:900px){.emxCartPage .emxTrustStrip{grid-template-columns:1fr;}}
+@media (max-width:1200px){.emxCartPage .emxGrid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:900px){.emxCartPage .emxGrid{grid-template-columns:repeat(2,1fr);} .emxCartPage .emxBanner{grid-template-columns:1fr;}}
+@media (max-width:520px){.emxCartPage .emxGrid{grid-template-columns:1fr;} .emxCartPage .emxContentWrap{padding:20px;} .emxCartPage .emxHero{padding:32px 20px;}}
+</style></head><body>
+<div class="emxLangSwitch"><span class="material-icons-placeholder">&#127760;</span><a class="" href="full-metal-tr.html">TR</a><a class="" href="full-metal-en.html">EN</a><a class="" href="full-metal-de.html">DE</a><a class="emxLangActive" href="full-metal-ar.html">AR</a></div>
+<div class="emxCartPage">
+<div class="emxHero"><h1 class="emxPageTitle">عربات تسوق معدنية</h1></div>
+<div class="emxContentWrap">
+<div class="emxTrustStrip"><div class="emxTrustItem"><span class="emxTrustIcon">&#10003;</span><span class="emxTrustLabel">جسم فولاذي مجلفن</span></div><div class="emxTrustItem"><span class="emxTrustIcon">&#8645;</span><span class="emxTrustLabel">نطاق سعة 25 – 210 لتر</span></div><div class="emxTrustItem"><span class="emxTrustIcon">&#9679;</span><span class="emxTrustLabel">عجلات رباعية الاتجاه في كل طراز</span></div></div>
+<div class="emxFilterBar">
+<span class="emxFilterLabel">تصفية حسب السعة</span>
+<button type="button" class="emxFilterChip emxFilterActive" data-filter="all" onclick="emxFilterCarts(this)">الكل</button><button type="button" class="emxFilterChip" data-filter="small" onclick="emxFilterCarts(this)">≤100 لتر</button><button type="button" class="emxFilterChip" data-filter="mid" onclick="emxFilterCarts(this)">101–150 لتر</button><button type="button" class="emxFilterChip" data-filter="large" onclick="emxFilterCarts(this)">+151 لتر</button>
+<span class="emxFilterCount" id="emxFilterCount"></span>
+</div>
+<script>
+function emxFilterCarts(btn){
+  var bar = btn.closest('.emxFilterBar');
+  bar.querySelectorAll('.emxFilterChip').forEach(function(c){c.classList.remove('emxFilterActive');});
+  btn.classList.add('emxFilterActive');
+  var filter = btn.dataset.filter;
+  var cards = document.querySelectorAll('.emxCard');
+  var shown = 0;
+  cards.forEach(function(card){
+    var cap = card.dataset.capL ? parseFloat(card.dataset.capL) : null;
+    var match = filter === 'all' || (cap !== null && (
+      (filter === 'small' && cap <= 100) ||
+      (filter === 'mid' && cap > 100 && cap <= 150) ||
+      (filter === 'large' && cap > 150)
+    ));
+    card.classList.toggle('emxHiddenByFilter', !match);
+    if (match) shown++;
+  });
+  var countEl = document.getElementById('emxFilterCount');
+  if (countEl) countEl.textContent = 'عرض {n} منتج'.replace('{n}', shown);
+}
+document.addEventListener('DOMContentLoaded', function(){
+  var countEl = document.getElementById('emxFilterCount');
+  if (countEl) countEl.textContent = 'عرض {n} منتج'.replace('{n}', document.querySelectorAll('.emxCard').length);
+});
+</script>
+<div class="emxGrid">
+<a class="emxCard" data-cap-l="75" href="detail-km-75-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-75-hero.png" alt="عربة تسوق معدنية سعة 75 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 45CM</span><span>ارتفاع 99CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-75</span>
+    <h3>عربة تسوق معدنية سعة 75 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>75L</b></div><div><span>الوزن</span><b>8.5kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" data-cap-l="100" href="detail-km-100-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-100-hero.png" alt="عربة تسوق معدنية سعة 100 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 49CM</span><span>ارتفاع 99CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-100</span>
+    <h3>عربة تسوق معدنية سعة 100 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>100L</b></div><div><span>الوزن</span><b>12kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" data-cap-l="125" href="detail-km-125-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-125-hero.png" alt="عربة تسوق معدنية سعة 125 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 50CM</span><span>ارتفاع 99CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-125</span>
+    <h3>عربة تسوق معدنية سعة 125 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>125L</b></div><div><span>الوزن</span><b>13.25kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" data-cap-l="150" href="detail-km-150-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-150-hero.png" alt="عربة تسوق معدنية سعة 150 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 57CM</span><span>ارتفاع 100CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-150</span>
+    <h3>عربة تسوق معدنية سعة 150 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>150L</b></div><div><span>الوزن</span><b>14.5kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<div class="emxBanner">
+  <div>
+    <div class="eyebrow">هيكل مجلفن</div>
+    <h3>هياكل معدنية مصممة للاستخدام اليومي عالي الحمولة</h3>
+    <p>سلك مجلفن وهيكل أنبوبي معزز — تم اختباره لحركة السوبر ماركت والهايبر ماركت.</p>
+    <a class="emxBtnPrimary" href="#">طلب التفاصيل الفنية</a>
+  </div>
+  <div class="emxBannerImgWrap"><img src="assets/img/urunler/ai-generated/KM-150-hero.png" alt=""></div>
+</div>
+<a class="emxCard" data-cap-l="150" href="detail-km-180-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-180-hero.png" alt="عربة تسوق معدنية سعة 180 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 57CM</span><span>ارتفاع 100CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-180</span>
+    <h3>عربة تسوق معدنية سعة 180 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>150L</b></div><div><span>الوزن</span><b>14.5kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" data-cap-l="210" href="detail-km-210-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-210-hero.png" alt="عربة تسوق معدنية سعة 210 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 59CM</span><span>ارتفاع 100CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-210</span>
+    <h3>عربة تسوق معدنية سعة 210 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>210L</b></div><div><span>الوزن</span><b>16.5kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" data-cap-l="210" href="detail-km-210xl-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-210XL-hero.png" alt="عربة تسوق معدنية سعة 210 لتر (كبيرة)" loading="lazy"></div>
+  <div class="emxDims"><span>ع 62CM</span><span>ارتفاع 107CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-210XL</span>
+    <h3>عربة تسوق معدنية سعة 210 لتر (كبيرة)</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>210L</b></div><div><span>الوزن</span><b>19kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" data-cap-l="25" href="detail-km-25c-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-25C-hero.png" alt="عربة تسوق معدنية للأطفال سعة 25 لتر" loading="lazy"></div>
+  <div class="emxDims"><span>ع 36CM</span><span>ارتفاع 73CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-25C</span>
+    <h3>عربة تسوق معدنية للأطفال سعة 25 لتر</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>25L</b></div><div><span>الوزن</span><b>6kg</b></div><div><span>العجلات</span><b>4</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" href="detail-km-chs-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-CHS-hero.png" alt="عربة تسوق معدنية بهيكل جانبي" loading="lazy"></div>
+  
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-CHS</span>
+    <h3>عربة تسوق معدنية بهيكل جانبي</h3>
+    <div class="emxSpecEmpty">منتج ملحق</div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" href="detail-ky-600-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KY-600-hero.png" alt="عربة نقل البضائع الاحترافية" loading="lazy"></div>
+  <div class="emxDims"><span>ع 65CM</span><span>ارتفاع 95CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KY-600</span>
+    <h3>عربة نقل البضائع الاحترافية</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>600kg</b></div><div><span>الوزن</span><b>40kg</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" href="detail-ky-200-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KY-200-hero.png" alt="عربة بضائع مع سلة" loading="lazy"></div>
+  <div class="emxDims"><span>ع 52CM</span><span>ارتفاع 92CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KY-200</span>
+    <h3>عربة بضائع مع سلة</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>200kg</b></div><div><span>الوزن</span><b>16kg</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" href="detail-ky-100-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KY-100-hero.png" alt="عربة نقل البضائع ذات الطراز البيئي" loading="lazy"></div>
+  <div class="emxDims"><span>ع 42CM</span><span>ارتفاع 102CM</span></div>
+  <div class="emxContent">
+    <span class="emxEyebrow">KY-100</span>
+    <h3>عربة نقل البضائع ذات الطراز البيئي</h3>
+    <div class="emxSpecGrid"><div><span>السعة</span><b>100kg</b></div><div><span>الوزن</span><b>9kg</b></div></div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+<a class="emxCard" href="detail-km-lock-ar.html">
+  <div class="emxImgWrap"><img src="assets/img/urunler/ai-generated/KM-LOCK-hero.png" alt="نظام قفل عربة السوق" loading="lazy"></div>
+  
+  <div class="emxContent">
+    <span class="emxEyebrow">KM-LOCK</span>
+    <h3>نظام قفل عربة السوق</h3>
+    <div class="emxSpecEmpty">منتج ملحق</div>
+    <span class="emxViewBtn">عرض التفاصيل</span>
+  </div>
+</a>
+</div></div></div></body></html>

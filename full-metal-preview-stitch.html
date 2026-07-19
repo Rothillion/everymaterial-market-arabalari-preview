@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Metal Shopping Carts — Stitch Blend Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#020810;font-family:'Inter',sans-serif;}
+.wrap{max-width:1200px;margin:0 auto;padding:24px;}
+.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;display:inline-block;}
+.emxCartPage{--m3-background:#051424;--m3-surface-container-low:#0d1c2d;--m3-surface-container:#122131;--m3-surface-container-high:#1c2b3c;--m3-card:#2A3544;--m3-on-background:#d4e4fa;--m3-on-surface:#d4e4fa;--m3-on-surface-variant:#c5c6cc;--m3-outline-variant:#45474c;--m3-primary:#bec7db;--m3-primary-container:#1a2332;--m3-on-primary-container:#818a9d;--m3-secondary:#ffb693;--m3-secondary-container:#fe6b00;background:linear-gradient(180deg,var(--m3-background) 0%, #1a2332 100%);color:var(--m3-on-background);border-radius:12px;padding:32px;}
+.emxCartPage .emxHero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding:40px 8px;margin-bottom:8px;}
+.emxCartPage .emxBreadcrumb{display:inline-flex;gap:4px;font-size:13px;margin-bottom:16px;color:var(--m3-on-surface-variant);}
+.emxCartPage .emxBreadcrumb a{color:var(--m3-on-surface-variant);text-decoration:none;}
+.emxCartPage .emxHero h1{margin:0 0 20px;font-size:40px;line-height:1.15;font-weight:700;letter-spacing:-.02em;color:var(--m3-on-background);}
+.emxCartPage .emxHeroBtns{display:flex;flex-wrap:wrap;gap:14px;}
+.emxCartPage .emxBtnPrimary{background:var(--m3-secondary-container);color:#fff;border:none;padding:12px 24px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:inline-block;box-shadow:0 0 15px rgba(254,107,0,.3);}
+.emxCartPage .emxBtnGhost{background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);color:var(--m3-on-background);padding:12px 24px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:inline-block;}
+.emxCartPage .emxHeroArt{position:relative;display:flex;align-items:center;justify-content:center;height:280px;}
+.emxCartPage .emxHeroArt::before{content:"";position:absolute;width:75%;height:75%;border-radius:999px;background:var(--m3-primary);opacity:.12;filter:blur(70px);mix-blend-mode:screen;}
+.emxCartPage .emxHeroArt img{position:relative;max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));}
+.emxCartPage .emxFeatures{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;padding:24px 8px;margin:8px 0 32px;border-top:1px solid var(--m3-outline-variant);border-bottom:1px solid var(--m3-outline-variant);}
+.emxCartPage .emxFeatures div{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--m3-on-surface-variant);}
+.emxCartPage .emxFeatures .material-symbols-outlined{font-size:28px;}
+.emxCartPage .emxFeatures span.label{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;}
+.emxCartPage h2.emxSectionTitle{text-align:center;font-size:26px;font-weight:700;color:var(--m3-on-surface);margin:0 0 8px;}
+.emxCartPage p.emxSectionSub{text-align:center;color:var(--m3-on-surface-variant);margin:0 0 32px;}
+.emxCartPage .emxGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.emxCartPage .emxCard{background:var(--m3-card);border:1px solid rgba(69,71,76,.4);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer;transition:border-color .3s ease;}
+.emxCartPage .emxCard:hover{border-color:rgba(190,199,219,.4);}
+.emxCartPage .emxImgWrap{position:relative;height:260px;padding:32px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.03);}
+.emxCartPage .emxImgWrap img{width:100%;height:100%;object-fit:contain;transition:transform .5s ease;}
+.emxCartPage .emxCard:hover .emxImgWrap img{transform:scale(1.05);}
+.emxCartPage .emxMaterialBadge{position:absolute;top:14px;left:14px;z-index:2;max-width:calc(100% - 28px);background:rgba(26,35,50,.8);backdrop-filter:blur(8px);border:1px solid rgba(190,199,219,.2);color:var(--m3-on-primary-container);padding:4px 9px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.emxCartPage .emxHoverPanel{position:absolute;inset:0;z-index:3;background:rgba(18,33,49,.62);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .25s ease;}
+.emxCartPage .emxCard:hover .emxHoverPanel{opacity:1;}
+.emxCartPage .emxHoverInner{background:var(--m3-surface-container-high);border:1px solid rgba(69,71,76,.5);border-radius:8px;padding:18px;width:100%;max-width:230px;box-shadow:0 20px 40px rgba(0,0,0,.4);}
+.emxCartPage .emxHoverInner h4{margin:0 0 10px;font-size:13px;color:var(--m3-primary);border-bottom:1px solid rgba(69,71,76,.4);padding-bottom:8px;font-weight:600;}
+.emxCartPage .emxHoverInner ul{list-style:none;margin:0 0 12px;padding:0;font-size:13px;color:var(--m3-on-surface-variant);}
+.emxCartPage .emxHoverInner li{display:flex;justify-content:space-between;gap:10px;padding:3px 0;}
+.emxCartPage .emxHoverInner li b{color:var(--m3-on-surface);font-weight:600;text-align:right;}
+.emxCartPage .emxHoverBtn{display:block;text-align:center;width:100%;box-sizing:border-box;padding:8px;border-radius:4px;border:1px solid rgba(255,182,147,.5);color:var(--m3-secondary);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;}
+.emxCartPage .emxCardBody{padding:20px;background:var(--m3-surface-container-low);border-top:1px solid rgba(69,71,76,.25);flex:1;}
+.emxCartPage .emxCard h3{margin:0;font-size:20px;font-weight:700;color:var(--m3-on-surface);}
+.emxCartPage .emxSpecLine{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:14px;font-size:12px;color:var(--m3-on-surface-variant);}
+.emxCartPage .emxSpecEmpty{margin-top:14px;font-size:12px;color:var(--m3-on-surface-variant);font-style:italic;}
+.emxCartPage .emxDesc{margin-top:32px;font-size:15px;line-height:1.7;color:var(--m3-on-surface-variant);max-width:800px;}
+</style></head><body><div class="wrap"><div class="emxCartPage">
+<section class="emxHero">
+  <div>
+    <div class="emxBreadcrumb"><a href="#">Home</a>&nbsp;/&nbsp;<a href="#">Market Equipment</a></div>
+    <h1>Metal Shopping Carts</h1>
+    <div class="emxHeroBtns"><a class="emxBtnPrimary" href="#">Request a Quote</a><a class="emxBtnGhost" href="#">Explore Categories</a></div>
+  </div>
+  <div class="emxHeroArt"><img src="assets/img/urunler/thumb/metal-grocery-cart-4.jpg" alt=""></div>
+</section>
+<div class="emxFeatures"><div><span class="material-symbols-outlined">speed</span><span class="label">High Efficiency</span></div><div><span class="material-symbols-outlined">precision_manufacturing</span><span class="label">Durable Build</span></div><div><span class="material-symbols-outlined">warehouse</span><span class="label">Space Saving</span></div><div><span class="material-symbols-outlined">cleaning_services</span><span class="label">Easy to Clean</span></div></div>
+<section><div class="emxGrid">
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-1.jpg" alt="75 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>75L</b></li><li><span>W</span><b>45cm</b></li><li><span>H</span><b>99cm</b></li><li><span>Wt</span><b>8.5kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>75 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 75L</span><span>W: 45cm</span><span>H: 99cm</span><span>Wt: 8.5kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-2.jpg" alt="100 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>100L</b></li><li><span>W</span><b>49cm</b></li><li><span>H</span><b>99cm</b></li><li><span>Wt</span><b>12kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>100 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 100L</span><span>W: 49cm</span><span>H: 99cm</span><span>Wt: 12kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-3.jpg" alt="125 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>125L</b></li><li><span>W</span><b>50cm</b></li><li><span>H</span><b>99cm</b></li><li><span>Wt</span><b>13.25kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>125 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 125L</span><span>W: 50cm</span><span>H: 99cm</span><span>Wt: 13.25kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-4.jpg" alt="150 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>150L</b></li><li><span>W</span><b>57cm</b></li><li><span>H</span><b>100cm</b></li><li><span>Wt</span><b>14.5kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>150 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 150L</span><span>W: 57cm</span><span>H: 100cm</span><span>Wt: 14.5kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-5.jpg" alt="180 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>150L</b></li><li><span>W</span><b>57cm</b></li><li><span>H</span><b>100cm</b></li><li><span>Wt</span><b>14.5kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>180 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 150L</span><span>W: 57cm</span><span>H: 100cm</span><span>Wt: 14.5kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama &nbsp;</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-6.jpg" alt="210 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama &nbsp;</b></li><li><span>Vol</span><b>210L</b></li><li><span>W</span><b>59cm</b></li><li><span>H</span><b>100cm</b></li><li><span>Wt</span><b>16.5kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>210 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 210L</span><span>W: 59cm</span><span>H: 100cm</span><span>Wt: 16.5kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-7.jpg" alt="210 l Metal Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>210L</b></li><li><span>W</span><b>62cm</b></li><li><span>H</span><b>107cm</b></li><li><span>Wt</span><b>19kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>210 l Metal Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 210L</span><span>W: 62cm</span><span>H: 107cm</span><span>Wt: 19kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-8.jpg" alt="25 l Metal Children's Shopping Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>Vol</span><b>25L</b></li><li><span>W</span><b>36cm</b></li><li><span>H</span><b>73cm</b></li><li><span>Wt</span><b>6kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>25 l Metal Children's Shopping Cart</h3>
+    <div class="emxSpecLine"><span>Vol: 25L</span><span>W: 36cm</span><span>H: 73cm</span><span>Wt: 6kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-10.jpg" alt="Profile Frame Metal Shopping Cart" loading="lazy">
+    
+  </div>
+  <div class="emxCardBody">
+    <h3>Profile Frame Metal Shopping Cart</h3>
+    <div class="emxSpecEmpty">Details on product page</div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-11.jpg" alt="Professional Load Transport Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>W</span><b>65cm</b></li><li><span>H</span><b>95cm</b></li><li><span>Wt</span><b>40kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>Professional Load Transport Cart</h3>
+    <div class="emxSpecLine"><span>W: 65cm</span><span>H: 95cm</span><span>Wt: 40kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-12.jpg" alt="Cart with Basket and Wheels" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>W</span><b>52cm</b></li><li><span>H</span><b>92cm</b></li><li><span>Wt</span><b>16kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>Cart with Basket and Wheels</h3>
+    <div class="emxSpecLine"><span>W: 52cm</span><span>H: 92cm</span><span>Wt: 16kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    <div class="emxMaterialBadge">Galvaniz Kaplama</div>
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-13.jpg" alt="Eco Model Load Transport Cart" loading="lazy">
+    <div class="emxHoverPanel"><div class="emxHoverInner">
+          <h4>Technical Specs</h4><ul><li><span>Material</span><b>Galvaniz Kaplama</b></li><li><span>W</span><b>42cm</b></li><li><span>H</span><b>102cm</b></li><li><span>Wt</span><b>9kg</b></li></ul>
+          <span class="emxHoverBtn">View Details</span>
+        </div></div>
+  </div>
+  <div class="emxCardBody">
+    <h3>Eco Model Load Transport Cart</h3>
+    <div class="emxSpecLine"><span>W: 42cm</span><span>H: 102cm</span><span>Wt: 9kg</span></div>
+  </div>
+</a>
+<a class="emxCard" href="#">
+  <div class="emxImgWrap">
+    
+    <img src="assets/img/urunler/thumb/metal-grocery-cart-9.jpg" alt="Shopping Cart with Locking System" loading="lazy">
+    
+  </div>
+  <div class="emxCardBody">
+    <h3>Shopping Cart with Locking System</h3>
+    <div class="emxSpecEmpty">Details on product page</div>
+  </div>
+</a>
+</div>
+<p class="emxDesc">Metal shopping carts are made from high-quality metal materials, designed to handle heavy loads and provide long-lasting use. Their durable construction ensures that they are suitable for extended periods of use.</p>
+</section>
+</div></div></body></html>
