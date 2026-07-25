@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About Us — everymaterial.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f5f6f8;font-family:'Inter',sans-serif;}
+.emxAboutPage{color:#1c2b3c;width:100%;box-sizing:border-box;background:linear-gradient(160deg,#fbfcfe 0%,#eef4fb 45%,#d9e6f5 100%);}
+.emxAboutPage .emxHero{background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);padding:56px 40px 96px;}
+.emxAboutPage .emxHeroInner{max-width:1200px;margin:0 auto;}
+.emxAboutPage h1.emxPageTitle{font-size:36px;font-weight:800;letter-spacing:-.01em;margin:0 0 14px;color:#f4f8ff;}
+.emxAboutPage .emxBreadcrumb{font-size:13px;color:#c3d1e3;display:flex;gap:8px;align-items:center;}
+.emxAboutPage .emxBreadcrumb a{color:#c3d1e3;text-decoration:none;}
+.emxAboutPage .emxBreadcrumb a:hover{color:#fff;}
+.emxAboutPage .emxBreadcrumb span.sep{color:#5b7594;}
+.emxAboutPage .emxBreadcrumb span.current{color:#f4f8ff;font-weight:600;}
+.emxAboutPage .emxContentWrap{padding:0 40px 64px;max-width:1400px;margin:0 auto;}
+.emxAboutPage .emxAboutGrid{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;margin-top:-64px;align-items:start;}
+.emxAboutPage .emxAboutMain{background:linear-gradient(160deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.5) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px -10px rgba(20,40,65,.28);}
+.emxAboutPage .emxAboutImgWrap{width:100%;aspect-ratio:16/7;overflow:hidden;}
+.emxAboutPage .emxAboutImgWrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.emxAboutPage .emxAboutBody{padding:40px 48px 48px;}
+.emxAboutPage .emxAboutBody h2{font-size:28px;line-height:1.3;font-weight:700;margin:0 0 20px;color:#16324a;}
+.emxAboutPage .emxAboutBody p{font-size:16px;line-height:1.7;color:#5b6b7d;max-width:72ch;margin:0 0 18px;}
+.emxAboutPage .emxAboutBody p:last-of-type{margin-bottom:0;}
+.emxAboutPage .emxAboutAside{margin-top:48px;position:sticky;top:80px;}
+.emxAboutPage .emxCtaCard{background:linear-gradient(160deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.5) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:16px;padding:36px 32px;position:relative;overflow:hidden;box-shadow:0 10px 30px -10px rgba(20,40,65,.28);}
+.emxAboutPage .emxCtaCard::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#fe6b00,#a04100);}
+.emxAboutPage .emxCtaCard h3{font-size:22px;line-height:1.4;font-weight:700;color:#16324a;margin:0 0 20px;}
+.emxAboutPage .emxCtaImgWrap{border-radius:12px;overflow:hidden;margin-bottom:24px;}
+.emxAboutPage .emxCtaImgWrap img{width:100%;height:auto;display:block;}
+.emxAboutPage .emxCtaBtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;box-sizing:border-box;background:#a04100;color:#fff;font-weight:700;font-size:15px;padding:16px 20px;border-radius:10px;text-decoration:none;transition:background .2s;}
+.emxAboutPage .emxCtaBtn:hover{background:#8a3800;}
+.emxLangSwitchBar{position:sticky;top:0;z-index:60;width:100%;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center;padding:10px 20px;background:linear-gradient(160deg,#173654 0%,#0a1f33 60%,#0a1f33 100%);}
+.emxLangSwitch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;font-family:'Inter',sans-serif;}
+.emxLangSwitch .material-icons-placeholder{font-size:15px;color:#9fb3c8;margin-inline:6px;}
+.emxLangSwitch a{font-size:13px;font-weight:700;padding:9px 13px;min-height:22px;display:inline-flex;align-items:center;border-radius:999px;color:#c3d1e3;text-decoration:none;transition:background .15s,color .15s;}
+.emxLangSwitch a:hover{color:#fff;}
+.emxLangSwitch a.emxLangActive{background:#fe6b00;color:#fff;}
+@media (max-width:520px){.emxLangSwitchBar{padding:8px 12px;} .emxLangSwitch a{padding:10px 11px;font-size:12.5px;}}
+@media (max-width:900px){.emxAboutPage .emxAboutGrid{grid-template-columns:1fr;margin-top:0;}.emxAboutPage .emxAboutAside{position:static;margin-top:24px;}.emxAboutPage .emxHero{padding:32px 20px 48px;}.emxAboutPage .emxContentWrap{padding:0 0 32px;}.emxAboutPage .emxAboutBody{padding:28px 24px 32px;}}
+</style></head><body>
+<div class="emxLangSwitchBar"><div class="emxLangSwitch"><span class="material-icons-placeholder">&#127760;</span><a href="about-tr.html">TR</a><a class="emxLangActive" href="about-en.html">EN</a><a href="about-de.html">DE</a><a href="about-ar.html">AR</a></div></div>
+<div class="emxAboutPage">
+<div class="emxHero"><div class="emxHeroInner">
+<h1 class="emxPageTitle">About Us</h1>
+<div class="emxBreadcrumb"><a href="#">Home</a><span class="sep">/</span><span class="current">About Us</span></div>
+</div></div>
+<div class="emxContentWrap">
+<div class="emxAboutGrid">
+<div class="emxAboutMain">
+<div class="emxAboutImgWrap"><img src="assets/img/sayfa/iStock-828124804.jpg" alt="About Us — global logistics and export" loading="lazy"></div>
+<div class="emxAboutBody">
+<h2>everymaterial.com: Your Solution Partner</h2>
+<p>everymaterial.com is a platform based in Turkey, with solution partners in Germany and Palestine, aiming to provide comprehensive service to customers worldwide. Combining our 8 years of industry experience, we take pride in serving under our own name. Our mission is to best meet customer needs with our wide product range.</p>
+<p>Our product categories include plexiglass, wooden, and glass display equipment, label holders, market equipment, shelving systems, and food and industrial machinery. We also offer comprehensive solutions to our customers with our expertise in turnkey projects.</p>
+<p>When you work with us, you gain not just a product supplier, but a business partner offering solutions tailored to your needs. By responding quickly and flexibly to our customers' requests, we aim to support their business processes and make their work easier. From food products to industrial materials, we are here to meet all your needs.</p>
+</div>
+</div>
+<aside class="emxAboutAside">
+<div class="emxCtaCard">
+<h3>Leave All Your Material Needs to Us — We Have a Solution for Everything.</h3>
+<div class="emxCtaImgWrap"><img src="assets/images/every-material-slogan.jpeg" alt="Every Material" loading="lazy"></div>
+<a class="emxCtaBtn" href="#">Get in Touch</a>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</body></html>
