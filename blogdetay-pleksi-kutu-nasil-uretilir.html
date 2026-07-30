@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pleksi Kutu Nasıl Üretilir? — everymaterial.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@500&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+body{margin:0;background:#f5f6f8;font-family:'Inter',sans-serif;}
+.emxHomePage{color:#1c2b3c;width:100%;background:linear-gradient(160deg,#fbfcfe 0%,#eef4fb 45%,#d9e6f5 100%);}
+.emxHomePage a{text-decoration:none;color:inherit;}
+.emxHomePage .emxWrap{max-width:1400px;margin:0 auto;padding:0 40px;}
+.emxLangSwitchBar{position:sticky;top:0;z-index:70;width:100%;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center;padding:10px 20px;background:linear-gradient(160deg,#173654 0%,#0a1f33 60%,#0a1f33 100%);}
+.emxLangSwitch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;}
+.emxLangSwitch .material-icons-placeholder{font-size:15px;color:#9fb3c8;margin-inline:6px;}
+.emxLangSwitch a{font-size:13px;font-weight:700;padding:9px 13px;min-height:22px;display:inline-flex;align-items:center;border-radius:999px;color:#c3d1e3;text-decoration:none;transition:background .15s,color .15s;}
+.emxLangSwitch a:hover{color:#fff;}
+.emxLangSwitch a.emxLangActive{background:#a04100;color:#fff;}
+.emxSiteHeader{position:sticky;top:41px;z-index:65;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,35,55,.1);}
+.emxSiteHeader .emxHeaderInner{max-width:1400px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.emxSiteHeader .emxLogo img{height:34px;display:block;}
+.emxSiteHeader nav{display:flex;align-items:center;gap:26px;}
+.emxSiteHeader nav > a{font-size:14.5px;font-weight:600;color:#16324a;position:relative;padding:6px 0;}
+.emxSiteHeader nav > a:hover{color:#e66000;}
+.emxSiteHeader nav > a.emxNavActive{color:#a04100;}
+.emxSiteHeader .emxNavDrop{position:relative;}
+.emxSiteHeader .emxNavDrop > span{font-size:14.5px;font-weight:600;color:#16324a;cursor:default;display:inline-block;padding:6px 0;}
+.emxSiteHeader .emxNavDrop:hover > span{color:#e66000;}
+.emxSiteHeader .emxDropMenu{position:absolute;top:100%;inset-inline-start:0;background:#fff;border:1px solid rgba(15,35,55,.12);border-radius:10px;box-shadow:0 14px 34px -12px rgba(20,40,65,.35);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;}
+.emxSiteHeader .emxNavDrop:hover .emxDropMenu{opacity:1;visibility:visible;transform:translateY(0);}
+.emxSiteHeader .emxDropMenu a{display:block;padding:9px 12px;border-radius:6px;font-size:13.5px;font-weight:500;color:#16324a;}
+.emxSiteHeader .emxDropMenu a:hover{background:#fdf1e8;color:#a04100;}
+.emxSiteHeader .emxCallBtn{background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:11px 20px;border-radius:8px;white-space:nowrap;}
+.emxSiteHeader .emxCallBtn:hover{background:#8a3800;}
+.emxMenuToggle{display:none;background:none;border:none;font-size:22px;color:#16324a;cursor:pointer;}
+@media (max-width:1080px){.emxSiteHeader nav{display:none;}.emxMenuToggle{display:block;}}
+
+/* Article hero + breadcrumb */
+.emxHero{background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);padding:48px 40px 40px;}
+.emxHeroInner{max-width:1200px;margin:0 auto;}
+.emxBreadcrumb{font-size:13px;color:#c3d1e3;display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.emxBreadcrumb a{color:#c3d1e3;text-decoration:none;}
+.emxBreadcrumb a:hover{color:#fff;}
+.emxBreadcrumb span.sep{color:#5b7594;}
+.emxBreadcrumb span.current{color:#f4f8ff;font-weight:600;}
+.emxArtMeta{display:flex;gap:14px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+.emxArtTag{background:#a04100;padding:5px 12px;font-size:10.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.05em;border-radius:3px;}
+.emxArtDate{color:rgba(255,255,255,.75);font-size:12.5px;font-weight:600;}
+h1.emxArtTitle{font-size:34px;font-weight:800;letter-spacing:-.01em;margin:0;color:#f4f8ff;line-height:1.25;max-width:900px;}
+
+/* Two-column layout */
+.emxContentWrap{padding:0 40px 64px;max-width:1400px;margin:0 auto;}
+.emxArticleLayout{display:flex;gap:36px;margin-top:-16px;align-items:flex-start;}
+.emxArticleMain{flex:0 0 68%;min-width:0;}
+.emxArticleSidebar{flex:1;min-width:0;display:flex;flex-direction:column;gap:22px;position:sticky;top:110px;}
+
+.emxArtHeroImg{width:100%;aspect-ratio:16/8;border-radius:12px;overflow:hidden;box-shadow:0 14px 34px -12px rgba(20,40,65,.3);margin-bottom:28px;}
+.emxArtHeroImg img{width:100%;height:100%;object-fit:cover;display:block;}
+
+.emxArtBody{background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.1);border-radius:12px;padding:36px 40px;box-shadow:0 4px 18px -8px rgba(20,40,65,.12);}
+.emxArtBody p{font-size:15.5px;line-height:1.85;color:#33475b;margin:0 0 20px;}
+.emxArtBody p:last-child{margin-bottom:0;}
+.emxArtLead{font-weight:600;color:#16324a;font-style:italic;border-inline-start:4px solid #fe6b00;padding-inline-start:20px;padding-block:4px;}
+.emxArtBody h2{font-size:21px;font-weight:800;color:#16324a;margin:32px 0 14px;}
+.emxArtBody h2:first-of-type{margin-top:8px;}
+.emxArtBody h3{font-size:15.5px;font-weight:700;color:#16324a;margin:18px 0 10px;}
+.emxArtBody a{color:#a04100;font-weight:600;}
+.emxArtBody a:hover{text-decoration:underline;}
+.emxArtQuote{background:linear-gradient(160deg,#173654 0%,#0a1f33 100%);color:#f4f8ff;border-radius:10px;padding:28px 32px;margin-top:28px;}
+.emxArtQuote p{color:#f4f8ff;font-size:16px;font-weight:600;line-height:1.7;margin:0;}
+.emxArtQuote cite{display:block;margin-top:12px;font-size:12.5px;font-weight:700;color:#ff9142;font-style:normal;}
+
+.emxRelatedSec{margin-top:36px;}
+.emxRelatedSec h3{font-size:19px;font-weight:800;color:#16324a;display:flex;align-items:center;gap:12px;margin:0 0 18px;}
+.emxRelatedSec h3 .emxBar{width:34px;height:4px;background:#fe6b00;display:inline-block;border-radius:2px;}
+.emxRelProdGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.emxRelProdCard{background:#fff;border:1px solid rgba(15,35,55,.1);border-radius:10px;overflow:hidden;box-shadow:0 4px 14px -8px rgba(20,40,65,.15);transition:transform .25s ease,box-shadow .25s ease;}
+.emxRelProdCard:hover{transform:translateY(-4px);box-shadow:0 12px 26px -10px rgba(20,40,65,.25);}
+.emxRelProdCard .emxRpImg{aspect-ratio:1/1;overflow:hidden;background:#f2f5f9;}
+.emxRelProdCard .emxRpImg img{width:100%;height:100%;object-fit:cover;display:block;}
+.emxRelProdCard span{display:block;padding:10px 12px 14px;font-size:12.5px;font-weight:700;color:#16324a;line-height:1.35;}
+
+.emxSideBox{background:rgba(255,255,255,.72);backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.1);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px -8px rgba(20,40,65,.12);}
+.emxSideBox h4{margin:0;padding:16px 20px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#16324a;border-bottom:1px solid rgba(15,35,55,.08);}
+.emxSidePost{display:flex;gap:12px;padding:14px 20px;border-bottom:1px solid rgba(15,35,55,.06);}
+.emxSidePost:last-child{border-bottom:none;}
+.emxSidePost .emxSpImg{width:60px;height:60px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#f2f5f9;}
+.emxSidePost .emxSpImg img{width:100%;height:100%;object-fit:cover;display:block;}
+.emxSidePost .emxSpBody{display:flex;flex-direction:column;justify-content:center;gap:4px;min-width:0;}
+.emxSidePost .emxSpDate{font-size:10.5px;font-weight:700;color:#8a97a8;text-transform:uppercase;letter-spacing:.03em;}
+.emxSidePost .emxSpTitle{font-size:13px;font-weight:700;color:#16324a;line-height:1.35;}
+.emxSidePost:hover .emxSpTitle{color:#a04100;}
+
+.emxSideCta{background:linear-gradient(160deg,#173654 0%,#0a1f33 100%);border-radius:12px;padding:28px 24px;color:#f4f8ff;}
+.emxSideCta h4{margin:0 0 8px;font-size:17px;font-weight:800;color:#fff;}
+.emxSideCta p{margin:0 0 18px;font-size:13px;color:#c3d1e3;line-height:1.6;}
+.emxSideCta a.emxSideCtaBtn{display:block;text-align:center;background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:12px 16px;border-radius:8px;text-transform:uppercase;}
+.emxSideCta a.emxSideCtaBtn:hover{background:#8a3800;}
+.emxSideCta .emxSidePhone{display:block;text-align:center;margin-top:10px;font-size:13px;color:#c3d1e3;direction:ltr;}
+.emxSideCta .emxSidePhone a{color:#fff;font-weight:700;}
+
+.emxSideCats ul{list-style:none;margin:0;padding:14px 20px;display:flex;flex-direction:column;gap:2px;}
+.emxSideCats a{display:block;padding:8px 0;font-size:13px;font-weight:500;color:#5b6b7d;}
+.emxSideCats a:hover{color:#a04100;}
+
+@media (max-width:1080px){.emxArticleLayout{flex-direction:column;}.emxArticleSidebar{position:static;width:100%;}.emxRelProdGrid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:900px){.emxHomePage .emxWrap{padding:0 20px;}.emxContentWrap{padding:0 20px 48px;}.emxHero{padding:32px 20px 32px;}.emxArtBody{padding:26px 22px;}.emxRelProdGrid{grid-template-columns:repeat(2,1fr);}h1.emxArtTitle{font-size:26px;}}
+
+/* Footer (same as Blog listing) */
+.emxFooter{background:#0a1f33;color:#c3d1e3;padding:56px 0 0;margin-top:0;}
+.emxFooter .emxFootGrid{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);}
+.emxFooter .emxFootLogo img{height:30px;margin-bottom:14px;}
+.emxFooter .emxFootLogo p{font-size:13.5px;line-height:1.7;color:#9fb3c8;margin:0 0 18px;}
+.emxFooter .emxCatalogLink{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 16px;font-size:13px;font-weight:700;color:#f4f8ff;}
+.emxFooter .emxCatalogLink:hover{border-color:#fe6b00;}
+.emxFooter h5{font-size:13px;font-weight:700;color:#f4f8ff;text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px;}
+.emxFooter ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+.emxFooter ul a{font-size:13.5px;color:#c3d1e3;}
+.emxFooter ul a:hover{color:#fe6b00;}
+.emxFooter .emxFootContact p{font-size:13.5px;line-height:1.6;color:#c3d1e3;margin:0 0 10px;}
+.emxFooter .emxFootContact span{color:#8fa4bb;}
+.emxFooter .emxFootContact a{color:#c3d1e3;}
+.emxFooter .emxSocial{display:flex;gap:10px;margin-top:14px;}
+.emxFooter .emxSocial a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:14px;color:#c3d1e3;}
+.emxFooter .emxSocial a:hover{background:#a04100;border-color:#a04100;color:#fff;}
+.emxFooter .emxFootBottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:12.5px;color:#8fa4bb;flex-wrap:wrap;gap:10px;}
+.emxFooter .emxFootBottom ul{flex-direction:row;gap:20px;}
+.emxFooter .emxFootBottom a{color:#8fa4bb;}
+@media (max-width:900px){.emxFooter .emxFootGrid{grid-template-columns:1fr;}}
+
+.emxWhatsAppBtn{position:fixed;bottom:24px;inset-inline-end:24px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.4);}
+.emxWhatsAppBtn:hover{transform:scale(1.06);}
+.emxWhatsAppBtn svg{width:28px;height:28px;}
+@media (max-width:900px){.emxFooter .emxFootBottom{padding:20px 20px;}}
+</style></head><body>
+<div class="emxLangSwitchBar"><div class="emxLangSwitch"><span class="material-icons-placeholder">&#127760;</span><a class="emxLangActive" href="blogdetay-pleksi-kutu-nasil-uretilir.html">TR</a><a href="blogdetay-pleksi-kutu-nasil-uretilir-en.html">EN</a><a href="blogdetay-pleksi-kutu-nasil-uretilir-de.html">DE</a><a href="blogdetay-pleksi-kutu-nasil-uretilir-ar.html">AR</a></div></div>
+
+<header class="emxSiteHeader">
+<div class="emxHeaderInner">
+<a class="emxLogo" href="index.html"><img src="assets/img/logo/every-material-logo-2.png" alt="EveryMaterial"></a>
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<div class="emxNavDrop"><span>Kategoriler</span>
+<div class="emxDropMenu">
+<a href="#">Pleksi Teşhir Ekipmanları</a>
+<a href="#">Kapaklar</a>
+<a href="#">Ahşap Teşhir Ekipmanları</a>
+<a href="#">Cam Teşhir Ekipmanları</a>
+<a href="#">Polikarbon Teşhir Ekipmanları</a>
+<a href="#">Market Ekipmanları</a>
+<a href="#">Raf Sistemleri</a>
+<a href="#">Makineler</a>
+<a href="#">Dolaplar ve Depolama Sistemleri</a>
+</div></div>
+<div class="emxNavDrop"><span>Kurumsal</span>
+<div class="emxDropMenu">
+<a href="about-tr.html">Hakkımızda</a>
+<a href="gelismeler-tr.html">Gelişmeler</a>
+<a href="team-tr.html">Ekibimiz</a>
+</div></div>
+<a href="ihracat-danismanligi-tr.html">İhracat Danışmanlığı</a>
+<a href="projeler-tr.html">Projeler</a>
+<a class="emxNavActive" href="blog-tr.html">Blog</a>
+<a href="iletisim-tr.html">İletişim</a>
+</nav>
+<a class="emxCallBtn" href="talep-tr.html">Sizi Arayalım</a>
+<button class="emxMenuToggle" aria-label="Menü">&#9776;</button>
+</div>
+</header>
+
+<div class="emxHomePage">
+<div class="emxHero"><div class="emxHeroInner">
+<div class="emxBreadcrumb"><a href="index.html">Ana Sayfa</a><span class="sep">/</span><a href="blog-tr.html">Blog</a><span class="sep">/</span><span class="current">Pleksi Kutu Nasıl Üretilir?</span></div>
+<div class="emxArtMeta"><span class="emxArtTag">Ürün Rehberi</span><span class="emxArtDate">9 Mayıs 2026</span></div>
+<h1 class="emxArtTitle">Pleksi Kutu Nasıl Üretilir?</h1>
+</div></div>
+
+<div class="emxContentWrap">
+<div class="emxArticleLayout">
+
+<article class="emxArticleMain">
+<div class="emxArtHeroImg"><img src="assets/img/blog/pleksi-kutu-nasil-uretilir.jpeg" alt="Pleksi Kutu Nasıl Üretilir?" loading="lazy"></div>
+
+<div class="emxArtBody">
+<p class="emxArtLead">Modern perakende sektörünün vazgeçilmez sergileme çözümü olan <a href="#">pleksi kutular</a>, şeffaflığı, dayanıklılığı ve hijyenik yapısı sayesinde kuruyemiş tezgâhlarından şarküteri vitrinlerine kadar her noktada tercih ediliyor. Peki bu zarif görünümlü kutular hangi aşamalardan geçerek üretiliyor? EveryMaterial olarak yıllardır sürdürdüğümüz üretim deneyimimizden yola çıkarak hazırladığımız bu rehberde, pleksi kutu üretiminin tüm teknik detaylarını sektör profesyonellerinin diliyle anlatıyoruz.</p>
+
+<h2>1. Pleksi Kutu Üretiminde Hammadde Seçimi</h2>
+<p>Pleksi kutu üretiminin temeli, doğru hammadde seçimine dayanır. Endüstride akrilik ya da pleksiglas olarak da bilinen polimetilmetakrilat (PMMA), termoplastik özelliği sayesinde ısıyla şekillendirilebilen, yüksek şeffaflığa ve darbe dayanımına sahip bir malzemedir. Sektörde iki temel pleksi türü kullanılır: iki cam kalıp arasına dökülerek elde edilen döküm (cast) pleksi ve sürekli ekstrüzyonla üretilen çekme (extruded) pleksi. Büküm gerektiren, yüksek estetikli kuruyemiş ve şarküteri kutuları için döküm pleksi tercih edilir; çünkü ısıl işlemde deformasyona uğramaz ve cam berraklığını korur. Plaka kalınlıkları 1 mm ile 30 mm arasında değişirken standart ebatlar 105x160 cm, 125x200 cm ve 205x305 cm olarak sunulur. Gıda ile temas eden uygulamalarda mutlaka gıdaya uygun sertifikalı pleksi levha kullanılır; bu malzeme camdan yaklaşık 10 kat daha dayanıklı, %50 daha hafif ve %92 ışık geçirgenliğine sahiptir.</p>
+
+<h2>2. Tasarım, Ölçülendirme ve CAD Çizimi Aşaması</h2>
+<p>Hammadde seçiminden sonraki kritik aşama, kutunun teknik tasarımıdır. Müşterinin tezgâh ölçüleri, ürün kapasitesi ve görsel beklentileri değerlendirilerek CAD ortamında 2D ve 3D çizimler hazırlanır. Bu aşamada kutunun taban, yan yüzey ve kapak parçaları ayrı ayrı çizilir; köşelerde yapışacak yüzey paylarının milimetrik hesabı yapılır. Kuruyemiş ve şarküteri sektörü için sıklıkla talep edilen kayar kapaklı kutular, kademeli teşhir kutuları, eğimli ön yüzeyli ürün haznelerinde özellikle açı hesabı, çekme payı ve büküm radius değeri büyük önem taşır. Tasarım aşamasındaki en küçük hata, sonraki kesim ve birleştirme süreçlerinde katlanarak büyüyerek hem zaman kaybına hem de pleksi malzeme firesine yol açar. EveryMaterial mühendislik ekibi, üretime geçmeden önce her tasarımı dijital prototip olarak değerlendirir, kerf payı (lazer kesim hattı kalınlığı) ve minimum duvar kalınlığı standartlarına uygunluğunu kontrol eder. Böylece atölyeye sadece kusursuz şekilde optimize edilmiş tasarımlar ulaşır.</p>
+
+<h2>3. Lazer Kesim ve CNC Kesim Süreçleri</h2>
+<p>Tasarımı tamamlanan parçalar, dijital dosyalar üzerinden CO2 lazer kesim veya CNC router makinelerine aktarılır. Lazer kesim, yüksek yoğunluklu ışık huzmesinin pleksiyi süblimleştirerek kesmesi prensibine dayanır; bu sayede kesim hattında çapak, pürüz veya talaş kalmaz, kenarlar adeta alevle parlatılmışçasına cam berraklığında çıkar. Endüstriyel lazer makineleri 0-50 mm arası kalınlıklarda 205x305 cm ebatına kadar pleksi işleyebilir. CNC kesimde ise 18.000-24.000 RPM devir hızı ve dakikada 2-3 metre ilerleme hızı ideal kabul edilir; tungsten karbür uçlar ve hava üfleme soğutma sistemi pleksinin erimesini engeller.</p>
+<h3>Hangi Kesim Yöntemi Ne Zaman Kullanılır?</h3>
+<p>İnce duvarlı, yüksek estetik gerektiren kuruyemiş teşhir kutularında lazer kesim tercih edilirken, kalın cidarlı şarküteri kutularında ve büyük ebatlı market sergileme ünitelerinde CNC kesim öne çıkar. Her iki yöntemde de pleksinin koruyucu kağıdı kesim tamamlanana kadar yüzeyde bırakılır; bu, üretim sırasında oluşabilecek çizilmeleri önler ve son ürünün kristal berraklığını garanti altına alır.</p>
+
+<h2>4. Pleksi Büküm ve Termoform İşlemi</h2>
+<p>Tek parça şeklinde tasarlanmış kuruyemiş hazneleri, eğimli ön yüzlü baharat kutuları ve yuvarlak köşeli teşhir ünitelerinde pleksi büküm aşaması devreye girer. Pleksiglas, polimetilmetakrilat bazlı termoplastik bir malzeme olduğundan belirli bir sıcaklığa (yaklaşık 150-160°C) ulaştığında yumuşar ve kalıba alınarak istenilen forma kavuşur. Profesyonel atölyelerde kullanılan tel rezistanslı büküm makineleri ya da ısı odaları sayesinde 45°, 60°, 90°, 140° ve 160° derecelik açılarda hassas bükümler yapılabilir. Büküm aşamasında malzemenin homojen ısıtılması büyük önem taşır; aşırı ısı malzemenin köpürmesine, yetersiz ısı ise çatlamaya neden olur. Bu nedenle kuruyemiş ve şarküteri sektörünün talep ettiği yüksek estetikli, gergin köşeli pleksi kutularda mutlaka döküm pleksi kullanılmalı ve büküm sonrası kontrollü soğutma uygulanarak iç gerilim minimize edilmelidir. EveryMaterial kutularının dikişsiz görünümünün sırrı tam olarak burada gizlidir.</p>
+
+<h2>5. Yapıştırma ve Birleştirme Aşaması</h2>
+<p>Kesilen ve gerektiğinde bükülen pleksi parçalar, son aşamada birleştirilir. Pleksi kutu üretiminde standart yapıştırıcılar yerine kloroform bazlı çözücü yapıştırıcılar ya da akrilik kaynak yapıştırıcıları kullanılır. Bu özel kimyasallar, pleksi yüzeyini molekül seviyesinde eriterek iki parçayı birbirine kaynatır; sonuç, neredeyse görünmez ve son derece dayanıklı bir bağ olur. Yapıştırma sürecinde parçalar bant ya da fikstür yardımıyla sabitlenir; çünkü kloroform uçucu yapısı nedeniyle 30 saniye içinde tepkimeye girer ve 3 dakika içinde tutunma sağlar. Tam dayanım için yaklaşık 3 saat bekleme süresi gerekir. Kuruyemiş kutuları gibi sıklıkla yıkanan ürünlerde köşelerin sızdırmazlığı kritik öneme sahip olduğundan, EveryMaterial üretim hattında her birleşim noktası ışığa tutularak kılcal çatlak ve hava boşluğu kontrolü yapılır; gıda hijyeni açısından kusursuz, su geçirmez bir bütünlük sağlanır.</p>
+
+<h2>6. Yüzey İşleme, Kalite Kontrol ve Son Dokunuşlar</h2>
+<p>Birleştirme tamamlandıktan sonra pleksi kutunun kenarları alev parlatma ya da kimyasal parlatma tekniğiyle cilalanır. Alev parlatmada kontrollü bir hidrojen alevi kenarlardan geçirilerek kesim sırasında oluşan mat dokunun şeffaflaşması sağlanır; bu işlem ustalık gerektirir, aşırı ısı deformasyona yol açabilir. Sonrasında kutu, kuruyemiş, baharat ya da şarküteri ürünleri için talep edilen marka logosu, ürün etiketi veya bilgilendirici görseller UV baskı veya lazer kazıma ile uygulanır. Son aşamada her ürün, milimetrik hassasiyetle kalite kontrolden geçirilir: ışık altında kılcal çatlak, hava kabarcığı, yüzey çiziği kontrolü yapılır; ölçü tutarlılığı dijital kumpaslarla doğrulanır. EveryMaterial olarak teslim öncesi her kutuya hijyenik temizlik uygulayıp özel poşet ya da koruyucu film ile ambalajlayarak sevkiyata hazırlıyoruz; böylece son kullanıcıya kusursuz, ilk gün etkisi koruyan bir ürün sunmuş oluyoruz.</p>
+
+<div class="emxArtQuote">
+<p>"EveryMaterial, kuruyemiş, market ve şarküteri sektörüne özel pleksi kutu ve ahşap kova üretiminde Türkiye'nin önde gelen markalarından biridir. Yıllara dayanan üretim deneyimimiz, gıdaya uygun sertifikalı hammaddelerimiz, hassas lazer kesim altyapımız ve sektörün ihtiyaçlarına özel tasarım ekibimizle işletmenizin teşhir kalitesini bir üst seviyeye taşıyoruz. İster küçük bir butik şarküteri ister zincir market kategorisinde olun, sipariş adetine göre esnek üretim, hızlı teslimat ve uzun ömürlü ürün garantisi sunuyoruz."</p>
+<cite>— everymaterial.com, Neden EveryMaterial?</cite>
+</div>
+</div>
+
+<div class="emxRelatedSec">
+<h3><span class="emxBar"></span>İlgili Ürünler</h3>
+<div class="emxRelProdGrid">
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/egimli-kare-kutu.jpg" alt="Eğimli Kare Kutu" loading="lazy"></div><span>Eğimli Kare Kutu</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/bonbon-kutu-stand.jpg" alt="Dolaplı Bonbon Kutu Stand" loading="lazy"></div><span>Dolaplı Bonbon Kutu Stand</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/radyus-kapakli-kutu.jpg" alt="Radyüs Kapaklı Kutu" loading="lazy"></div><span>Radyüs Kapaklı Kutu</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/menteseli-yuvarlak-kutu.jpg" alt="Menteşeli Yuvarlak Kutu" loading="lazy"></div><span>Menteşeli Yuvarlak Kutu</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/yuvarlak-kutu.jpg" alt="Yuvarlak Kutu" loading="lazy"></div><span>Yuvarlak Kutu</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/egimli-dikdortgen-kutu_1.jpg" alt="Dikdörtgen Eğimli Kutu" loading="lazy"></div><span>Dikdörtgen Eğimli Kutu</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/fantastik-kutu-1.jpg" alt="Mystic Kutu" loading="lazy"></div><span>Mystic Kutu</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/2-combo-kutu-set.jpg" alt="Mystic Set Kutu" loading="lazy"></div><span>Mystic Set Kutu</span></a>
+</div>
+</div>
+</article>
+
+<aside class="emxArticleSidebar">
+<div class="emxSideBox">
+<h4>Son Yazılar</h4>
+<a class="emxSidePost" href="#"><div class="emxSpImg"><img src="assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg" alt="Özel Ölçü Pleksi Kutu Sipariş Rehberi" loading="lazy"></div><div class="emxSpBody"><span class="emxSpDate">10 Mayıs 2026</span><span class="emxSpTitle">Özel Ölçü Pleksi Kutu Sipariş Rehberi</span></div></a>
+<a class="emxSidePost" href="#"><div class="emxSpImg"><img src="assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg" alt="Pastane ve Şekercilerde Pleksi Kutu Kullanımı" loading="lazy"></div><div class="emxSpBody"><span class="emxSpDate">9 Mayıs 2026</span><span class="emxSpTitle">Pastane ve Şekercilerde Pleksi Kutu Kullanımı</span></div></a>
+<a class="emxSidePost" href="#"><div class="emxSpImg"><img src="assets/img/blog/thumb/pleksi-kutu-price.jpg" alt="Pleksi Kutu Fiyatlarını Etkileyen 7 Faktör" loading="lazy"></div><div class="emxSpBody"><span class="emxSpDate">9 Mayıs 2026</span><span class="emxSpTitle">Pleksi Kutu Fiyatlarını Etkileyen 7 Faktör</span></div></a>
+</div>
+
+<div class="emxSideCta">
+<h4>Projeniz için Özel Çözümler</h4>
+<p>Mühendislik ekibimiz tasarım aşamasından üretime kadar yanınızda. Kutunuzun ölçüsünü, adedini ve kullanım amacını bize iletin, size özel teklif hazırlayalım.</p>
+<a class="emxSideCtaBtn" href="#">Sizi Arayalım</a>
+<span class="emxSidePhone">veya arayın: <a href="tel:+905459111002">+90 545 911 10 02</a></span>
+</div>
+
+<div class="emxSideBox emxSideCats">
+<h4>Kategoriler</h4>
+<ul>
+<li><a href="#">Pleksi Teşhir Ekipmanları</a></li>
+<li><a href="#">Kapaklar</a></li>
+<li><a href="#">Ahşap Teşhir Ekipmanları</a></li>
+<li><a href="#">Cam Teşhir Ekipmanları</a></li>
+<li><a href="#">Market Ekipmanları</a></li>
+</ul>
+</div>
+</aside>
+
+</div>
+</div>
+</div>
+
+<footer class="emxFooter">
+<div class="emxWrap emxFootGrid">
+<div class="emxFootLogo">
+<img src="assets/images/every-material-logo-beyaz.png" alt="EveryMaterial">
+<p>everymaterial.com, Türkiye merkezli, Almanya ve Filistin çözüm ortaklı bir firma olarak dünya genelindeki müşterilerine kapsamlı hizmet sunmayı hedefleyen bir platformdur.</p>
+<a class="emxCatalogLink" href="katalog-tr.html">&#128196; Kataloğa Göz Atın</a>
+</div>
+<div>
+<h5>Kategoriler</h5>
+<ul>
+<li><a href="#">Pleksi Teşhir Ekipmanları</a></li>
+<li><a href="#">Kapaklar</a></li>
+<li><a href="#">Ahşap Teşhir Ekipmanları</a></li>
+<li><a href="#">Cam Teşhir Ekipmanları</a></li>
+<li><a href="#">Polikarbon Teşhir Ekipmanları</a></li>
+<li><a href="#">Market Ekipmanları</a></li>
+<li><a href="#">Raf Sistemleri</a></li>
+<li><a href="#">Makineler</a></li>
+<li><a href="#">Dolaplar ve Depolama Sistemleri</a></li>
+</ul>
+</div>
+<div class="emxFootContact">
+<h5>İletişim Bilgileri</h5>
+<p><span>Adres:</span> Mahmutbey Mah. 2430. Sok. 12.Ada No: 112 - İstoç Toptancılar Çarşısı - Bağcılar / İstanbul</p>
+<p><span>Telefon:</span> <a href="tel:+905459111002">+90 545 911 10 02</a></p>
+<p><span>E-posta:</span> <a href="mailto:info@everymaterial.com">info@everymaterial.com</a></p>
+<div class="emxSocial">
+<a href="https://www.instagram.com/every.material/" target="_blank" aria-label="Instagram">IG</a>
+<a href="https://www.facebook.com/profile.php?id=61561776136698" target="_blank" aria-label="Facebook">FB</a>
+<a href="https://www.linkedin.com/company/everymaterial/" target="_blank" aria-label="LinkedIn">IN</a>
+<a href="https://x.com/every_material" target="_blank" aria-label="X">X</a>
+<a href="https://www.youtube.com/@EveryMaterial-k3i" target="_blank" aria-label="YouTube">YT</a>
+</div>
+</div>
+</div>
+<div class="emxWrap emxFootBottom">
+<span>Copyright 2026 Every Material | Tüm Hakları Saklıdır.</span>
+<ul><li><a href="#">Kişisel Verilerin Korunması Kanunu (KVKK)</a></li><li><a href="#">Çerez Politikası</a></li></ul>
+</div>
+</footer>
+
+<a class="emxWhatsAppBtn" href="https://wa.me/905459111002/?text=Merhaba, ürünleriniz hakkında bilgi almak istiyorum.." target="_blank" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.94.92.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+</a>
+</body></html>

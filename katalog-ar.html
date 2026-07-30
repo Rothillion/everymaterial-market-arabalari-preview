@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>كتالوج المنتجات — everymaterial.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@500&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Noto Sans Arabic','Inter',sans-serif;}
+
+*{box-sizing:border-box;}
+body{margin:0;background:#f5f6f8;font-family:'Inter',sans-serif;}
+.emxHomePage{color:#1c2b3c;width:100%;background:linear-gradient(160deg,#fbfcfe 0%,#eef4fb 45%,#d9e6f5 100%);}
+.emxHomePage a{text-decoration:none;color:inherit;}
+.emxHomePage .emxWrap{max-width:1400px;margin:0 auto;padding:0 40px;}
+.emxLangSwitchBar{position:sticky;top:0;z-index:70;width:100%;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center;padding:10px 20px;background:linear-gradient(160deg,#173654 0%,#0a1f33 60%,#0a1f33 100%);}
+.emxLangSwitch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;}
+.emxLangSwitch .material-icons-placeholder{font-size:15px;color:#9fb3c8;margin-inline:6px;}
+.emxLangSwitch a{font-size:13px;font-weight:700;padding:9px 13px;min-height:22px;display:inline-flex;align-items:center;border-radius:999px;color:#c3d1e3;text-decoration:none;transition:background .15s,color .15s;}
+.emxLangSwitch a:hover{color:#fff;}
+.emxLangSwitch a.emxLangActive{background:#a04100;color:#fff;}
+.emxSiteHeader{position:sticky;top:41px;z-index:65;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,35,55,.1);}
+.emxSiteHeader .emxHeaderInner{max-width:1400px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.emxSiteHeader .emxLogo img{height:34px;display:block;}
+.emxSiteHeader nav{display:flex;align-items:center;gap:26px;}
+.emxSiteHeader nav > a{font-size:14.5px;font-weight:600;color:#16324a;position:relative;padding:6px 0;}
+.emxSiteHeader nav > a:hover{color:#e66000;}
+.emxSiteHeader nav > a.emxNavActive{color:#a04100;}
+.emxSiteHeader .emxNavDrop{position:relative;}
+.emxSiteHeader .emxNavDrop > span{font-size:14.5px;font-weight:600;color:#16324a;cursor:default;display:inline-block;padding:6px 0;}
+.emxSiteHeader .emxNavDrop:hover > span{color:#e66000;}
+.emxSiteHeader .emxDropMenu{position:absolute;top:100%;inset-inline-start:0;background:#fff;border:1px solid rgba(15,35,55,.12);border-radius:10px;box-shadow:0 14px 34px -12px rgba(20,40,65,.35);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;}
+.emxSiteHeader .emxNavDrop:hover .emxDropMenu{opacity:1;visibility:visible;transform:translateY(0);}
+.emxSiteHeader .emxDropMenu a{display:block;padding:9px 12px;border-radius:6px;font-size:13.5px;font-weight:500;color:#16324a;}
+.emxSiteHeader .emxDropMenu a:hover{background:#fdf1e8;color:#a04100;}
+.emxSiteHeader .emxCallBtn{background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:11px 20px;border-radius:8px;white-space:nowrap;}
+.emxSiteHeader .emxCallBtn:hover{background:#8a3800;}
+.emxMenuToggle{display:none;background:none;border:none;font-size:22px;color:#16324a;cursor:pointer;}
+@media (max-width:1080px){.emxSiteHeader nav{display:none;}.emxMenuToggle{display:block;}}
+
+.emxHero{background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);padding:56px 40px 40px;}
+.emxHeroInner{max-width:1200px;margin:0 auto;}
+h1.emxPageTitle{font-size:36px;font-weight:800;letter-spacing:-.01em;margin:0 0 14px;color:#f4f8ff;}
+.emxBreadcrumb{font-size:13px;color:#c3d1e3;display:flex;gap:8px;align-items:center;margin-bottom:6px;}
+.emxBreadcrumb a{color:#c3d1e3;text-decoration:none;}
+.emxBreadcrumb a:hover{color:#fff;}
+.emxBreadcrumb span.sep{color:#5b7594;}
+.emxBreadcrumb span.current{color:#f4f8ff;font-weight:600;}
+.emxHeroLead{font-size:16px;line-height:1.6;color:#c3d1e3;max-width:640px;margin:0 0 24px;}
+.emxKatStatRow{display:flex;gap:32px;flex-wrap:wrap;}
+.emxKatStat{display:flex;flex-direction:column;gap:2px;}
+.emxKatStat b{font-size:26px;font-weight:800;color:#fff;}
+.emxKatStat span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9fb3c8;}
+.emxContentWrap{padding:0 40px 80px;max-width:1400px;margin:0 auto;}
+
+.emxSection{padding:56px 0 0;}
+.emxSecTitle{font-size:22px;font-weight:800;color:#16324a;margin:0 0 28px;}
+
+.emxProjFilterRow{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0 40px;}
+.emxProjFilterBtn{background:#fff;border:1px solid rgba(15,35,55,.15);color:#5b6b7d;font-size:13px;font-weight:700;padding:12px 22px;border-radius:999px;cursor:pointer;}
+.emxProjFilterBtn.emxProjFilterActive{background:#a04100;border-color:#a04100;color:#fff;}
+.emxProjFilterBtn:not(.emxProjFilterActive):hover{border-color:#fe6b00;color:#a04100;}
+
+.emxKatGroup.emxKatHidden{display:none;}
+.emxKatFamHead{margin-bottom:28px;max-width:820px;}
+.emxKatFamHead h2{font-size:26px;font-weight:800;color:#16324a;margin:0 0 10px;}
+.emxKatFamHead p{font-size:15px;line-height:1.6;color:#5b6b7d;margin:0;}
+
+.emxGrid.emxKatGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.emxCard{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s ease,box-shadow .3s ease,background .3s ease;box-shadow:0 4px 18px -8px rgba(20,40,65,.18);}
+.emxCard:hover{border-color:rgba(254,107,0,.45);box-shadow:0 10px 30px -10px rgba(20,40,65,.3);background:linear-gradient(160deg,rgba(255,255,255,.75) 0%,rgba(255,255,255,.5) 100%);}
+.emxImgWrap{position:relative;width:100%;aspect-ratio:4/3;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.5);overflow:hidden;border-radius:10px 10px 14px 14px;}
+.emxImgWrap img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .5s ease;}
+.emxCard:hover .emxImgWrap img{transform:scale(1.05);}
+.emxDims{display:grid;grid-template-columns:repeat(3,1fr);padding:10px 16px 10px;font-size:10px;letter-spacing:.02em;color:#5b6b7d;text-transform:uppercase;text-align:center;}
+.emxDims span{border-inline-start:1px solid rgba(15,35,55,.1);padding:0 4px;}
+.emxDims span:first-child{border-inline-start:none;}
+.emxContent{position:relative;flex:1;padding:0 20px 20px;border-top:1px solid rgba(15,35,55,.1);display:flex;flex-direction:column;gap:6px;padding-top:14px;}
+.emxEyebrow{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5b6b7d;}
+.emxCard h3{margin:2px 0 8px;font-size:15.5px;line-height:1.3;font-weight:700;color:#16324a;}
+.emxSpecGrid{display:flex;flex-direction:column;}
+.emxSpecGrid div{display:flex;justify-content:space-between;font-size:12.5px;color:#5b6b7d;border-bottom:1px solid rgba(15,35,55,.1);padding:6px 0;gap:8px;}
+.emxSpecGrid div b{color:#16324a;font-weight:600;text-align:end;}
+.emxKatRow{display:flex;justify-content:space-between;font-size:12.5px;color:#5b6b7d;border-bottom:1px solid rgba(15,35,55,.1);padding:6px 0;gap:8px;}
+.emxKatRow b{color:#16324a;font-weight:600;text-align:end;}
+.emxKatTags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.emxKatTag{font-size:10.5px;font-weight:700;letter-spacing:.03em;color:#a04100;background:rgba(254,107,0,.12);border-radius:4px;padding:4px 8px;}
+
+.emxKatCompTitle{font-size:17px;font-weight:700;color:#16324a;margin:40px 0 16px;}
+.emxKatTableWrap{overflow-x:auto;border-radius:12px;border:1px solid rgba(15,35,55,.12);background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-bottom:56px;}
+table.emxKatTable{width:100%;border-collapse:collapse;font-size:13.5px;white-space:nowrap;}
+table.emxKatTable th{text-align:start;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#5b6b7d;font-weight:700;padding:14px 16px;border-bottom:1px solid rgba(15,35,55,.14);background:rgba(255,255,255,.4);}
+table.emxKatTable td{padding:12px 16px;border-bottom:1px solid rgba(15,35,55,.08);color:#16324a;}
+table.emxKatTable tr:last-child td{border-bottom:none;}
+table.emxKatTable tr:hover td{background:rgba(254,107,0,.06);}
+
+.emxKatCertList{display:flex;flex-direction:column;gap:12px;}
+.emxKatCertRow{display:flex;align-items:center;gap:16px;background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:12px;padding:18px 22px;}
+.emxKatCertIcon{flex-shrink:0;width:44px;height:44px;border-radius:10px;background:rgba(254,107,0,.12);display:flex;align-items:center;justify-content:center;font-size:19px;}
+.emxKatCertBody{flex:1;}
+.emxKatCertBody h4{margin:0 0 4px;font-size:15px;font-weight:700;color:#16324a;}
+.emxKatCertBody p{margin:0;font-size:13px;color:#5b6b7d;line-height:1.5;}
+.emxKatCertNo{flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:#a04100;background:rgba(254,107,0,.08);padding:6px 12px;border-radius:6px;}
+.emxKatCertNote{font-size:12.5px;color:#5b6b7d;margin:16px 0 0;line-height:1.6;max-width:80ch;}
+
+.emxProjCtaCard{margin-top:56px;background:linear-gradient(160deg,#173654 0%,#0a1f33 100%);border-radius:12px;padding:40px;color:#f4f8ff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;}
+.emxProjCtaCard h3{margin:0 0 6px;font-size:20px;font-weight:800;color:#fff;}
+.emxProjCtaCard p{margin:0;font-size:13.5px;color:#c3d1e3;max-width:480px;}
+.emxProjCtaCard .emxProjCtaActions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.emxProjCtaCard a.emxProjCtaBtn{background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:13px 24px;border-radius:8px;text-transform:uppercase;white-space:nowrap;}
+.emxProjCtaCard a.emxProjCtaBtn:hover{background:#8a3800;}
+.emxProjCtaCard .emxProjCtaPhone{font-size:13px;color:#c3d1e3;direction:ltr;display:inline-block;}
+.emxProjCtaCard .emxProjCtaPhone a{color:#fff;font-weight:700;}
+@media (max-width:900px){.emxProjCtaCard{padding:28px;}}
+
+.emxFooter{background:#0a1f33;color:#c3d1e3;padding:56px 0 0;margin-top:0;}
+.emxFooter .emxFootGrid{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);}
+.emxFooter .emxFootLogo img{height:30px;margin-bottom:14px;}
+.emxFooter .emxFootLogo p{font-size:13.5px;line-height:1.7;color:#9fb3c8;margin:0 0 18px;}
+.emxFooter .emxCatalogLink{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 16px;font-size:13px;font-weight:700;color:#f4f8ff;}
+.emxFooter .emxCatalogLink:hover{border-color:#fe6b00;}
+.emxFooter h5{font-size:13px;font-weight:700;color:#f4f8ff;text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px;}
+.emxFooter ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+.emxFooter ul a{font-size:13.5px;color:#c3d1e3;}
+.emxFooter ul a:hover{color:#fe6b00;}
+.emxFooter .emxFootContact p{font-size:13.5px;line-height:1.6;color:#c3d1e3;margin:0 0 10px;}
+.emxFooter .emxFootContact span{color:#8fa4bb;}
+.emxFooter .emxFootContact a{color:#c3d1e3;}
+.emxFooter .emxSocial{display:flex;gap:10px;margin-top:14px;}
+.emxFooter .emxSocial a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:14px;color:#c3d1e3;}
+.emxFooter .emxSocial a:hover{background:#a04100;border-color:#a04100;color:#fff;}
+.emxFooter .emxFootBottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:12.5px;color:#8fa4bb;flex-wrap:wrap;gap:10px;}
+.emxFooter .emxFootBottom ul{flex-direction:row;gap:20px;}
+.emxFooter .emxFootBottom a{color:#8fa4bb;}
+@media (max-width:900px){.emxFooter .emxFootGrid{grid-template-columns:1fr;}.emxFooter .emxFootBottom{padding:20px 20px;}}
+
+.emxWhatsAppBtn{position:fixed;bottom:24px;inset-inline-end:24px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.4);}
+.emxWhatsAppBtn:hover{transform:scale(1.06);}
+.emxWhatsAppBtn svg{width:28px;height:28px;}
+
+@media (max-width:1200px){.emxGrid.emxKatGrid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:900px){.emxHomePage .emxWrap{padding:0 20px;}.emxContentWrap{padding:0 20px 56px;}.emxHero{padding:32px 20px 32px;}.emxGrid.emxKatGrid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:520px){.emxGrid.emxKatGrid{grid-template-columns:1fr;}}
+
+</style></head><body>
+<div class="emxLangSwitchBar"><div class="emxLangSwitch"><span class="material-icons-placeholder">&#127760;</span><a href="katalog-tr.html">TR</a><a href="katalog-en.html">EN</a><a href="katalog-de.html">DE</a><a class="emxLangActive" href="katalog-ar.html">AR</a></div></div>
+<header class="emxSiteHeader">
+<div class="emxHeaderInner">
+<a class="emxLogo" href="index-ar.html"><img src="assets/img/logo/every-material-logo-2.png" alt="EveryMaterial"></a>
+<nav>
+<a href="index-ar.html">الرئيسية</a>
+<div class="emxNavDrop"><span>الفئات</span>
+<div class="emxDropMenu"><a href="#">معدات عرض بليكسي</a><a href="#">الأغطية</a><a href="#">معدات عرض خشبية</a><a href="#">معدات عرض زجاجية</a><a href="#">معدات عرض بولي كربونات</a><a href="#">معدات السوق</a><a href="#">أنظمة الرفوف</a><a href="#">الآلات</a><a href="#">الخزائن وأنظمة التخزين</a></div></div>
+<div class="emxNavDrop"><span>الشركة</span>
+<div class="emxDropMenu">
+<a href="about-ar.html">من نحن</a>
+<a href="gelismeler-ar.html">آخر الأخبار</a>
+<a href="team-ar.html">فريقنا</a>
+</div></div>
+<a href="ihracat-danismanligi-ar.html">استشارات التصدير</a>
+<a href="projeler-ar.html">المشاريع</a>
+<a href="blog-ar.html">المدونة</a>
+<a href="iletisim-ar.html">اتصل بنا</a>
+</nav>
+<a class="emxCallBtn" href="talep-ar.html">اطلب اتصالاً</a>
+<button class="emxMenuToggle" aria-label="القائمة">&#9776;</button>
+</div>
+</header>
+<div class="emxHomePage">
+<div class="emxHero"><div class="emxHeroInner">
+<div class="emxBreadcrumb"><a href="index-ar.html">الرئيسية</a><span class="sep">/</span><span class="current">الكتالوج</span></div>
+<h1 class="emxPageTitle">كتالوج المنتجات</h1>
+<p class="emxHeroLead">62 منتجًا ضمن 5 عائلات — لكل منتج صورة حقيقية وأبعاد وخامة حقيقية.</p>
+<div class="emxKatStatRow">
+<div class="emxKatStat"><b>62</b><span>منتج</span></div>
+<div class="emxKatStat"><b>5</b><span>عائلة منتجات</span></div>
+<div class="emxKatStat"><b>184</b><span>صورة منتج حقيقية</span></div>
+</div>
+</div></div>
+<div class="emxContentWrap">
+<div class="emxProjFilterRow"><button class="emxProjFilterBtn emxProjFilterActive" data-target="alisveris-arabalari">عربات تسوق بلاستيكية</button><button class="emxProjFilterBtn" data-target="metal-yuk-tasima">عربات معدنية ونقل الأحمال</button><button class="emxProjFilterBtn" data-target="el-sepetleri">سلال يد بلاستيكية</button><button class="emxProjFilterBtn" data-target="havuz-sepet-sistemleri">أنظمة أحواض وعرض بلاستيكية</button><button class="emxProjFilterBtn" data-target="raf-sistemleri">أنظمة رفوف بلاستيكية</button></div>
+<div class="emxKatGroup" data-fam="alisveris-arabalari">
+<div class="emxKatFamHead">
+<h2>عربات تسوق بلاستيكية</h2>
+<p>عربات تسوق ملونة بخيارات متعددة من الحجم والهيكل ومقاعد الأطفال، تدعم حركة العملاء داخل المتجر.</p>
+</div>
+<div class="emxGrid emxKatGrid">
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/01.jpeg" alt="عربة تسوق للأطفال بعلم 25 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 41 cm</span><span>الطول 72 cm</span><span>الارتفاع 61 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">01</span>
+<h3>عربة تسوق للأطفال بعلم 25 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>25 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/02.jpeg" alt="عربة تسوق 80 لتر بدون مقعد أطفال" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 68 cm</span><span>الارتفاع 98 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">02</span>
+<h3>عربة تسوق 80 لتر بدون مقعد أطفال</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>80 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">سلة رئيسية واسعة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/03.jpeg" alt="عربة تسوق بلاستيكية بمقعد أطفال 100 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 57 cm</span><span>الطول 86 cm</span><span>الارتفاع 99 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">03</span>
+<h3>عربة تسوق بلاستيكية بمقعد أطفال 100 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>100 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/04.jpeg" alt="عربة تسوق بلاستيكية بمقعد أطفال 130 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 58 cm</span><span>الطول 93 cm</span><span>الارتفاع 98 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">04</span>
+<h3>عربة تسوق بلاستيكية بمقعد أطفال 130 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>130 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/05.png" alt="عربة تسوق بلاستيكية 130 لتر بدون مقعد أطفال" loading="lazy"></div>
+<div class="emxDims"><span>العرض 58 cm</span><span>الطول 98 cm</span><span>الارتفاع 93 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">05</span>
+<h3>عربة تسوق بلاستيكية 130 لتر بدون مقعد أطفال</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>130 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">سلة رئيسية واسعة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/06.jpeg" alt="عربة تسوق بلاستيكية بمقعد أطفال 150 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 55 cm</span><span>الطول 100 cm</span><span>الارتفاع 100 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">06</span>
+<h3>عربة تسوق بلاستيكية بمقعد أطفال 150 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>150 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/07.jpeg" alt="عربة تسوق بمقعد أطفال 150 لتر - هيكل شبكي" loading="lazy"></div>
+<div class="emxDims"><span>العرض 56 cm</span><span>الطول 99 cm</span><span>الارتفاع 99 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">07</span>
+<h3>عربة تسوق بمقعد أطفال 150 لتر - هيكل شبكي</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>150 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/08.jpeg" alt="عربة تسوق بمقعد أطفال 150 لتر - هيكل بروفايل" loading="lazy"></div>
+<div class="emxDims"><span>العرض 56 cm</span><span>الطول 99 cm</span><span>الارتفاع 99 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">08</span>
+<h3>عربة تسوق بمقعد أطفال 150 لتر - هيكل بروفايل</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>150 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/09.jpeg" alt="عربة تسوق بمقعد أطفال 150 لتر - هيكل سلكي" loading="lazy"></div>
+<div class="emxDims"><span>العرض 59 cm</span><span>الطول 99.5 cm</span><span>الارتفاع 101 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">09</span>
+<h3>عربة تسوق بمقعد أطفال 150 لتر - هيكل سلكي</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>150 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / أحمر / أخضر</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+</div>
+<h3 class="emxKatCompTitle">مقارنة سريعة</h3>
+<div class="emxKatTableWrap"><table class="emxKatTable"><thead><tr><th>الرقم</th><th>المنتج</th><th>الحجم</th><th>العرض</th><th>الطول</th><th>الارتفاع</th><th>الخامة</th></tr></thead><tbody><tr><td>01</td><td>عربة تسوق للأطفال بعلم 25 لتر</td><td>25 لتر</td><td>41 cm</td><td>72 cm</td><td>61 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>02</td><td>عربة تسوق 80 لتر بدون مقعد أطفال</td><td>80 لتر</td><td>60 cm</td><td>68 cm</td><td>98 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>03</td><td>عربة تسوق بلاستيكية بمقعد أطفال 100 لتر</td><td>100 لتر</td><td>57 cm</td><td>86 cm</td><td>99 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>04</td><td>عربة تسوق بلاستيكية بمقعد أطفال 130 لتر</td><td>130 لتر</td><td>58 cm</td><td>93 cm</td><td>98 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>05</td><td>عربة تسوق بلاستيكية 130 لتر بدون مقعد أطفال</td><td>130 لتر</td><td>58 cm</td><td>98 cm</td><td>93 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>06</td><td>عربة تسوق بلاستيكية بمقعد أطفال 150 لتر</td><td>150 لتر</td><td>55 cm</td><td>100 cm</td><td>100 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>07</td><td>عربة تسوق بمقعد أطفال 150 لتر - هيكل شبكي</td><td>150 لتر</td><td>56 cm</td><td>99 cm</td><td>99 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>08</td><td>عربة تسوق بمقعد أطفال 150 لتر - هيكل بروفايل</td><td>150 لتر</td><td>56 cm</td><td>99 cm</td><td>99 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>09</td><td>عربة تسوق بمقعد أطفال 150 لتر - هيكل سلكي</td><td>150 لتر</td><td>59 cm</td><td>99.5 cm</td><td>101 cm</td><td>بولي بروبيلين (PP)</td></tr></tbody></table></div>
+</div>
+<div class="emxKatGroup emxKatHidden" data-fam="metal-yuk-tasima">
+<div class="emxKatFamHead">
+<h2>عربات معدنية ونقل الأحمال</h2>
+<p>عائلة منتجات بهيكل معدني لسيناريوهات نقل متنوعة، من التسوق في المتجر إلى نقل الكراتين والمنصات.</p>
+</div>
+<div class="emxGrid emxKatGrid">
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/10.jpeg" alt="عربة أطفال معدنية 25 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 40 cm</span><span>الطول 55 cm</span><span>الارتفاع 71 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">10</span>
+<h3>عربة أطفال معدنية 25 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>25 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/11.jpeg" alt="عربة سوق معدنية 75 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 48 cm</span><span>الطول 72 cm</span><span>الارتفاع 101 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">11</span>
+<h3>عربة سوق معدنية 75 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>75 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/12.jpeg" alt="عربة سوق معدنية 100 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 50 cm</span><span>الطول 83 cm</span><span>الارتفاع 101 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">12</span>
+<h3>عربة سوق معدنية 100 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>100 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/13.jpeg" alt="عربة سوق معدنية 125 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 52 cm</span><span>الطول 85 cm</span><span>الارتفاع 101 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">13</span>
+<h3>عربة سوق معدنية 125 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>125 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/14.jpeg" alt="عربة سوق معدنية 150 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 97 cm</span><span>الارتفاع 104 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">14</span>
+<h3>عربة سوق معدنية 150 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>150 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/15.jpeg" alt="عربة سوق معدنية 180 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 97 cm</span><span>الارتفاع 108 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">15</span>
+<h3>عربة سوق معدنية 180 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>180 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/16.jpeg" alt="عربة سوق معدنية 210 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 62 cm</span><span>الطول 110 cm</span><span>الارتفاع 108 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">16</span>
+<h3>عربة سوق معدنية 210 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>210 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/17.jpeg" alt="عربة سوق معدنية معززة 210 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 63 cm</span><span>الطول 111 cm</span><span>الارتفاع 115 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">17</span>
+<h3>عربة سوق معدنية معززة 210 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>210 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/18.jpeg" alt="عربة حاملة لسلال اليد" loading="lazy"></div>
+<div class="emxDims"><span>العرض 59 cm</span><span>الطول 63 cm</span><span>الارتفاع 96 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">18</span>
+<h3>عربة حاملة لسلال اليد</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>جميع سلال اليد</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/19.jpeg" alt="عربة سحب معدنية 54 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 42 cm</span><span>الطول 66 cm</span><span>الارتفاع 51 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">19</span>
+<h3>عربة سحب معدنية 54 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>54 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/20.jpeg" alt="سلة يد معدنية 20 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 28 cm</span><span>الطول 23 cm</span><span>الارتفاع 61 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">20</span>
+<h3>سلة يد معدنية 20 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>20 لتر</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/21.jpeg" alt="عربة نقل أحمال احترافية" loading="lazy"></div>
+<div class="emxDims"><span>العرض 72 cm</span><span>الطول 146 cm</span><span>الارتفاع 99 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">21</span>
+<h3>عربة نقل أحمال احترافية</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">نقل الأحمال</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/22.jpeg" alt="عربة نقل أحمال بسلة" loading="lazy"></div>
+<div class="emxDims"><span>العرض 55 cm</span><span>الطول 96 cm</span><span>الارتفاع 92 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">22</span>
+<h3>عربة نقل أحمال بسلة</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">نقل الأحمال</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/23.jpeg" alt="عربة نقل أحمال 200 كجم" loading="lazy"></div>
+<div class="emxDims"><span>العرض 54 cm</span><span>الطول 120 cm</span><span>الارتفاع 92 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">23</span>
+<h3>عربة نقل أحمال 200 كجم</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">نقل الأحمال</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/24.jpeg" alt="عربة نقل كراتين شبكية" loading="lazy"></div>
+<div class="emxDims"><span>العرض 70 cm</span><span>الطول 70 cm</span><span>الارتفاع 200 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">24</span>
+<h3>عربة نقل كراتين شبكية</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>صلب مجلفن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أصفر / أحمر / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">نقل الأحمال</span><span class="emxKatTag">هيكل صلب مجلفن</span></div>
+</div>
+</div>
+</div>
+<h3 class="emxKatCompTitle">مقارنة سريعة</h3>
+<div class="emxKatTableWrap"><table class="emxKatTable"><thead><tr><th>الرقم</th><th>المنتج</th><th>الحجم</th><th>العرض</th><th>الطول</th><th>الارتفاع</th><th>الخامة</th></tr></thead><tbody><tr><td>10</td><td>عربة أطفال معدنية 25 لتر</td><td>25 لتر</td><td>40 cm</td><td>55 cm</td><td>71 cm</td><td>صلب مجلفن</td></tr><tr><td>11</td><td>عربة سوق معدنية 75 لتر</td><td>75 لتر</td><td>48 cm</td><td>72 cm</td><td>101 cm</td><td>صلب مجلفن</td></tr><tr><td>12</td><td>عربة سوق معدنية 100 لتر</td><td>100 لتر</td><td>50 cm</td><td>83 cm</td><td>101 cm</td><td>صلب مجلفن</td></tr><tr><td>13</td><td>عربة سوق معدنية 125 لتر</td><td>125 لتر</td><td>52 cm</td><td>85 cm</td><td>101 cm</td><td>صلب مجلفن</td></tr><tr><td>14</td><td>عربة سوق معدنية 150 لتر</td><td>150 لتر</td><td>60 cm</td><td>97 cm</td><td>104 cm</td><td>صلب مجلفن</td></tr><tr><td>15</td><td>عربة سوق معدنية 180 لتر</td><td>180 لتر</td><td>60 cm</td><td>97 cm</td><td>108 cm</td><td>صلب مجلفن</td></tr><tr><td>16</td><td>عربة سوق معدنية 210 لتر</td><td>210 لتر</td><td>62 cm</td><td>110 cm</td><td>108 cm</td><td>صلب مجلفن</td></tr><tr><td>17</td><td>عربة سوق معدنية معززة 210 لتر</td><td>210 لتر</td><td>63 cm</td><td>111 cm</td><td>115 cm</td><td>صلب مجلفن</td></tr><tr><td>18</td><td>عربة حاملة لسلال اليد</td><td>جميع سلال اليد</td><td>59 cm</td><td>63 cm</td><td>96 cm</td><td>صلب مجلفن</td></tr><tr><td>19</td><td>عربة سحب معدنية 54 لتر</td><td>54 لتر</td><td>42 cm</td><td>66 cm</td><td>51 cm</td><td>صلب مجلفن</td></tr><tr><td>20</td><td>سلة يد معدنية 20 لتر</td><td>20 لتر</td><td>28 cm</td><td>23 cm</td><td>61 cm</td><td>صلب مجلفن</td></tr><tr><td>21</td><td>عربة نقل أحمال احترافية</td><td>غير محدد</td><td>72 cm</td><td>146 cm</td><td>99 cm</td><td>صلب مجلفن</td></tr><tr><td>22</td><td>عربة نقل أحمال بسلة</td><td>غير محدد</td><td>55 cm</td><td>96 cm</td><td>92 cm</td><td>صلب مجلفن</td></tr><tr><td>23</td><td>عربة نقل أحمال 200 كجم</td><td>غير محدد</td><td>54 cm</td><td>120 cm</td><td>92 cm</td><td>صلب مجلفن</td></tr><tr><td>24</td><td>عربة نقل كراتين شبكية</td><td>غير محدد</td><td>70 cm</td><td>70 cm</td><td>200 cm</td><td>صلب مجلفن</td></tr></tbody></table></div>
+</div>
+<div class="emxKatGroup emxKatHidden" data-fam="el-sepetleri">
+<div class="emxKatFamHead">
+<h2>سلال يد بلاستيكية</h2>
+<p>حلول سلال بعجلات أو تُحمل باليد، مناسبة للتسوق السريع والتنقل داخل المتجر بطرق حمل مختلفة.</p>
+</div>
+<div class="emxGrid emxKatGrid">
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/25.jpeg" alt="سلة يد بلاستيكية 22 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 30 cm</span><span>الطول 43 cm</span><span>الارتفاع 23 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">25</span>
+<h3>سلة يد بلاستيكية 22 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>22 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/26.jpeg" alt="سلة يد بلاستيكية بيضاوية 25 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 30 cm</span><span>الطول 51 cm</span><span>الارتفاع 27 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">26</span>
+<h3>سلة يد بلاستيكية بيضاوية 25 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>25 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/27.jpeg" alt="سلة تسوق بلاستيكية 28 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 34 cm</span><span>الطول 49 cm</span><span>الارتفاع 26 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">27</span>
+<h3>سلة تسوق بلاستيكية 28 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>28 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/28.jpeg" alt="سلة تسوق بلاستيكية بعجلات 28 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 34 cm</span><span>الطول 49 cm</span><span>الارتفاع 26 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">28</span>
+<h3>سلة تسوق بلاستيكية بعجلات 28 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>28 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/29.jpeg" alt="سلة يد بلاستيكية بيضاوية 35 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 35 cm</span><span>الطول 52 cm</span><span>الارتفاع 28 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">29</span>
+<h3>سلة يد بلاستيكية بيضاوية 35 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>35 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/30.jpeg" alt="سلة يد بلاستيكية 42 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 53 cm</span><span>الطول 37 cm</span><span>الارتفاع 71 cm (دون المقبض)</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">30</span>
+<h3>سلة يد بلاستيكية 42 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>42 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/31.jpeg" alt="سلة يد بلاستيكية بعجلات 45 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 38 cm</span><span>الطول 44 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">31</span>
+<h3>سلة يد بلاستيكية بعجلات 45 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>45 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/32.jpeg" alt="سلة يد بلاستيكية بعجلات 54 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 40 cm</span><span>الطول 60 cm</span><span>الارتفاع 44 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">32</span>
+<h3>سلة يد بلاستيكية بعجلات 54 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>54 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/33.jpeg" alt="سلة يد بلاستيكية بعجلات 70 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 43 cm</span><span>الطول 49 cm</span><span>الارتفاع 88 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">33</span>
+<h3>سلة يد بلاستيكية بعجلات 70 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>70 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/34.jpeg" alt="سلة يد بلاستيكية بعجلات 80 لتر" loading="lazy"></div>
+<div class="emxDims"><span>العرض 40 cm</span><span>الطول 49 cm</span><span>الارتفاع 90 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">34</span>
+<h3>سلة يد بلاستيكية بعجلات 80 لتر</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>80 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/35.png" alt="عربة حاملة لسلال اليد بطبقتين" loading="lazy"></div>
+<div class="emxDims"><span>العرض 59 cm</span><span>الطول 63 cm</span><span>الارتفاع 96 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">35</span>
+<h3>عربة حاملة لسلال اليد بطبقتين</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/36.jpeg" alt="عربة تسوق متعددة الطبقات بمقصورة أطفال" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 55 cm</span><span>الارتفاع 70 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">36</span>
+<h3>عربة تسوق متعددة الطبقات بمقصورة أطفال</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>80 لتر</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أزرق / برتقالي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">مقعد أطفال</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/37.jpeg" alt="حامل سلال يد بعجلات" loading="lazy"></div>
+<div class="emxDims"><span>العرض 35 cm</span><span>الطول 45 cm</span><span>الارتفاع 32 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">37</span>
+<h3>حامل سلال يد بعجلات</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>معدن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">هيكل معدني</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/38.jpeg" alt="حامل سلال يد بدون عجلات" loading="lazy"></div>
+<div class="emxDims"><span>العرض 35 cm</span><span>الطول 45 cm</span><span>الارتفاع 32 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">38</span>
+<h3>حامل سلال يد بدون عجلات</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>معدن</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+
+<div class="emxKatTags"><span class="emxKatTag">استخدام داخل المتجر</span><span class="emxKatTag">هيكل معدني</span></div>
+</div>
+</div>
+</div>
+<h3 class="emxKatCompTitle">مقارنة سريعة</h3>
+<div class="emxKatTableWrap"><table class="emxKatTable"><thead><tr><th>الرقم</th><th>المنتج</th><th>الحجم</th><th>العرض</th><th>الطول</th><th>الارتفاع</th><th>الخامة</th></tr></thead><tbody><tr><td>25</td><td>سلة يد بلاستيكية 22 لتر</td><td>22 لتر</td><td>30 cm</td><td>43 cm</td><td>23 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>26</td><td>سلة يد بلاستيكية بيضاوية 25 لتر</td><td>25 لتر</td><td>30 cm</td><td>51 cm</td><td>27 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>27</td><td>سلة تسوق بلاستيكية 28 لتر</td><td>28 لتر</td><td>34 cm</td><td>49 cm</td><td>26 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>28</td><td>سلة تسوق بلاستيكية بعجلات 28 لتر</td><td>28 لتر</td><td>34 cm</td><td>49 cm</td><td>26 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>29</td><td>سلة يد بلاستيكية بيضاوية 35 لتر</td><td>35 لتر</td><td>35 cm</td><td>52 cm</td><td>28 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>30</td><td>سلة يد بلاستيكية 42 لتر</td><td>42 لتر</td><td>53 cm</td><td>37 cm</td><td>71 cm (دون المقبض)</td><td>بولي بروبيلين (PP)</td></tr><tr><td>31</td><td>سلة يد بلاستيكية بعجلات 45 لتر</td><td>45 لتر</td><td>38 cm</td><td>44 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>32</td><td>سلة يد بلاستيكية بعجلات 54 لتر</td><td>54 لتر</td><td>40 cm</td><td>60 cm</td><td>44 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>33</td><td>سلة يد بلاستيكية بعجلات 70 لتر</td><td>70 لتر</td><td>43 cm</td><td>49 cm</td><td>88 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>34</td><td>سلة يد بلاستيكية بعجلات 80 لتر</td><td>80 لتر</td><td>40 cm</td><td>49 cm</td><td>90 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>35</td><td>عربة حاملة لسلال اليد بطبقتين</td><td>غير محدد</td><td>59 cm</td><td>63 cm</td><td>96 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>36</td><td>عربة تسوق متعددة الطبقات بمقصورة أطفال</td><td>80 لتر</td><td>60 cm</td><td>55 cm</td><td>70 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>37</td><td>حامل سلال يد بعجلات</td><td>غير محدد</td><td>35 cm</td><td>45 cm</td><td>32 cm</td><td>معدن</td></tr><tr><td>38</td><td>حامل سلال يد بدون عجلات</td><td>غير محدد</td><td>35 cm</td><td>45 cm</td><td>32 cm</td><td>معدن</td></tr></tbody></table></div>
+</div>
+<div class="emxKatGroup emxKatHidden" data-fam="havuz-sepet-sistemleri">
+<div class="emxKatFamHead">
+<h2>أنظمة أحواض وعرض بلاستيكية</h2>
+<p>أنظمة معيارية بطبقة واحدة أو متعددة لعرض المنتجات الترويجية والخضروات والإكسسوارات والمنتجات كبيرة الحجم.</p>
+</div>
+<div class="emxGrid emxKatGrid">
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/39.jpeg" alt="حوض عرض بلاستيكي بعجلات 60×60" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 60 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">39</span>
+<h3>حوض عرض بلاستيكي بعجلات 60×60</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">حركة سهلة</span><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/40.jpeg" alt="حوض عرض بلاستيكي 60×60" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 60 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">40</span>
+<h3>حوض عرض بلاستيكي 60×60</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/41.jpeg" alt="حوض عرض بلاستيكي 60×80" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 80 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">41</span>
+<h3>حوض عرض بلاستيكي 60×80</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/42.jpeg" alt="حوض عرض بلاستيكي 80×80" loading="lazy"></div>
+<div class="emxDims"><span>العرض 80 cm</span><span>الطول 80 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">42</span>
+<h3>حوض عرض بلاستيكي 80×80</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/43.jpeg" alt="حوض عرض بلاستيكي 60×120" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 120 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">43</span>
+<h3>حوض عرض بلاستيكي 60×120</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/44.jpeg" alt="حوض عرض بلاستيكي 80×120" loading="lazy"></div>
+<div class="emxDims"><span>العرض 80 cm</span><span>الطول 120 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">44</span>
+<h3>حوض عرض بلاستيكي 80×120</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/45.jpeg" alt="حوض عرض بلاستيكي 80×160" loading="lazy"></div>
+<div class="emxDims"><span>العرض 80 cm</span><span>الطول 160 cm</span><span>الارتفاع 85 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">45</span>
+<h3>حوض عرض بلاستيكي 80×160</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/46.jpeg" alt="حوض عرض بلاستيكي ثلاثي الطبقات 60×80 (180 سم)" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 80 cm</span><span>الارتفاع 180 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">46</span>
+<h3>حوض عرض بلاستيكي ثلاثي الطبقات 60×80 (180 سم)</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/47.jpeg" alt="حوض عرض بلاستيكي متدرج 60×80" loading="lazy"></div>
+<div class="emxDims"><span>العرض 80 cm</span><span>الطول 60 cm</span><span>الارتفاع 170 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">47</span>
+<h3>حوض عرض بلاستيكي متدرج 60×80</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/48.jpeg" alt="حوض عرض بلاستيكي متدرج 80×120" loading="lazy"></div>
+<div class="emxDims"><span>العرض 80 cm</span><span>الطول 120 cm</span><span>الارتفاع 165 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">48</span>
+<h3>حوض عرض بلاستيكي متدرج 80×120</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/49.jpeg" alt="حوض عرض بلاستيكي متدرج 80×160" loading="lazy"></div>
+<div class="emxDims"><span>العرض 80 cm</span><span>الطول 160 cm</span><span>الارتفاع 165 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">49</span>
+<h3>حوض عرض بلاستيكي متدرج 80×160</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/50.jpeg" alt="حوض عرض بلاستيكي ثلاثي الطبقات 60×80 (165 سم)" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 80 cm</span><span>الارتفاع 165 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">50</span>
+<h3>حوض عرض بلاستيكي ثلاثي الطبقات 60×80 (165 سم)</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/51.jpeg" alt="حوض عرض بلاستيكي ثلاثي الطبقات 60×120" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 120 cm</span><span>الارتفاع 165 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">51</span>
+<h3>حوض عرض بلاستيكي ثلاثي الطبقات 60×120</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">عرض ترويجي</span><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/52.jpeg" alt="سلة كرات بلاستيكية متدرجة" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 60 cm</span><span>الارتفاع 170 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">52</span>
+<h3>سلة كرات بلاستيكية متدرجة</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/53.jpeg" alt="سلة خضروات وفواكه بلاستيكية" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 60 cm</span><span>الارتفاع 180 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">53</span>
+<h3>سلة خضروات وفواكه بلاستيكية</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">استخدام داخل المتجر</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/54.jpeg" alt="سلة عروض بلاستيكية 4 طبقات" loading="lazy"></div>
+<div class="emxDims"><span>العرض 30 cm</span><span>الطول 60 cm</span><span>الارتفاع 120 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">54</span>
+<h3>سلة عروض بلاستيكية 4 طبقات</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/55.jpeg" alt="سلة عروض بلاستيكية متدرجة 4 طبقات" loading="lazy"></div>
+<div class="emxDims"><span>العرض 35 cm</span><span>الطول 80 cm</span><span>الارتفاع 120 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">55</span>
+<h3>سلة عروض بلاستيكية متدرجة 4 طبقات</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/56.jpeg" alt="سلة عروض متدرجة ثنائية الاتجاه" loading="lazy"></div>
+<div class="emxDims"><span>العرض 60 cm</span><span>الطول 80 cm</span><span>الارتفاع 120 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">56</span>
+<h3>سلة عروض متدرجة ثنائية الاتجاه</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">عرض متعدد الطبقات</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/57.jpeg" alt="حامل إكسسوارات بسلة مسطحة" loading="lazy"></div>
+<div class="emxDims"><span>العرض 35 cm</span><span>الطول 60 cm</span><span>الارتفاع 160 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">57</span>
+<h3>حامل إكسسوارات بسلة مسطحة</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">استخدام داخل المتجر</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/58.jpeg" alt="حامل إكسسوارات بلاستيكي" loading="lazy"></div>
+<div class="emxDims"><span>العرض 35 cm</span><span>الطول 80 cm</span><span>الارتفاع 160 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">58</span>
+<h3>حامل إكسسوارات بلاستيكي</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">استخدام داخل المتجر</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/59.jpeg" alt="صندوق خضروات بلاستيكي - عالي" loading="lazy"></div>
+<div class="emxDims"><span>العرض 40 cm</span><span>الطول 60 cm</span><span>الارتفاع 20 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">59</span>
+<h3>صندوق خضروات بلاستيكي - عالي</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">استخدام داخل المتجر</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/60.jpeg" alt="صندوق خضروات بلاستيكي - منخفض" loading="lazy"></div>
+<div class="emxDims"><span>العرض 40 cm</span><span>الطول 60 cm</span><span>الارتفاع 10 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">60</span>
+<h3>صندوق خضروات بلاستيكي - منخفض</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+<div class="emxKatRow"><span>خيارات الألوان</span><b>أخضر / برتقالي / فيروزي</b></div>
+<div class="emxKatTags"><span class="emxKatTag">هيكل PP</span><span class="emxKatTag">استخدام داخل المتجر</span></div>
+</div>
+</div>
+</div>
+<h3 class="emxKatCompTitle">مقارنة سريعة</h3>
+<div class="emxKatTableWrap"><table class="emxKatTable"><thead><tr><th>الرقم</th><th>المنتج</th><th>الحجم</th><th>العرض</th><th>الطول</th><th>الارتفاع</th><th>الخامة</th></tr></thead><tbody><tr><td>39</td><td>حوض عرض بلاستيكي بعجلات 60×60</td><td>غير محدد</td><td>60 cm</td><td>60 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>40</td><td>حوض عرض بلاستيكي 60×60</td><td>غير محدد</td><td>60 cm</td><td>60 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>41</td><td>حوض عرض بلاستيكي 60×80</td><td>غير محدد</td><td>60 cm</td><td>80 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>42</td><td>حوض عرض بلاستيكي 80×80</td><td>غير محدد</td><td>80 cm</td><td>80 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>43</td><td>حوض عرض بلاستيكي 60×120</td><td>غير محدد</td><td>60 cm</td><td>120 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>44</td><td>حوض عرض بلاستيكي 80×120</td><td>غير محدد</td><td>80 cm</td><td>120 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>45</td><td>حوض عرض بلاستيكي 80×160</td><td>غير محدد</td><td>80 cm</td><td>160 cm</td><td>85 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>46</td><td>حوض عرض بلاستيكي ثلاثي الطبقات 60×80 (180 سم)</td><td>غير محدد</td><td>60 cm</td><td>80 cm</td><td>180 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>47</td><td>حوض عرض بلاستيكي متدرج 60×80</td><td>غير محدد</td><td>80 cm</td><td>60 cm</td><td>170 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>48</td><td>حوض عرض بلاستيكي متدرج 80×120</td><td>غير محدد</td><td>80 cm</td><td>120 cm</td><td>165 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>49</td><td>حوض عرض بلاستيكي متدرج 80×160</td><td>غير محدد</td><td>80 cm</td><td>160 cm</td><td>165 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>50</td><td>حوض عرض بلاستيكي ثلاثي الطبقات 60×80 (165 سم)</td><td>غير محدد</td><td>60 cm</td><td>80 cm</td><td>165 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>51</td><td>حوض عرض بلاستيكي ثلاثي الطبقات 60×120</td><td>غير محدد</td><td>60 cm</td><td>120 cm</td><td>165 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>52</td><td>سلة كرات بلاستيكية متدرجة</td><td>غير محدد</td><td>60 cm</td><td>60 cm</td><td>170 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>53</td><td>سلة خضروات وفواكه بلاستيكية</td><td>غير محدد</td><td>60 cm</td><td>60 cm</td><td>180 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>54</td><td>سلة عروض بلاستيكية 4 طبقات</td><td>غير محدد</td><td>30 cm</td><td>60 cm</td><td>120 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>55</td><td>سلة عروض بلاستيكية متدرجة 4 طبقات</td><td>غير محدد</td><td>35 cm</td><td>80 cm</td><td>120 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>56</td><td>سلة عروض متدرجة ثنائية الاتجاه</td><td>غير محدد</td><td>60 cm</td><td>80 cm</td><td>120 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>57</td><td>حامل إكسسوارات بسلة مسطحة</td><td>غير محدد</td><td>35 cm</td><td>60 cm</td><td>160 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>58</td><td>حامل إكسسوارات بلاستيكي</td><td>غير محدد</td><td>35 cm</td><td>80 cm</td><td>160 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>59</td><td>صندوق خضروات بلاستيكي - عالي</td><td>غير محدد</td><td>40 cm</td><td>60 cm</td><td>20 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>60</td><td>صندوق خضروات بلاستيكي - منخفض</td><td>غير محدد</td><td>40 cm</td><td>60 cm</td><td>10 cm</td><td>بولي بروبيلين (PP)</td></tr></tbody></table></div>
+</div>
+<div class="emxKatGroup emxKatHidden" data-fam="raf-sistemleri">
+<div class="emxKatFamHead">
+<h2>أنظمة رفوف بلاستيكية</h2>
+<p>رفوف بلاستيكية بسيطة ومعيارية تستغل المساحة الرأسية بكفاءة في المستودعات ومناطق البيع.</p>
+</div>
+<div class="emxGrid emxKatGrid">
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/61.jpeg" alt="رف بلاستيكي 31×93" loading="lazy"></div>
+<div class="emxDims"><span>العرض 31 cm</span><span>الطول 93 cm</span><span>الارتفاع 210 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">61</span>
+<h3>رف بلاستيكي 31×93</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+
+<div class="emxKatTags"><span class="emxKatTag">رف معياري</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+<div class="emxCard emxKatCard">
+<div class="emxImgWrap"><img src="assets/img/katalog/62.jpeg" alt="رف بلاستيكي مثقب 31×93" loading="lazy"></div>
+<div class="emxDims"><span>العرض 31 cm</span><span>الطول 93 cm</span><span>الارتفاع 210 cm</span></div>
+<div class="emxContent">
+<span class="emxEyebrow">62</span>
+<h3>رف بلاستيكي مثقب 31×93</h3>
+<div class="emxSpecGrid">
+<div><span>الحجم</span><b>غير محدد</b></div>
+<div><span>الخامة</span><b>بولي بروبيلين (PP)</b></div>
+<div><span>بلد الصنع</span><b>تركيا</b></div>
+</div>
+
+<div class="emxKatTags"><span class="emxKatTag">رف معياري</span><span class="emxKatTag">هيكل PP</span></div>
+</div>
+</div>
+</div>
+<h3 class="emxKatCompTitle">مقارنة سريعة</h3>
+<div class="emxKatTableWrap"><table class="emxKatTable"><thead><tr><th>الرقم</th><th>المنتج</th><th>الحجم</th><th>العرض</th><th>الطول</th><th>الارتفاع</th><th>الخامة</th></tr></thead><tbody><tr><td>61</td><td>رف بلاستيكي 31×93</td><td>غير محدد</td><td>31 cm</td><td>93 cm</td><td>210 cm</td><td>بولي بروبيلين (PP)</td></tr><tr><td>62</td><td>رف بلاستيكي مثقب 31×93</td><td>غير محدد</td><td>31 cm</td><td>93 cm</td><td>210 cm</td><td>بولي بروبيلين (PP)</td></tr></tbody></table></div>
+</div>
+<section class="emxSection">
+<h2 class="emxSecTitle">الوثائق الفنية</h2>
+<div class="emxKatCertList"><div class="emxKatCertRow">
+<div class="emxKatCertIcon">&#128196;</div>
+<div class="emxKatCertBody"><h4>إعلان مطابقة CE</h4><p>رف تخزين بلاستيكي · 2001/95/EC, TS 2415</p></div>
+<div class="emxKatCertNo">A1536764</div>
+</div><div class="emxKatCertRow">
+<div class="emxKatCertIcon">&#128196;</div>
+<div class="emxKatCertBody"><h4>ISO 45001:2018</h4><p>نظام إدارة الصحة والسلامة المهنية</p></div>
+<div class="emxKatCertNo">A1536760</div>
+</div><div class="emxKatCertRow">
+<div class="emxKatCertIcon">&#128196;</div>
+<div class="emxKatCertBody"><h4>شهادة مطابقة غذائية</h4><p>عربات السوق البلاستيكية/المعدنية وسلال اليد والسلال ذات العجلات القابلة للسحب · دستور الغذاء التركي</p></div>
+<div class="emxKatCertNo">A1546821</div>
+</div><div class="emxKatCertRow">
+<div class="emxKatCertIcon">&#128196;</div>
+<div class="emxKatCertBody"><h4>ISO 10002:2018</h4><p>نظام إدارة رضا العملاء والشكاوى</p></div>
+<div class="emxKatCertNo">A1546820</div>
+</div><div class="emxKatCertRow">
+<div class="emxKatCertIcon">&#128196;</div>
+<div class="emxKatCertBody"><h4>ISO 14001:2015</h4><p>نظام الإدارة البيئية</p></div>
+<div class="emxKatCertNo">A1536759</div>
+</div><div class="emxKatCertRow">
+<div class="emxKatCertIcon">&#128196;</div>
+<div class="emxKatCertBody"><h4>إعلان مطابقة CE</h4><p>عربات التسوق وسلال اليد والسلال ذات العجلات القابلة للسحب · 2001/95/EC, TS EN 1929-2</p></div>
+<div class="emxKatCertNo">A1536763</div>
+</div></div>
+<p class="emxKatCertNote">يتم مشاركة نطاق الشهادة والنسخ الأصلية والتفاصيل الأخرى عند الطلب؛ وتُعتمد النسخ الأصلية في أي تقييم رسمي.</p>
+</section>
+<div class="emxProjCtaCard">
+<div><h3>تواصل معنا للطلبات بالجملة والعروض المخصصة</h3><p>تواصل مع فريقنا لتحديد تفاصيل اللون والعلامة التجارية والطلبات بالجملة.</p></div>
+<div class="emxProjCtaActions"><a class="emxProjCtaBtn" href="#">اطلب اتصالاً</a><span class="emxProjCtaPhone"><a href="tel:+905459111002">+90 545 911 10 02</a></span></div>
+</div>
+</div>
+</div>
+<footer class="emxFooter">
+<div class="emxWrap emxFootGrid">
+<div class="emxFootLogo">
+<img src="assets/images/every-material-logo-beyaz.png" alt="EveryMaterial">
+<p>everymaterial.com هي منصة مقرها تركيا بشراكة في ألمانيا وفلسطين، تهدف إلى تقديم خدمات شاملة للعملاء حول العالم.</p>
+<a class="emxCatalogLink" href="katalog-ar.html">&#128196; تصفح الكتالوج</a>
+</div>
+<div>
+<h5>الفئات</h5>
+<ul><li><a href="#">معدات عرض بليكسي</a></li><li><a href="#">الأغطية</a></li><li><a href="#">معدات عرض خشبية</a></li><li><a href="#">معدات عرض زجاجية</a></li><li><a href="#">معدات عرض بولي كربونات</a></li><li><a href="#">معدات السوق</a></li><li><a href="#">أنظمة الرفوف</a></li><li><a href="#">الآلات</a></li><li><a href="#">الخزائن وأنظمة التخزين</a></li></ul>
+</div>
+<div class="emxFootContact">
+<h5>معلومات الاتصال</h5>
+<p><span>الهاتف:</span> Mahmutbey Mah. 2430. Sok. 12.Ada No: 112 - İstoç Toptancılar Çarşısı - Bağcılar / İstanbul</p>
+<p><span>الهاتف:</span> <a href="tel:+905459111002">+90 545 911 10 02</a></p>
+<p><span>البريد الإلكتروني:</span> <a href="mailto:info@everymaterial.com">info@everymaterial.com</a></p>
+<div class="emxSocial">
+<a href="https://www.instagram.com/every.material/" target="_blank" aria-label="Instagram">IG</a>
+<a href="https://www.facebook.com/profile.php?id=61561776136698" target="_blank" aria-label="Facebook">FB</a>
+<a href="https://www.linkedin.com/company/everymaterial/" target="_blank" aria-label="LinkedIn">IN</a>
+<a href="https://x.com/every_material" target="_blank" aria-label="X">X</a>
+<a href="https://www.youtube.com/@EveryMaterial-k3i" target="_blank" aria-label="YouTube">YT</a>
+</div>
+</div>
+</div>
+<div class="emxWrap emxFootBottom">
+<span>© 2026 Every Material. جميع الحقوق محفوظة.</span>
+<ul><li><a href="#">قانون حماية البيانات الشخصية (KVKK)</a></li><li><a href="#">سياسة ملفات تعريف الارتباط</a></li></ul>
+</div>
+</footer>
+<a class="emxWhatsAppBtn" href="https://wa.me/905466382175/?text=مرحبًا، أريد الحصول على معلومات حول منتجاتك.." target="_blank" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.94.92.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+</a>
+<script>
+document.querySelectorAll('.emxProjFilterBtn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.emxProjFilterBtn').forEach(function(b){ b.classList.remove('emxProjFilterActive'); });
+    btn.classList.add('emxProjFilterActive');
+    var target = btn.getAttribute('data-target');
+    document.querySelectorAll('.emxKatGroup').forEach(function(group){
+      if (group.getAttribute('data-fam') === target) {
+        group.classList.remove('emxKatHidden');
+      } else {
+        group.classList.add('emxKatHidden');
+      }
+    });
+    window.scrollTo({top: document.querySelector('.emxProjFilterRow').getBoundingClientRect().top + window.scrollY - 90, behavior:'smooth'});
+  });
+});
+</script>
+</body></html>

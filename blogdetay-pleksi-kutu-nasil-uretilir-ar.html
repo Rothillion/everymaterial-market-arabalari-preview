@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>كيف تُصنع صناديق بليكسي؟ — everymaterial.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+body{margin:0;background:#f5f6f8;font-family:'Noto Sans Arabic','Inter',sans-serif;}
+.emxHomePage{color:#1c2b3c;width:100%;background:linear-gradient(160deg,#fbfcfe 0%,#eef4fb 45%,#d9e6f5 100%);}
+.emxHomePage a{text-decoration:none;color:inherit;}
+.emxHomePage .emxWrap{max-width:1400px;margin:0 auto;padding:0 40px;}
+.emxLangSwitchBar{position:sticky;top:0;z-index:70;width:100%;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center;padding:10px 20px;background:linear-gradient(160deg,#173654 0%,#0a1f33 60%,#0a1f33 100%);}
+.emxLangSwitch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;}
+.emxLangSwitch .material-icons-placeholder{font-size:15px;color:#9fb3c8;margin-inline:6px;}
+.emxLangSwitch a{font-size:13px;font-weight:700;padding:9px 13px;min-height:22px;display:inline-flex;align-items:center;border-radius:999px;color:#c3d1e3;text-decoration:none;transition:background .15s,color .15s;}
+.emxLangSwitch a:hover{color:#fff;}
+.emxLangSwitch a.emxLangActive{background:#a04100;color:#fff;}
+.emxSiteHeader{position:sticky;top:41px;z-index:65;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,35,55,.1);}
+.emxSiteHeader .emxHeaderInner{max-width:1400px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.emxSiteHeader .emxLogo img{height:34px;display:block;}
+.emxSiteHeader nav{display:flex;align-items:center;gap:26px;}
+.emxSiteHeader nav > a{font-size:14.5px;font-weight:600;color:#16324a;position:relative;padding:6px 0;}
+.emxSiteHeader nav > a:hover{color:#e66000;}
+.emxSiteHeader nav > a.emxNavActive{color:#a04100;}
+.emxSiteHeader .emxNavDrop{position:relative;}
+.emxSiteHeader .emxNavDrop > span{font-size:14.5px;font-weight:600;color:#16324a;cursor:default;display:inline-block;padding:6px 0;}
+.emxSiteHeader .emxNavDrop:hover > span{color:#e66000;}
+.emxSiteHeader .emxDropMenu{position:absolute;top:100%;inset-inline-start:0;background:#fff;border:1px solid rgba(15,35,55,.12);border-radius:10px;box-shadow:0 14px 34px -12px rgba(20,40,65,.35);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;}
+.emxSiteHeader .emxNavDrop:hover .emxDropMenu{opacity:1;visibility:visible;transform:translateY(0);}
+.emxSiteHeader .emxDropMenu a{display:block;padding:9px 12px;border-radius:6px;font-size:13.5px;font-weight:500;color:#16324a;}
+.emxSiteHeader .emxDropMenu a:hover{background:#fdf1e8;color:#a04100;}
+.emxSiteHeader .emxCallBtn{background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:11px 20px;border-radius:8px;white-space:nowrap;}
+.emxSiteHeader .emxCallBtn:hover{background:#8a3800;}
+.emxMenuToggle{display:none;background:none;border:none;font-size:22px;color:#16324a;cursor:pointer;}
+@media (max-width:1080px){.emxSiteHeader nav{display:none;}.emxMenuToggle{display:block;}}
+
+.emxHero{background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);padding:48px 40px 40px;}
+.emxHeroInner{max-width:1200px;margin:0 auto;}
+.emxBreadcrumb{font-size:13px;color:#c3d1e3;display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.emxBreadcrumb a{color:#c3d1e3;text-decoration:none;}
+.emxBreadcrumb a:hover{color:#fff;}
+.emxBreadcrumb span.sep{color:#5b7594;}
+.emxBreadcrumb span.current{color:#f4f8ff;font-weight:600;}
+.emxArtMeta{display:flex;gap:14px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+.emxArtTag{background:#a04100;padding:5px 12px;font-size:10.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.05em;border-radius:3px;}
+.emxArtDate{color:rgba(255,255,255,.75);font-size:12.5px;font-weight:600;}
+h1.emxArtTitle{font-size:34px;font-weight:800;letter-spacing:-.01em;margin:0;color:#f4f8ff;line-height:1.35;max-width:900px;}
+
+.emxContentWrap{padding:0 40px 64px;max-width:1400px;margin:0 auto;}
+.emxArticleLayout{display:flex;gap:36px;margin-top:-16px;align-items:flex-start;}
+.emxArticleMain{flex:0 0 68%;min-width:0;}
+.emxArticleSidebar{flex:1;min-width:0;display:flex;flex-direction:column;gap:22px;position:sticky;top:110px;}
+
+.emxArtHeroImg{width:100%;aspect-ratio:16/8;border-radius:12px;overflow:hidden;box-shadow:0 14px 34px -12px rgba(20,40,65,.3);margin-bottom:28px;}
+.emxArtHeroImg img{width:100%;height:100%;object-fit:cover;display:block;}
+
+.emxArtBody{background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.1);border-radius:12px;padding:36px 40px;box-shadow:0 4px 18px -8px rgba(20,40,65,.12);}
+.emxArtBody p{font-size:16px;line-height:2;color:#33475b;margin:0 0 20px;}
+.emxArtBody p:last-child{margin-bottom:0;}
+.emxArtLead{font-weight:600;color:#16324a;border-inline-start:4px solid #fe6b00;padding-inline-start:20px;padding-block:4px;}
+.emxArtBody h2{font-size:21px;font-weight:800;color:#16324a;margin:32px 0 14px;}
+.emxArtBody h2:first-of-type{margin-top:8px;}
+.emxArtBody h3{font-size:15.5px;font-weight:700;color:#16324a;margin:18px 0 10px;}
+.emxArtBody a{color:#a04100;font-weight:600;}
+.emxArtBody a:hover{text-decoration:underline;}
+.emxArtQuote{background:linear-gradient(160deg,#173654 0%,#0a1f33 100%);color:#f4f8ff;border-radius:10px;padding:28px 32px;margin-top:28px;}
+.emxArtQuote p{color:#f4f8ff;font-size:16px;font-weight:600;line-height:1.9;margin:0;}
+.emxArtQuote cite{display:block;margin-top:12px;font-size:12.5px;font-weight:700;color:#ff9142;font-style:normal;}
+
+.emxRelatedSec{margin-top:36px;}
+.emxRelatedSec h3{font-size:19px;font-weight:800;color:#16324a;display:flex;align-items:center;gap:12px;margin:0 0 18px;}
+.emxRelatedSec h3 .emxBar{width:34px;height:4px;background:#fe6b00;display:inline-block;border-radius:2px;}
+.emxRelProdGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.emxRelProdCard{background:#fff;border:1px solid rgba(15,35,55,.1);border-radius:10px;overflow:hidden;box-shadow:0 4px 14px -8px rgba(20,40,65,.15);transition:transform .25s ease,box-shadow .25s ease;}
+.emxRelProdCard:hover{transform:translateY(-4px);box-shadow:0 12px 26px -10px rgba(20,40,65,.25);}
+.emxRelProdCard .emxRpImg{aspect-ratio:1/1;overflow:hidden;background:#f2f5f9;}
+.emxRelProdCard .emxRpImg img{width:100%;height:100%;object-fit:cover;display:block;}
+.emxRelProdCard span{display:block;padding:10px 12px 14px;font-size:12.5px;font-weight:700;color:#16324a;line-height:1.5;}
+
+.emxSideBox{background:rgba(255,255,255,.72);backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.1);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px -8px rgba(20,40,65,.12);}
+.emxSideBox h4{margin:0;padding:16px 20px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#16324a;border-bottom:1px solid rgba(15,35,55,.08);}
+.emxSidePost{display:flex;gap:12px;padding:14px 20px;border-bottom:1px solid rgba(15,35,55,.06);}
+.emxSidePost:last-child{border-bottom:none;}
+.emxSidePost .emxSpImg{width:60px;height:60px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#f2f5f9;}
+.emxSidePost .emxSpImg img{width:100%;height:100%;object-fit:cover;display:block;}
+.emxSidePost .emxSpBody{display:flex;flex-direction:column;justify-content:center;gap:4px;min-width:0;}
+.emxSidePost .emxSpDate{font-size:10.5px;font-weight:700;color:#8a97a8;text-transform:uppercase;letter-spacing:.03em;}
+.emxSidePost .emxSpTitle{font-size:13px;font-weight:700;color:#16324a;line-height:1.5;}
+.emxSidePost:hover .emxSpTitle{color:#a04100;}
+
+.emxSideCta{background:linear-gradient(160deg,#173654 0%,#0a1f33 100%);border-radius:12px;padding:28px 24px;color:#f4f8ff;}
+.emxSideCta h4{margin:0 0 8px;font-size:17px;font-weight:800;color:#fff;}
+.emxSideCta p{margin:0 0 18px;font-size:13px;color:#c3d1e3;line-height:1.8;}
+.emxSideCta a.emxSideCtaBtn{display:block;text-align:center;background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:12px 16px;border-radius:8px;text-transform:uppercase;}
+.emxSideCta a.emxSideCtaBtn:hover{background:#8a3800;}
+.emxSideCta .emxSidePhone{display:block;text-align:center;margin-top:10px;font-size:13px;color:#c3d1e3;direction:ltr;}
+.emxSideCta .emxSidePhone a{color:#fff;font-weight:700;}
+
+.emxSideCats ul{list-style:none;margin:0;padding:14px 20px;display:flex;flex-direction:column;gap:2px;}
+.emxSideCats a{display:block;padding:8px 0;font-size:13px;font-weight:500;color:#5b6b7d;}
+.emxSideCats a:hover{color:#a04100;}
+
+@media (max-width:1080px){.emxArticleLayout{flex-direction:column;}.emxArticleSidebar{position:static;width:100%;}.emxRelProdGrid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:900px){.emxHomePage .emxWrap{padding:0 20px;}.emxContentWrap{padding:0 20px 48px;}.emxHero{padding:32px 20px 32px;}.emxArtBody{padding:26px 22px;}.emxRelProdGrid{grid-template-columns:repeat(2,1fr);}h1.emxArtTitle{font-size:26px;}}
+
+.emxFooter{background:#0a1f33;color:#c3d1e3;padding:56px 0 0;margin-top:0;}
+.emxFooter .emxFootGrid{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);}
+.emxFooter .emxFootLogo img{height:30px;margin-bottom:14px;}
+.emxFooter .emxFootLogo p{font-size:13.5px;line-height:1.8;color:#9fb3c8;margin:0 0 18px;}
+.emxFooter .emxCatalogLink{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 16px;font-size:13px;font-weight:700;color:#f4f8ff;}
+.emxFooter .emxCatalogLink:hover{border-color:#fe6b00;}
+.emxFooter h5{font-size:13px;font-weight:700;color:#f4f8ff;text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px;}
+.emxFooter ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+.emxFooter ul a{font-size:13.5px;color:#c3d1e3;}
+.emxFooter ul a:hover{color:#fe6b00;}
+.emxFooter .emxFootContact p{font-size:13.5px;line-height:1.8;color:#c3d1e3;margin:0 0 10px;}
+.emxFooter .emxFootContact span{color:#8fa4bb;}
+.emxFooter .emxFootContact a{color:#c3d1e3;}
+.emxFooter .emxFootContact p:nth-child(3),.emxFooter .emxFootContact p:nth-child(4){direction:ltr;text-align:right;}
+.emxFooter .emxSocial{display:flex;gap:10px;margin-top:14px;}
+.emxFooter .emxSocial a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:14px;color:#c3d1e3;}
+.emxFooter .emxSocial a:hover{background:#a04100;border-color:#a04100;color:#fff;}
+.emxFooter .emxFootBottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:12.5px;color:#8fa4bb;flex-wrap:wrap;gap:10px;}
+.emxFooter .emxFootBottom ul{flex-direction:row;gap:20px;}
+.emxFooter .emxFootBottom a{color:#8fa4bb;}
+@media (max-width:900px){.emxFooter .emxFootGrid{grid-template-columns:1fr;}}
+
+.emxWhatsAppBtn{position:fixed;bottom:24px;inset-inline-end:24px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.4);}
+.emxWhatsAppBtn:hover{transform:scale(1.06);}
+.emxWhatsAppBtn svg{width:28px;height:28px;}
+@media (max-width:900px){.emxFooter .emxFootBottom{padding:20px 20px;}}
+</style></head><body>
+<div class="emxLangSwitchBar"><div class="emxLangSwitch"><span class="material-icons-placeholder">&#127760;</span><a href="blogdetay-pleksi-kutu-nasil-uretilir.html">TR</a><a href="blogdetay-pleksi-kutu-nasil-uretilir-en.html">EN</a><a href="blogdetay-pleksi-kutu-nasil-uretilir-de.html">DE</a><a class="emxLangActive" href="blogdetay-pleksi-kutu-nasil-uretilir-ar.html">AR</a></div></div>
+
+<header class="emxSiteHeader">
+<div class="emxHeaderInner">
+<a class="emxLogo" href="index-ar.html"><img src="assets/img/logo/every-material-logo-2.png" alt="EveryMaterial"></a>
+<nav>
+<a href="index-ar.html">الرئيسية</a>
+<div class="emxNavDrop"><span>الفئات</span>
+<div class="emxDropMenu">
+<a href="#">معدات عرض بليكسي</a>
+<a href="#">الأغطية</a>
+<a href="#">معدات عرض خشبية</a>
+<a href="#">معدات عرض زجاجية</a>
+<a href="#">معدات عرض بولي كربونات</a>
+<a href="#">معدات السوق</a>
+<a href="#">أنظمة الرفوف</a>
+<a href="#">الآلات</a>
+<a href="#">الخزائن وأنظمة التخزين</a>
+</div></div>
+<div class="emxNavDrop"><span>الشركة</span>
+<div class="emxDropMenu">
+<a href="about-ar.html">من نحن</a>
+<a href="gelismeler-ar.html">آخر الأخبار</a>
+<a href="team-ar.html">فريقنا</a>
+</div></div>
+<a href="ihracat-danismanligi-ar.html">استشارات التصدير</a>
+<a href="projeler-ar.html">المشاريع</a>
+<a class="emxNavActive" href="blog-ar.html">المدونة</a>
+<a href="iletisim-ar.html">اتصل بنا</a>
+</nav>
+<a class="emxCallBtn" href="talep-ar.html">اطلب اتصالاً</a>
+<button class="emxMenuToggle" aria-label="القائمة">&#9776;</button>
+</div>
+</header>
+
+<div class="emxHomePage">
+<div class="emxHero"><div class="emxHeroInner">
+<div class="emxBreadcrumb"><a href="index-ar.html">الرئيسية</a><span class="sep">/</span><a href="blog-ar.html">المدونة</a><span class="sep">/</span><span class="current">كيف تُصنع صناديق بليكسي؟</span></div>
+<div class="emxArtMeta"><span class="emxArtTag">دليل المنتج</span><span class="emxArtDate">9 مايو 2026</span></div>
+<h1 class="emxArtTitle">كيف تُصنع صناديق بليكسي؟</h1>
+</div></div>
+
+<div class="emxContentWrap">
+<div class="emxArticleLayout">
+
+<article class="emxArticleMain">
+<div class="emxArtHeroImg"><img src="assets/img/blog/pleksi-kutu-nasil-uretilir.jpeg" alt="كيف تُصنع صناديق بليكسي؟" loading="lazy"></div>
+
+<div class="emxArtBody">
+<p class="emxArtLead">بفضل شفافيتها ومتانتها وبنيتها الصحية، تُعد <a href="#">صناديق بليكسي</a> حل العرض الذي لا غنى عنه في قطاع التجزئة الحديث، إذ يُفضَّل استخدامها في كل مكان بدءًا من أرفف محلات المكسرات وصولًا إلى واجهات محلات المأكولات الجاهزة. فما هي المراحل التي تمر بها هذه الصناديق الأنيقة المظهر حتى تصل إلى شكلها النهائي؟ في هذا الدليل، المستمد من سنوات خبرة EveryMaterial في التصنيع، نشرح جميع التفاصيل الفنية لتصنيع صناديق بليكسي بلغة محترفي القطاع.</p>
+
+<h2>1. اختيار المواد الخام في تصنيع صناديق بليكسي</h2>
+<p>يعتمد أساس تصنيع صناديق بليكسي على الاختيار الصحيح للمادة الخام. يُعرف البولي ميثيل ميثاكريلات (PMMA) في الصناعة أيضًا باسم الأكريليك أو البليكسيغلاس، وهو مادة حرارية يمكن تشكيلها بالحرارة، وتتميز بشفافية عالية ومقاومة للصدمات. يُستخدم في القطاع نوعان أساسيان من البليكسي: البليكسي المصبوب (cast)، الذي يُنتَج بالصب بين قالبين زجاجيين، والبليكسي المسحوب (extruded)، الذي يُنتَج عبر البثق المستمر. يُفضَّل البليكسي المصبوب لصناديق المكسرات والمأكولات الجاهزة عالية الجمالية التي تتطلب انحناءً، لأنه لا يتشوه عند المعالجة الحرارية ويحافظ على صفاء يشبه الزجاج. تتراوح سماكات الألواح بين 1 مم و30 مم، بينما تُقدَّم المقاسات القياسية بأبعاد 105×160 سم و125×200 سم و205×305 سم. في التطبيقات التي تتلامس مع الأغذية، يُستخدم دائمًا لوح بليكسي معتمد وآمن غذائيًا؛ وهذه المادة أكثر متانة من الزجاج بنحو 10 مرات، وأخف وزنًا بنسبة 50%، وتتمتع بنفاذية ضوئية تبلغ 92%.</p>
+
+<h2>2. مرحلة التصميم والقياس ورسم CAD</h2>
+<p>المرحلة الحاسمة التالية بعد اختيار المادة الخام هي التصميم الفني للصندوق. يتم تقييم أبعاد طاولة العرض لدى العميل وسعة المنتج والتوقعات البصرية لإعداد رسومات ثنائية وثلاثية الأبعاد في بيئة CAD. في هذه المرحلة تُرسَم قاعدة الصندوق والأسطح الجانبية وأجزاء الغطاء كل على حدة؛ ويُحسَب بدقة الملليمتر هامش أسطح اللصق عند الزوايا. في الصناديق ذات الغطاء المنزلق، وصناديق العرض المتدرجة، وحجيرات المنتجات ذات الواجهة المائلة التي كثيرًا ما يطلبها قطاع المكسرات والمأكولات الجاهزة، يكتسب حساب الزاوية وهامش السحب وقيمة نصف قطر الانحناء أهمية خاصة. يتضاعف أصغر خطأ في مرحلة التصميم عبر عمليات القطع والتجميع اللاحقة، مما يؤدي إلى إهدار الوقت وهدر مادة البليكسي. يقوم فريق الهندسة في EveryMaterial بتقييم كل تصميم كنموذج أولي رقمي قبل الانتقال إلى الإنتاج، ويتحقق من التوافق مع معايير هامش شق القطع (سماكة خط القطع بالليزر) والحد الأدنى لسماكة الجدار. وهكذا لا تصل إلى الورشة سوى تصاميم مُحسَّنة بشكل مثالي.</p>
+
+<h2>3. عمليات القطع بالليزر وبالـ CNC</h2>
+<p>تُنقَل الأجزاء المكتملة التصميم عبر ملفات رقمية إلى أجهزة القطع بالليزر CO2 أو أجهزة الروتر CNC. يعتمد القطع بالليزر على مبدأ تسامي البليكسي بواسطة حزمة ضوء عالية الكثافة أثناء القطع؛ وبذلك لا يتبقى أي نتوءات أو خشونة أو نشارة على خط القطع، وتخرج الحواف بصفاء زجاجي وكأنها لُمِّعت باللهب. يمكن لأجهزة الليزر الصناعية معالجة البليكسي بسماكات تتراوح بين 0 و50 مم وحتى مقاس 205×305 سم. أما في القطع بالـ CNC، فتُعتبر سرعة دوران تتراوح بين 18,000 و24,000 دورة في الدقيقة وسرعة تقدم من 2 إلى 3 أمتار في الدقيقة مثالية؛ وتمنع رؤوس كربيد التنغستن ونظام التبريد الهوائي ذوبان البليكسي.</p>
+<h3>متى تُستخدم كل طريقة قطع؟</h3>
+<p>يُفضَّل القطع بالليزر في صناديق عرض المكسرات رقيقة الجدران وعالية الجمالية، بينما يبرز القطع بالـ CNC في صناديق المأكولات الجاهزة سميكة الجدران ووحدات عرض الأسواق كبيرة الحجم. في كلتا الطريقتين، تُترَك الورقة الواقية للبليكسي على السطح حتى اكتمال القطع؛ مما يمنع أي خدوش قد تحدث أثناء التصنيع ويضمن الصفاء البلوري للمنتج النهائي.</p>
+
+<h2>4. عملية ثني وتشكيل البليكسي بالحرارة</h2>
+<p>تدخل مرحلة ثني البليكسي في حجيرات المكسرات المصممة كقطعة واحدة، وصناديق التوابل ذات الواجهة المائلة، ووحدات العرض ذات الزوايا الدائرية. وبما أن البليكسيغلاس مادة حرارية قائمة على البولي ميثيل ميثاكريلات، فإنه يلين عند بلوغ درجة حرارة معينة (نحو 150-160 درجة مئوية) ويُوضَع في قالب ليأخذ الشكل المطلوب. وبفضل ماكينات الثني بالمقاومة السلكية أو غرف التسخين المستخدمة في الورش المتخصصة، يمكن تنفيذ عمليات ثني دقيقة بزوايا 45 و60 و90 و140 و160 درجة. يكتسب التسخين المتجانس للمادة أهمية كبيرة أثناء الثني؛ فالحرارة الزائدة تؤدي إلى انتفاخ المادة، بينما تؤدي الحرارة غير الكافية إلى التشقق. لهذا السبب، يجب دائمًا استخدام البليكسي المصبوب في صناديق البليكسي عالية الجمالية ذات الزوايا الحادة التي يطلبها قطاع المكسرات والمأكولات الجاهزة، وتطبيق تبريد مُتحكَّم به بعد الثني لتقليل الإجهاد الداخلي إلى الحد الأدنى. وهنا بالتحديد يكمن سر المظهر السلس لصناديق EveryMaterial.</p>
+
+<h2>5. مرحلة اللصق والتجميع</h2>
+<p>تُجمَّع أجزاء البليكسي المقطوعة، والمثنية عند الحاجة، في المرحلة الأخيرة. بدلًا من الغراء القياسي، تُستخدم في تصنيع صناديق بليكسي مواد لاصقة مذيبة قائمة على الكلوروفورم أو مواد لحام أكريليكية. تُذيب هذه المواد الكيميائية الخاصة سطح البليكسي على المستوى الجزيئي وتلحم القطعتين معًا؛ والنتيجة رابطة شبه غير مرئية وشديدة المتانة. أثناء عملية اللصق، تُثبَّت القطع بواسطة شريط لاصق أو تجهيزات تثبيت، لأن الكلوروفورم متطاير ويتفاعل خلال 30 ثانية ويحقق التماسك خلال 3 دقائق. تتطلب المتانة الكاملة انتظار نحو 3 ساعات. وبما أن إحكام إغلاق الزوايا أمر بالغ الأهمية في المنتجات التي تُغسَل بشكل متكرر مثل صناديق المكسرات، يُفحَص كل موضع لحام في خط إنتاج EveryMaterial تحت الضوء للتحقق من عدم وجود تشققات شعرية أو فراغات هوائية؛ مما يضمن تكاملًا مثاليًا ومقاومًا للماء من الناحية الصحية الغذائية.</p>
+
+<h2>6. المعالجة السطحية ومراقبة الجودة واللمسات الأخيرة</h2>
+<p>بعد اكتمال التجميع، تُصقَل حواف صندوق البليكسي بتقنية التلميع باللهب أو التلميع الكيميائي. في التلميع باللهب، يُمرَّر لهب هيدروجيني مُتحكَّم به على طول الحواف لإزالة الملمس غير اللامع الناتج عن القطع؛ وتتطلب هذه العملية مهارة، إذ يمكن أن تؤدي الحرارة الزائدة إلى التشوه. بعد ذلك، تُطبَّق شعارات العلامة التجارية أو ملصقات المنتج أو الرسومات التعريفية المطلوبة للمكسرات أو التوابل أو منتجات المأكولات الجاهزة عبر الطباعة بالأشعة فوق البنفسجية أو الحفر بالليزر. في المرحلة الأخيرة، يخضع كل منتج لمراقبة جودة بدقة الملليمتر: يُفحص وجود تشققات شعرية أو فقاعات هوائية أو خدوش سطحية تحت الضوء، ويُتحقَّق من اتساق القياسات باستخدام أدوات قياس رقمية. في EveryMaterial، نُطبِّق تنظيفًا صحيًا على كل صندوق قبل التسليم، ونُعِدُّه للشحن بتغليفه في كيس خاص أو غشاء واقٍ؛ وهكذا نقدّم للمستخدم النهائي منتجًا خاليًا من العيوب يحافظ على أثر اليوم الأول.</p>
+
+<div class="emxArtQuote">
+<p>"تُعد EveryMaterial واحدة من العلامات التجارية الرائدة في تركيا في تصنيع صناديق بليكسي وصناديق الخشب المخصصة لقطاع المكسرات والأسواق والمأكولات الجاهزة. بفضل سنوات خبرتنا في التصنيع، وموادنا الخام المعتمدة الآمنة غذائيًا، وبنيتنا التحتية الدقيقة للقطع بالليزر، وفريق التصميم المتخصص باحتياجات القطاع، نرتقي بجودة العرض في منشأتكم إلى مستوى أعلى. سواء كنتم محل مأكولات جاهزة بوتيك صغيرًا أو ضمن فئة الأسواق المتسلسلة، فإننا نقدم إنتاجًا مرنًا حسب كمية الطلب، وتسليمًا سريعًا، وضمان منتج طويل الأمد."</p>
+<cite>— everymaterial.com، لماذا EveryMaterial؟</cite>
+</div>
+</div>
+
+<div class="emxRelatedSec">
+<h3><span class="emxBar"></span>منتجات ذات صلة</h3>
+<div class="emxRelProdGrid">
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/egimli-kare-kutu.jpg" alt="صندوق مربع مائل" loading="lazy"></div><span>صندوق مربع مائل</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/bonbon-kutu-stand.jpg" alt="حامل صندوق حلوى بخزانة" loading="lazy"></div><span>حامل صندوق حلوى بخزانة</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/radyus-kapakli-kutu.jpg" alt="صندوق بغطاء نصف قطري" loading="lazy"></div><span>صندوق بغطاء نصف قطري</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/menteseli-yuvarlak-kutu.jpg" alt="صندوق دائري بمفصلة" loading="lazy"></div><span>صندوق دائري بمفصلة</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/yuvarlak-kutu.jpg" alt="صندوق دائري" loading="lazy"></div><span>صندوق دائري</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/egimli-dikdortgen-kutu_1.jpg" alt="صندوق مستطيل مائل" loading="lazy"></div><span>صندوق مستطيل مائل</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/fantastik-kutu-1.jpg" alt="صندوق ميستيك" loading="lazy"></div><span>صندوق ميستيك</span></a>
+<a class="emxRelProdCard" href="#"><div class="emxRpImg"><img src="assets/img/urunler/thumb/2-combo-kutu-set.jpg" alt="طقم صندوق ميستيك" loading="lazy"></div><span>طقم صندوق ميستيك</span></a>
+</div>
+</div>
+</article>
+
+<aside class="emxArticleSidebar">
+<div class="emxSideBox">
+<h4>أحدث المقالات</h4>
+<a class="emxSidePost" href="#"><div class="emxSpImg"><img src="assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg" alt="دليل طلب صندوق بليكسي بمقاس مخصص" loading="lazy"></div><div class="emxSpBody"><span class="emxSpDate">10 مايو 2026</span><span class="emxSpTitle">دليل طلب صندوق بليكسي بمقاس مخصص</span></div></a>
+<a class="emxSidePost" href="#"><div class="emxSpImg"><img src="assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg" alt="استخدام صناديق بليكسي في المخابز والحلويات" loading="lazy"></div><div class="emxSpBody"><span class="emxSpDate">9 مايو 2026</span><span class="emxSpTitle">استخدام صناديق بليكسي في المخابز والحلويات</span></div></a>
+<a class="emxSidePost" href="#"><div class="emxSpImg"><img src="assets/img/blog/thumb/pleksi-kutu-price.jpg" alt="7 عوامل تؤثر على أسعار صناديق بليكسي" loading="lazy"></div><div class="emxSpBody"><span class="emxSpDate">9 مايو 2026</span><span class="emxSpTitle">7 عوامل تؤثر على أسعار صناديق بليكسي</span></div></a>
+</div>
+
+<div class="emxSideCta">
+<h4>حلول مخصصة لمشروعك</h4>
+<p>فريق الهندسة لدينا معكم من مرحلة التصميم وحتى الإنتاج. أخبرونا بمقاس الصندوق والكمية والغرض من الاستخدام، ونُعِدُّ لكم عرض سعر مخصصًا.</p>
+<a class="emxSideCtaBtn" href="#">اطلب اتصالاً</a>
+<span class="emxSidePhone">أو اتصل: <a href="tel:+905459111002">+90 545 911 10 02</a></span>
+</div>
+
+<div class="emxSideBox emxSideCats">
+<h4>الفئات</h4>
+<ul>
+<li><a href="#">معدات عرض بليكسي</a></li>
+<li><a href="#">الأغطية</a></li>
+<li><a href="#">معدات عرض خشبية</a></li>
+<li><a href="#">معدات عرض زجاجية</a></li>
+<li><a href="#">معدات السوق</a></li>
+</ul>
+</div>
+</aside>
+
+</div>
+</div>
+</div>
+
+<footer class="emxFooter">
+<div class="emxWrap emxFootGrid">
+<div class="emxFootLogo">
+<img src="assets/images/every-material-logo-beyaz.png" alt="EveryMaterial">
+<p>everymaterial.com هي منصة مقرها تركيا بشراكة في ألمانيا وفلسطين، تهدف إلى تقديم خدمات شاملة للعملاء حول العالم.</p>
+<a class="emxCatalogLink" href="katalog-ar.html">&#128196; تصفح الكتالوج</a>
+</div>
+<div>
+<h5>الفئات</h5>
+<ul>
+<li><a href="#">معدات عرض بليكسي</a></li>
+<li><a href="#">الأغطية</a></li>
+<li><a href="#">معدات عرض خشبية</a></li>
+<li><a href="#">معدات عرض زجاجية</a></li>
+<li><a href="#">معدات عرض بولي كربونات</a></li>
+<li><a href="#">معدات السوق</a></li>
+<li><a href="#">أنظمة الرفوف</a></li>
+<li><a href="#">الآلات</a></li>
+<li><a href="#">الخزائن وأنظمة التخزين</a></li>
+</ul>
+</div>
+<div class="emxFootContact">
+<h5>معلومات الاتصال</h5>
+<p><span>العنوان:</span> Mahmutbey Mah. 2430. Sok. 12.Ada No: 112 - İstoç Toptancılar Çarşısı - Bağcılar / İstanbul</p>
+<p><span>الهاتف:</span> <a href="tel:+905459111002">+90 545 911 10 02</a></p>
+<p><span>البريد الإلكتروني:</span> <a href="mailto:info@everymaterial.com">info@everymaterial.com</a></p>
+<div class="emxSocial">
+<a href="https://www.instagram.com/every.material/" target="_blank" aria-label="Instagram">IG</a>
+<a href="https://www.facebook.com/profile.php?id=61561776136698" target="_blank" aria-label="Facebook">FB</a>
+<a href="https://www.linkedin.com/company/everymaterial/" target="_blank" aria-label="LinkedIn">IN</a>
+<a href="https://x.com/every_material" target="_blank" aria-label="X">X</a>
+<a href="https://www.youtube.com/@EveryMaterial-k3i" target="_blank" aria-label="YouTube">YT</a>
+</div>
+</div>
+</div>
+<div class="emxWrap emxFootBottom">
+<span>© 2026 Every Material. جميع الحقوق محفوظة.</span>
+<ul><li><a href="#">قانون حماية البيانات الشخصية (KVKK)</a></li><li><a href="#">سياسة ملفات تعريف الارتباط</a></li></ul>
+</div>
+</footer>
+
+<a class="emxWhatsAppBtn" href="https://wa.me/905466382175/?text=مرحبًا، أريد الحصول على معلومات حول منتجاتك.." target="_blank" aria-label="واتساب">
+<svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.94.92.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+</a>
+</body></html>
