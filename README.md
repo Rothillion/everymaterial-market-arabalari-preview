@@ -8,9 +8,15 @@ Repo kökündeki `*.html` dosyaları ve `assets/` klasörü, React/Vite frontend
 `assets/productCatalogLookup-*.js` içinde tek pakette taşınır, bu yüzden ürün başına ayrı HTML dosyası yoktur —
 bu normal bir Vite SPA build davranışıdır, eksik içerik değildir.
 
-Local'de görüntülemek için kökte:
+Local'de görüntülemek için repo köküne indirdiğiniz `SITEYI_AC.bat` dosyasına **çift tıklayın** —
+otomatik olarak local sunucu başlatır ve siteyi tarayıcıda açar. (HTML dosyalarına doğrudan çift
+tıklayarak açmayın: bu bir Vite/React build'i olduğu için `type="module"` script'ler kullanır ve
+Chrome/Edge bunları `file://` üzerinden güvenlik (CORS) gereği tamamen engeller — bembeyaz sayfa
+görürsünüz. `SITEYI_AC.bat` bu sorunu otomatik çözer.)
+
+Terminalden manuel açmak isterseniz:
 ```
-python3 -m http.server 8080
+python -m http.server 8080
 ```
 
 ## 2. `source/` — Frontend kaynak kodu
