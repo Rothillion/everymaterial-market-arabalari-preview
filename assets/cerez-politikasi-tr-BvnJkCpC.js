@@ -1,0 +1,1 @@
+import{c as o,j as e,r,M as n}from"./globals-CHIIlfwU.js";import{L as s,l as a}from"./legal-7CVdLYO_.js";o.createRoot(document.getElementById("root")).render(e.jsx(r.StrictMode,{children:e.jsx(n,{reducedMotion:"user",children:e.jsx(s,{lang:"tr",content:a.tr.cookies,navigateHref:t=>`/cerez-politikasi-${t}.html`})})}));

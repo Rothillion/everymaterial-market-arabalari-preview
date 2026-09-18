@@ -1,0 +1,1 @@
+import{c as r,j as o,r as t,M as e}from"./globals-CHIIlfwU.js";import{P as s}from"./ProductCategoryPage-Cj89Xe0r.js";import"./home-Dof2Jzab.js";import"./productCatalogLookup-BcinVNwx.js";r.createRoot(document.getElementById("root")).render(o.jsx(t.StrictMode,{children:o.jsx(e,{reducedMotion:"user",children:o.jsx(s,{lang:"en"})})}));

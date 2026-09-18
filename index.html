@@ -1,399 +1,46 @@
-<!DOCTYPE html>
-<html lang="tr" dir="ltr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>everymaterial.com — Pleksi, Cam, Ahşap ve Akrilik Teşhir Ekipmanları</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@500&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;}
-body{margin:0;background:#f5f6f8;font-family:'Inter',sans-serif;}
-.emxHomePage{color:#1c2b3c;width:100%;background:linear-gradient(160deg,#fbfcfe 0%,#eef4fb 45%,#d9e6f5 100%);}
-.emxHomePage a{text-decoration:none;color:inherit;}
-.emxHomePage .emxWrap{max-width:1400px;margin:0 auto;padding:0 40px;}
-.emxHomePage .emxSecTitle{font-size:28px;font-weight:700;color:#16324a;text-align:center;margin:0 0 36px;}
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/img/logo/every-material-logo-2.png" />
+    <title>everymaterial.com</title>
 
-/* Lang switch bar (shared sitewide pattern) */
-.emxLangSwitchBar{position:sticky;top:0;z-index:70;width:100%;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center;padding:10px 20px;background:linear-gradient(160deg,#173654 0%,#0a1f33 60%,#0a1f33 100%);}
-.emxLangSwitch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;}
-.emxLangSwitch .material-icons-placeholder{font-size:15px;color:#9fb3c8;margin-inline:6px;}
-.emxLangSwitch a{font-size:13px;font-weight:700;padding:9px 13px;min-height:22px;display:inline-flex;align-items:center;border-radius:999px;color:#c3d1e3;text-decoration:none;transition:background .15s,color .15s;}
-.emxLangSwitch a:hover{color:#fff;}
-.emxLangSwitch a.emxLangActive{background:#a04100;color:#fff;}
+    <!--
+      Meta Pixel — EveryMaterial Pixel (id 1086479217049750), bağlandı 2026-08-23.
+      Conversion event ("Contact") src/ui/WhatsAppButton.tsx'te zaten bağlı.
+    -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1086479217049750');
+      fbq('track', 'PageView');
+    </script>
 
-/* Sitewide header/nav — first real nav+footer in the redesign, reused by every subsequent page */
-.emxSiteHeader{position:sticky;top:41px;z-index:65;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,35,55,.1);}
-.emxSiteHeader .emxHeaderInner{max-width:1400px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
-.emxSiteHeader .emxLogo img{height:34px;display:block;}
-.emxSiteHeader nav{display:flex;align-items:center;gap:26px;}
-.emxSiteHeader nav > a{font-size:14.5px;font-weight:600;color:#16324a;position:relative;padding:6px 0;}
-.emxSiteHeader nav > a:hover{color:#e66000;}
-.emxSiteHeader .emxNavDrop{position:relative;}
-.emxSiteHeader .emxNavDrop > span{font-size:14.5px;font-weight:600;color:#16324a;cursor:default;display:inline-block;padding:6px 0;}
-.emxSiteHeader .emxNavDrop:hover > span{color:#e66000;}
-.emxSiteHeader .emxDropMenu{position:absolute;top:100%;left:0;background:#fff;border:1px solid rgba(15,35,55,.12);border-radius:10px;box-shadow:0 14px 34px -12px rgba(20,40,65,.35);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;}
-.emxSiteHeader .emxNavDrop:hover .emxDropMenu{opacity:1;visibility:visible;transform:translateY(0);}
-.emxSiteHeader .emxDropMenu a{display:block;padding:9px 12px;border-radius:6px;font-size:13.5px;font-weight:500;color:#16324a;}
-.emxSiteHeader .emxDropMenu a:hover{background:#fdf1e8;color:#a04100;}
-.emxSiteHeader .emxCallBtn{background:#a04100;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:11px 20px;border-radius:8px;white-space:nowrap;}
-.emxSiteHeader .emxCallBtn:hover{background:#8a3800;}
-.emxMenuToggle{display:none;background:none;border:none;font-size:22px;color:#16324a;cursor:pointer;}
-@media (max-width:1080px){.emxSiteHeader nav{display:none;}.emxMenuToggle{display:block;}}
-
-/* Hero slider */
-.emxHeroSlider{position:relative;background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);height:520px;overflow:hidden;}
-.emxHeroSlider .emxSlide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease;}
-.emxHeroSlider .emxSlide.emxSlideActive{opacity:1;}
-.emxHeroSlider .emxSlide img{width:100%;height:100%;object-fit:cover;opacity:.72;}
-.emxHeroSlider .emxSlideDots{position:absolute;bottom:20px;right:32px;display:flex;gap:8px;z-index:5;}
-.emxHeroSlider .emxSlideDots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .2s;}
-.emxHeroSlider .emxSlideDots span.emxDotActive{background:#fe6b00;}
-@media (max-width:900px){.emxHeroSlider{height:360px;}}
-@media (max-width:520px){.emxHeroSlider{height:260px;}}
-
-/* SEO H1 block — unobtrusive, for search engines not visual focus */
-.emxSeoBlock{padding:26px 40px 8px;text-align:center;}
-.emxSeoBlock h1{font-size:17px;font-weight:600;color:#5b6b7d;margin:0 0 8px;letter-spacing:-.005em;}
-.emxSeoBlock p{font-size:13.5px;color:#7c8a9b;max-width:760px;margin:0 auto;line-height:1.6;}
-
-/* Reusable card grid (matches full-metal-tr.html's .emxCard/.emxGrid) */
-.emxSection{padding:56px 0;}
-.emxGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.emxGrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.emxCard{background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s ease,box-shadow .3s ease,background .3s ease;box-shadow:0 4px 18px -8px rgba(20,40,65,.18);}
-.emxCard:hover{border-color:rgba(254,107,0,.45);box-shadow:0 10px 30px -10px rgba(20,40,65,.3);background:linear-gradient(160deg,rgba(255,255,255,.75) 0%,rgba(255,255,255,.5) 100%);}
-.emxCard .emxImgWrap{aspect-ratio:4/3;overflow:hidden;}
-.emxCard .emxImgWrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
-.emxCard:hover .emxImgWrap img{transform:scale(1.05);}
-.emxCard .emxCardBody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1;}
-.emxCard h3{margin:0;font-size:15.5px;line-height:1.3;font-weight:700;color:#16324a;}
-.emxViewBtn{align-self:stretch;text-align:center;margin-top:auto;background:#a04100;color:#fff;border:none;padding:10px 16px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;}
-.emxViewBtn:hover{background:#8a3800;}
-.emxSecFoot{text-align:center;margin-top:32px;}
-.emxBtnOutline{display:inline-block;border:1px solid rgba(15,35,55,.25);color:#16324a;font-size:13px;font-weight:700;padding:12px 28px;border-radius:999px;}
-.emxBtnOutline:hover{border-color:#fe6b00;color:#a04100;}
-
-/* How We Work — mirrors Kurumsal's emxAboutMain pattern */
-.emxWorkGrid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;}
-.emxWorkImgWrap{border-radius:14px;overflow:hidden;box-shadow:0 10px 30px -10px rgba(20,40,65,.28);}
-.emxWorkImgWrap img{width:100%;display:block;}
-.emxWorkBody p{font-size:15.5px;line-height:1.75;color:#5b6b7d;margin:0 0 16px;}
-.emxSloganStrip{display:flex;align-items:center;gap:16px;background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);border:1px solid rgba(15,35,55,.12);border-radius:12px;padding:16px 20px;margin-top:20px;}
-.emxSloganStrip img{width:56px;height:56px;object-fit:cover;border-radius:8px;flex-shrink:0;}
-.emxSloganStrip h4{margin:0;font-size:14.5px;font-weight:700;color:#16324a;line-height:1.4;}
-
-/* Two-part CTA band */
-.emxCtaBand{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.emxCtaCard{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.5) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:16px;padding:36px;overflow:hidden;box-shadow:0 10px 30px -10px rgba(20,40,65,.28);}
-.emxCtaCard::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#fe6b00,#a04100);}
-.emxCtaCard h2{font-size:21px;font-weight:700;color:#16324a;margin:0 0 12px;}
-.emxCtaCard p{font-size:14.5px;line-height:1.65;color:#5b6b7d;margin:0 0 14px;}
-.emxCtaCard ul{margin:0 0 18px;padding-inline-start:20px;color:#5b6b7d;font-size:13.5px;line-height:1.8;}
-.emxCtaCard ul li strong{color:#16324a;}
-.emxCtaCard .emxCtaImg{width:100%;border-radius:10px;margin-top:8px;display:block;}
-.emxPhoneCta{display:flex;align-items:center;gap:16px;background:#a04100;color:#fff;border-radius:10px;padding:16px 20px;font-size:19px;font-weight:700;margin-top:8px;width:fit-content;}
-.emxPhoneCta:hover{background:#8a3800;}
-@media (max-width:900px){.emxCtaBand{grid-template-columns:1fr;}}
-
-/* Team cards — no verified real employee photos exist in the source archive (assets/img/ekip/*
-   are generated 3D avatars, not photos); using an initials monogram instead of a fake photo. */
-.emxTeamCard{background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.4) 100%);backdrop-filter:blur(16px);border:1px solid rgba(15,35,55,.12);border-radius:12px;overflow:hidden;text-align:center;}
-.emxTeamCard .emxAvatar{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 160% at 15% 0%,#173654 0%,#0a1f33 45%,#081a2b 100%);}
-.emxTeamCard .emxAvatar span{font-size:32px;font-weight:700;color:#fe6b00;letter-spacing:.02em;}
-.emxTeamCard .emxCardBody{padding:16px;align-items:center;text-align:center;}
-.emxTeamCard h3{font-size:15px;}
-.emxTeamCard .emxRole{font-size:12px;color:#5b6b7d;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin:-4px 0 4px;}
-.emxTeamCard .emxContact{font-size:12.5px;color:#16324a;display:flex;flex-direction:column;gap:2px;}
-.emxTeamCard .emxContact a{color:#16324a;}
-.emxTeamCard .emxContact a:hover{color:#a04100;}
-.emxLangPills{display:flex;gap:5px;justify-content:center;margin-top:4px;}
-.emxLangPills span{font-size:10px;font-weight:700;letter-spacing:.04em;color:#a04100;background:rgba(254,107,0,.12);border-radius:4px;padding:2px 6px;}
-
-/* Blog asymmetric grid */
-.emxBlogGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;}
-.emxBlogGrid .emxBlogCard{grid-column:span 3;}
-.emxBlogGrid .emxBlogCard.emxBlogMed{grid-column:span 2;}
-.emxBlogGrid .emxBlogCard.emxBlogSm{grid-column:span 2;}
-.emxBlogCard{background:#fff;border:1px solid rgba(15,35,55,.1);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px -8px rgba(20,40,65,.15);transition:transform .3s ease,box-shadow .3s ease;}
-.emxBlogCard:hover{transform:translateY(-6px);box-shadow:0 14px 34px -12px rgba(20,40,65,.28);}
-.emxBlogCard .emxImgWrap{aspect-ratio:16/10;}
-.emxBlogCard .emxCardBody{padding:16px 18px 18px;gap:8px;}
-.emxBlogCard .emxDate{font-size:11.5px;color:#8a97a8;font-weight:600;}
-.emxBlogCard h3{font-size:15px;}
-.emxBlogCard.emxBlogSm h3{font-size:13.5px;}
-.emxBlogCard .emxReadLink{font-size:12px;font-weight:700;color:#a04100;margin-top:auto;}
-@media (max-width:1100px){.emxBlogGrid{grid-template-columns:repeat(2,1fr);}.emxBlogGrid .emxBlogCard,.emxBlogGrid .emxBlogCard.emxBlogMed,.emxBlogGrid .emxBlogCard.emxBlogSm{grid-column:span 1;}}
-
-/* Footer — first real sitewide footer; only ACTIVE language's WhatsApp button shows (fixes known live-site bug) */
-.emxFooter{background:#0a1f33;color:#c3d1e3;padding:56px 0 0;margin-top:0;}
-.emxFooter .emxFootGrid{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);}
-.emxFooter .emxFootLogo img{height:30px;margin-bottom:14px;}
-.emxFooter .emxFootLogo p{font-size:13.5px;line-height:1.7;color:#9fb3c8;margin:0 0 18px;}
-.emxFooter .emxCatalogLink{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 16px;font-size:13px;font-weight:700;color:#f4f8ff;}
-.emxFooter .emxCatalogLink:hover{border-color:#fe6b00;}
-.emxFooter h5{font-size:13px;font-weight:700;color:#f4f8ff;text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px;}
-.emxFooter ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
-.emxFooter ul a{font-size:13.5px;color:#c3d1e3;}
-.emxFooter ul a:hover{color:#fe6b00;}
-.emxFooter .emxFootContact p{font-size:13.5px;line-height:1.6;color:#c3d1e3;margin:0 0 10px;}
-.emxFooter .emxFootContact span{color:#8fa4bb;}
-.emxFooter .emxFootContact a{color:#c3d1e3;}
-.emxFooter .emxSocial{display:flex;gap:10px;margin-top:14px;}
-.emxFooter .emxSocial a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:14px;color:#c3d1e3;}
-.emxFooter .emxSocial a:hover{background:#a04100;border-color:#a04100;color:#fff;}
-.emxFooter .emxFootBottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:12.5px;color:#8fa4bb;flex-wrap:wrap;gap:10px;}
-.emxFooter .emxFootBottom ul{flex-direction:row;gap:20px;}
-.emxFooter .emxFootBottom a{color:#8fa4bb;}
-@media (max-width:900px){.emxFooter .emxFootGrid{grid-template-columns:1fr;}}
-
-.emxWhatsAppBtn{position:fixed;bottom:24px;inset-inline-end:24px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.4);}
-.emxWhatsAppBtn:hover{transform:scale(1.06);}
-.emxWhatsAppBtn svg{width:28px;height:28px;}
-
-@media (max-width:900px){.emxHomePage .emxWrap{padding:0 20px;}.emxGrid,.emxGrid3{grid-template-columns:repeat(2,1fr);}.emxWorkGrid{grid-template-columns:1fr;}.emxFooter .emxFootGrid{padding:0 20px 36px;}.emxFooter .emxFootBottom{padding:20px 20px;}}
-@media (max-width:520px){.emxGrid,.emxGrid3{grid-template-columns:1fr;}}
-</style></head><body>
-<div class="emxLangSwitchBar"><div class="emxLangSwitch"><span class="material-icons-placeholder">&#127760;</span><a class="emxLangActive" href="index.html">TR</a><a href="index-en.html">EN</a><a href="index-de.html">DE</a><a href="index-ar.html">AR</a></div></div>
-
-<header class="emxSiteHeader">
-<div class="emxHeaderInner">
-<a class="emxLogo" href="index.html"><img src="assets/img/logo/every-material-logo-2.png" alt="EveryMaterial"></a>
-<nav>
-<a href="index.html">Ana Sayfa</a>
-<div class="emxNavDrop"><span>Kategoriler</span>
-<div class="emxDropMenu">
-<a href="#">Pleksi Teşhir Ekipmanları</a>
-<a href="#">Kapaklar</a>
-<a href="#">Ahşap Teşhir Ekipmanları</a>
-<a href="#">Cam Teşhir Ekipmanları</a>
-<a href="#">Polikarbon Teşhir Ekipmanları</a>
-<a href="#">Market Ekipmanları</a>
-<a href="#">Raf Sistemleri</a>
-<a href="#">Makineler</a>
-<a href="#">Dolaplar ve Depolama Sistemleri</a>
-</div></div>
-<div class="emxNavDrop"><span>Kurumsal</span>
-<div class="emxDropMenu">
-<a href="about-tr.html">Hakkımızda</a>
-<a href="gelismeler-tr.html">Gelişmeler</a>
-<a href="team-tr.html">Ekibimiz</a>
-</div></div>
-<a href="ihracat-danismanligi-tr.html">İhracat Danışmanlığı</a>
-<a href="projeler-tr.html">Projeler</a>
-<a href="blog-tr.html">Blog</a>
-<a href="iletisim-tr.html">İletişim</a>
-</nav>
-<a class="emxCallBtn" href="talep-tr.html">Sizi Arayalım</a>
-<button class="emxMenuToggle" aria-label="Menü">&#9776;</button>
-</div>
-</header>
-
-<div class="emxHomePage">
-
-<section class="emxHeroSlider" id="emxHero">
-<div class="emxSlide emxSlideActive"><img src="assets/img/slider/Bener1.jpg" alt="EveryMaterial showroom ve üretim"></div>
-<div class="emxSlide"><img src="assets/img/slider/Bener2.jpg" alt="EveryMaterial ürün sergisi"></div>
-<div class="emxSlide"><img src="assets/img/slider/site-kapak.jpg" alt="EveryMaterial"></div>
-<div class="emxSlide"><img src="assets/img/slider/bener-cam.jpg" alt="Cam teşhir ekipmanları"></div>
-<div class="emxSlide"><img src="assets/img/slider/ahshap-bener.jpg" alt="Ahşap teşhir ekipmanları"></div>
-<div class="emxSlide"><img src="assets/img/slider/bener-RAF-1.jpg" alt="Raf sistemleri"></div>
-<div class="emxSlide"><img src="assets/img/slider/dolap-bener.jpg" alt="Dolap ve depolama sistemleri"></div>
-<div class="emxSlide"><img src="assets/img/slider/kuruyamis-dolap-bener.jpg" alt="Kuruyemiş dolabı"></div>
-<div class="emxSlideDots"></div>
-</section>
-
-<section class="emxSeoBlock">
-<h1>EveryMaterial | Pleksi Kutu, Cam, Ahşap ve Akrilik Teşhir Ekipmanları</h1>
-<p>Pleksi kutu, cam, ahşap ve kova teşhir ekipmanlarında profesyonel çözümler. Mağazalar, marketler ve showroomlar için akrilik ve pleksiglas ürünleri.</p>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<h2 class="emxSecTitle">Kategoriler</h2>
-<div class="emxGrid">
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg" alt="Pleksi Teşhir Ekipmanları" loading="lazy"></div><div class="emxCardBody"><h3>Pleksi Teşhir Ekipmanları</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/lids-every-material.jpg" alt="Kapaklar" loading="lazy"></div><div class="emxCardBody"><h3>Kapaklar</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/wooden-display-equipment-every-material.jpg" alt="Ahşap Teşhir Ekipmanları" loading="lazy"></div><div class="emxCardBody"><h3>Ahşap Teşhir Ekipmanları</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/glass-display-equipment-every-material.jpg" alt="Cam Teşhir Ekipmanları" loading="lazy"></div><div class="emxCardBody"><h3>Cam Teşhir Ekipmanları</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/polycarbon-display-equipment-every-material.jpg" alt="Polikarbon Teşhir Ekipmanları" loading="lazy"></div><div class="emxCardBody"><h3>Polikarbon Teşhir Ekipmanları</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/market-display-equipment-every-material.jpg" alt="Market Ekipmanları" loading="lazy"></div><div class="emxCardBody"><h3>Market Ekipmanları</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/shelf-every-material.jpg" alt="Raf Sistemleri" loading="lazy"></div><div class="emxCardBody"><h3>Raf Sistemleri</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/machines-every-material.jpg" alt="Makineler" loading="lazy"></div><div class="emxCardBody"><h3>Makineler</h3><span class="emxViewBtn">İncele</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunkategori/Kategori-dolap.jpg" alt="Dolaplar ve Depolama Sistemleri" loading="lazy"></div><div class="emxCardBody"><h3>Dolaplar ve Depolama Sistemleri</h3><span class="emxViewBtn">İncele</span></div></a>
-</div>
-<div class="emxSecFoot"><a class="emxBtnOutline" href="#">Tüm Kategoriler</a></div>
-</div>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<h2 class="emxSecTitle">En Çok Tercih Edilenler</h2>
-<div class="emxGrid">
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/fantastik-kutu-1.jpg" alt="Mystic Kutu" loading="lazy"></div><div class="emxCardBody"><h3>Mystic Kutu</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/2-combo-kutu-set.jpg" alt="Mystic Set Kutu" loading="lazy"></div><div class="emxCardBody"><h3>Mystic Set Kutu</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/ekstrem-kutu.jpg" alt="Ekstrem Kutu" loading="lazy"></div><div class="emxCardBody"><h3>Ekstrem Kutu</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/esktreme-kutu-set.jpg" alt="Ekstrem Set Kutu" loading="lazy"></div><div class="emxCardBody"><h3>Ekstrem Set Kutu</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/silindirik-silo.jpg" alt="Silindirik Silo" loading="lazy"></div><div class="emxCardBody"><h3>Silindirik Silo</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/dortgen-silo-1.jpg" alt="Dörtgen Silo" loading="lazy"></div><div class="emxCardBody"><h3>Dörtgen Silo</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/bonbon-kutu.jpg" alt="Bonbon Kutu" loading="lazy"></div><div class="emxCardBody"><h3>Bonbon Kutu</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/urunler/thumb/bonbon-kutu_1.jpg" alt="Bonbon Set Kutu" loading="lazy"></div><div class="emxCardBody"><h3>Bonbon Set Kutu</h3><span class="emxViewBtn">Ürün Detayı</span></div></a>
-</div>
-<div class="emxSecFoot"><a class="emxBtnOutline" href="#">Tümünü Gör</a></div>
-</div>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<h2 class="emxSecTitle">Nasıl Çalışıyoruz?</h2>
-<div class="emxWorkGrid">
-<div class="emxWorkImgWrap"><img src="assets/images/every-material-nasil-calisiyoruz2.jpg" alt="EveryMaterial üretim ve showroom" loading="lazy"></div>
-<div class="emxWorkBody">
-<p>everymaterial.com olarak, müşteri memnuniyetini en üst düzeye çıkarmak için yenilikçi ve çözüm odaklı bir yaklaşım benimsiyoruz. Hikayemiz, her müşterimizin kendine özgü taleplerine yanıt vermekle başlıyor.</p>
-<p>Bir müşteri bizimle iletişime geçtiğinde, ilk adımımız ihtiyaçlarını anlamak için detaylı bir analiz yapmaktır. Örneğin bir müşteri özel tasarım teşhir ekipmanı veya nadir bulunan gıda ürünleri talep ettiğinde, bu talepler doğrultusunda en uygun tedarikçileri ve çözümleri belirliyoruz. Uzmanlık alanlarımızın ötesinde destek sunarak, müşterilerimizi ihtiyaç duydukları ürünlerle buluşturuyoruz.</p>
-<p>Müşterilerimiz bizimle çalışmanın konforunu ve güvenilirliğini yaşıyor. Her adımda şeffaf bir iletişim sürdürüyor ve sürecin her aşamasında müşterilerimizi bilgilendiriyoruz. Amacımız, en rekabetçi fiyatlarla en yüksek kaliteli ürünleri sunarak müşterilerimizin operasyonlarını kolaylaştırmaktır. Bu nedenle her projeye bir çözüm ortağı olarak yaklaşıyoruz.</p>
-<div class="emxSloganStrip"><img src="assets/images/every-material-slogan.jpeg" alt="Every Material"><h4>Tüm Malzeme İhtiyaçlarınızı Bize Bırakın, Her Şeye Çözümümüz Var.</h4></div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<div class="emxCtaBand">
-<div class="emxCtaCard">
-<h2>Pleksi Teşhir Ekipmanları</h2>
-<p>Mağazanızda Pleksi Teşhir Ekipmanlarımızla ürünlerinizi daha güzel sergileyebilir, müşterilerinize ürün odaklı bir alışveriş deneyimi sunabilirsiniz.</p>
-<p><strong style="color:#16324a">Pleksi teşhir ekipmanı işletmelere birçok açıdan eşsiz faydalar sağlar;</strong></p>
-<ul>
-<li><strong>Estetik Görünüm:</strong> Şeffaf ve modern tasarımıyla mağaza içi görsel estetiği artırır</li>
-<li><strong>Ürün Sergileme Esnekliği:</strong> Farklı boyut ve şekillerde üretilebilen çok yönlü ekipman</li>
-<li><strong>Dayanıklılık:</strong> UV dayanımlı ve uzun ömürlü malzeme</li>
-<li><strong>Hafiflik:</strong> Kolay taşınabilir ve konumlandırılabilir</li>
-</ul>
-<img class="emxCtaImg" src="assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg" alt="Pleksi Teşhir Ekipmanları" loading="lazy">
-</div>
-<div class="emxCtaCard">
-<h2>Tüm Malzeme İhtiyaçlarınızı Bize Bırakın, Her Şeye Çözümümüz Var.</h2>
-<p>Malzeme ihtiyaçlarınız için profesyonel destek sunuyoruz. Size özel çözümler için bizimle iletişime geçin.</p>
-<a class="emxPhoneCta" href="tel:+905459111002">&#9742; +90 545 911 10 02</a>
-</div>
-</div>
-</div>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<h2 class="emxSecTitle">Uzman Ekibimiz</h2>
-<div class="emxGrid">
-<div class="emxTeamCard"><div class="emxAvatar"><span>MB</span></div><div class="emxCardBody"><h3>Muhammet Bilal Kavras</h3><div class="emxRole">Digital Marketing</div><div class="emxContact"><a href="tel:+905459111002">+90 545 911 10 02</a><a href="mailto:bilal@everymaterial.com">bilal@everymaterial.com</a></div><div class="emxLangPills"><span>TR</span><span>EN</span></div></div></div>
-<div class="emxTeamCard"><div class="emxAvatar"><span>HA</span></div><div class="emxCardBody"><h3>Hussein Ali</h3><div class="emxRole">Sales Marketing</div><div class="emxContact"><a href="tel:+905466382175">+90 546 638 21 75</a><a href="mailto:hussein@everymaterial.com">hussein@everymaterial.com</a></div><div class="emxLangPills"><span>TR</span><span>DE</span><span>AR</span></div></div></div>
-<div class="emxTeamCard"><div class="emxAvatar"><span>UE</span></div><div class="emxCardBody"><h3>Ugur Enes Ünel</h3><div class="emxRole">Export Specialist</div><div class="emxContact"><a href="tel:+905477717778">+90 547 771 77 78</a><a href="mailto:ugur@everymaterial.com">ugur@everymaterial.com</a></div><div class="emxLangPills"><span>EN</span></div></div></div>
-<div class="emxTeamCard"><div class="emxAvatar"><span>AY</span></div><div class="emxCardBody"><h3>Ahmet Yusuf</h3><div class="emxRole">Sales Marketing</div><div class="emxContact"><a href="tel:+4915213942586">+49 1521 394 25 86</a><a href="mailto:sales1@everymaterial.com">sales1@everymaterial.com</a></div><div class="emxLangPills"><span>DE</span></div></div></div>
-</div>
-<div class="emxSecFoot"><a class="emxBtnOutline" href="team-tr.html">Tüm Ekibimiz</a></div>
-</div>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<h2 class="emxSecTitle">Projelerimiz</h2>
-<div class="emxGrid3">
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/ahsap-standlar.jpeg" alt="Ahşap Standlar" loading="lazy"></div><div class="emxCardBody"><h3>Ahşap Standlar</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/silolar.jpg" alt="Silolar" loading="lazy"></div><div class="emxCardBody"><h3>Silolar</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/pleksi-standlar.jpg" alt="Pleksi Standlar" loading="lazy"></div><div class="emxCardBody"><h3>Pleksi Standlar</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/mystic-set-kutular.jpg" alt="Mystic - Mystic Set Kutular" loading="lazy"></div><div class="emxCardBody"><h3>Mystic - Mystic Set Kutular</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/tiptop-kutular.jpg" alt="Tiptop Kutular" loading="lazy"></div><div class="emxCardBody"><h3>Tiptop Kutular</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/kare-dikdortgen-kutular.jpg" alt="Kare - Dikdörtgen Kutular" loading="lazy"></div><div class="emxCardBody"><h3>Kare - Dikdörtgen Kutular</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/bonbon-kutular.jpg" alt="Bonbon Kutular" loading="lazy"></div><div class="emxCardBody"><h3>Bonbon Kutular</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/proje-1.jpeg" alt="Proje 1" loading="lazy"></div><div class="emxCardBody"><h3>Proje 1</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-<a class="emxCard" href="#"><div class="emxImgWrap"><img src="assets/img/proje/thumb/proje-2.jpeg" alt="Proje 2" loading="lazy"></div><div class="emxCardBody"><h3>Proje 2</h3><span class="emxViewBtn">Projeyi Gör</span></div></a>
-</div>
-<div class="emxSecFoot"><a class="emxBtnOutline" href="#">Tüm Projeler</a></div>
-</div>
-</section>
-
-<section class="emxSection">
-<div class="emxWrap">
-<h2 class="emxSecTitle">Son Yazılar</h2>
-<div class="emxBlogGrid">
-<a class="emxBlogCard" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg" alt="Özel Ölçü Pleksi Kutu Sipariş Rehberi" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">10 Mayıs 2026</span><h3>Özel Ölçü Pleksi Kutu Sipariş Rehberi</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogMed" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg" alt="Pastane ve Şekercilerde Pleksi Kutu Kullanımı" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">9 Mayıs 2026</span><h3>Pastane ve Şekercilerde Pleksi Kutu Kullanımı</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/pleksi-kutu-price.jpg" alt="Pleksi Kutu Fiyatlarını Etkileyen 7 Faktör" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">9 Mayıs 2026</span><h3>Pleksi Kutu Fiyatlarını Etkileyen 7 Faktör</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/pleksi-kutu-nasil-uretilir.jpeg" alt="Pleksi Kutu Nasıl Üretilir?" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">9 Mayıs 2026</span><h3>Pleksi Kutu Nasıl Üretilir?</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/pleksi-kopek-mama-kabi.jpeg" alt="Köpek Mama Kabı" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">25 Nisan 2026</span><h3>Köpek Mama Kabı</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/pleksi-kedi-mama-kabi_1.jpeg" alt="Kedi Mama Kabı" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">25 Nisan 2026</span><h3>Kedi Mama Kabı</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/pleksi-boru.jpeg" alt="Pleksi Boru" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">25 Nisan 2026</span><h3>Pleksi Boru</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/pleksi-akvaryum.jpeg" alt="Pleksi Akvaryum" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">25 Nisan 2026</span><h3>Pleksi Akvaryum</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-<a class="emxBlogCard emxBlogSm" href="#"><div class="emxImgWrap"><img src="assets/img/blog/thumb/kure-kutu.jpg" alt="Küre Kutu" loading="lazy"></div><div class="emxCardBody"><span class="emxDate">25 Nisan 2026</span><h3>Küre Kutu</h3><span class="emxReadLink">Devamını Oku →</span></div></a>
-</div>
-<div class="emxSecFoot"><a class="emxBtnOutline" href="blog-tr.html">Tümünü Gör</a></div>
-</div>
-</section>
-
-</div>
-
-<footer class="emxFooter">
-<div class="emxWrap emxFootGrid">
-<div class="emxFootLogo">
-<img src="assets/images/every-material-logo-beyaz.png" alt="EveryMaterial">
-<p>everymaterial.com, Türkiye merkezli, Almanya ve Filistin çözüm ortaklı bir firma olarak dünya genelindeki müşterilerine kapsamlı hizmet sunmayı hedefleyen bir platformdur.</p>
-<a class="emxCatalogLink" href="katalog-tr.html">&#128196; Kataloğa Göz Atın</a>
-</div>
-<div>
-<h5>Kategoriler</h5>
-<ul>
-<li><a href="#">Pleksi Teşhir Ekipmanları</a></li>
-<li><a href="#">Kapaklar</a></li>
-<li><a href="#">Ahşap Teşhir Ekipmanları</a></li>
-<li><a href="#">Cam Teşhir Ekipmanları</a></li>
-<li><a href="#">Polikarbon Teşhir Ekipmanları</a></li>
-<li><a href="#">Market Ekipmanları</a></li>
-<li><a href="#">Raf Sistemleri</a></li>
-<li><a href="#">Makineler</a></li>
-<li><a href="#">Dolaplar ve Depolama Sistemleri</a></li>
-</ul>
-</div>
-<div class="emxFootContact">
-<h5>İletişim Bilgileri</h5>
-<p><span>Adres:</span> Mahmutbey Mah. 2430. Sok. 12.Ada No: 112 - İstoç Toptancılar Çarşısı - Bağcılar / İstanbul</p>
-<p><span>Telefon:</span> <a href="tel:+905459111002">+90 545 911 10 02</a></p>
-<p><span>E-posta:</span> <a href="mailto:info@everymaterial.com">info@everymaterial.com</a></p>
-<div class="emxSocial">
-<a href="https://www.instagram.com/every.material/" target="_blank" aria-label="Instagram">IG</a>
-<a href="https://www.facebook.com/profile.php?id=61561776136698" target="_blank" aria-label="Facebook">FB</a>
-<a href="https://www.linkedin.com/company/everymaterial/" target="_blank" aria-label="LinkedIn">IN</a>
-<a href="https://x.com/every_material" target="_blank" aria-label="X">X</a>
-<a href="https://www.youtube.com/@EveryMaterial-k3i" target="_blank" aria-label="YouTube">YT</a>
-</div>
-</div>
-</div>
-<div class="emxWrap emxFootBottom">
-<span>Copyright 2026 Every Material | Tüm Hakları Saklıdır.</span>
-<ul><li><a href="#">Kişisel Verilerin Korunması Kanunu (KVKK)</a></li><li><a href="#">Çerez Politikası</a></li></ul>
-</div>
-</footer>
-
-<a class="emxWhatsAppBtn" href="https://wa.me/905459111002/?text=Merhaba, ürünleriniz hakkında bilgi almak istiyorum.." target="_blank" aria-label="WhatsApp">
-<svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.94.92.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
-</a>
-
-<script>
-(function(){
-  var slides = document.querySelectorAll('#emxHero .emxSlide');
-  var dotsWrap = document.querySelector('#emxHero .emxSlideDots');
-  var i = 0;
-  slides.forEach(function(_, idx){
-    var d = document.createElement('span');
-    if (idx === 0) d.className = 'emxDotActive';
-    d.addEventListener('click', function(){ show(idx); });
-    dotsWrap.appendChild(d);
-  });
-  function show(idx){
-    slides[i].classList.remove('emxSlideActive');
-    dotsWrap.children[i].classList.remove('emxDotActive');
-    i = idx;
-    slides[i].classList.add('emxSlideActive');
-    dotsWrap.children[i].classList.add('emxDotActive');
-  }
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    setInterval(function(){ show((i + 1) % slides.length); }, 4500);
-  }
-})();
-</script>
-</body></html>
+    <!--
+      TikTok Pixel — replace YOUR_TIKTOK_PIXEL_ID with the real ID from
+      TikTok Business Center > Assets > Events, then remove this comment.
+      Conversion event ("Contact") already wired in src/ui/WhatsAppButton.tsx.
+    -->
+    <script>
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<e.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=i+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(a,s)};
+        ttq.load('YOUR_TIKTOK_PIXEL_ID');
+        ttq.page();
+      }(window, document, 'ttq');
+    </script>
+    <script type="module" crossorigin src="/assets/main-DKSa4Isb.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/globals-CHIIlfwU.js">
+    <link rel="modulepreload" crossorigin href="/assets/home-Dof2Jzab.js">
+    <link rel="stylesheet" crossorigin href="/assets/globals-ChljVuRD.css">
+  </head>
+  <body>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1086479217049750&ev=PageView&noscript=1"
+    /></noscript>
+    <div id="root"></div>
+  </body>
+</html>
