@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@500&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+}
+
+/* Inter and Space Grotesk have no Arabic glyphs, so on RTL pages every element
+   (including ones with an explicit font-display/font-mono utility) must fall
+   back to Noto Sans Arabic instead of silently hitting the OS default font. */
+[dir="rtl"],
+[dir="rtl"] * {
+  font-family: "Noto Sans Arabic", "Inter", ui-sans-serif, system-ui, sans-serif !important;
+}

@@ -1,0 +1,698 @@
+export interface HeroSlide {
+  src: string;
+  alt: string;
+}
+
+export interface CategoryTeaser {
+  name: string;
+  image: string;
+}
+
+export interface ProductTeaser {
+  name: string;
+  image: string;
+  imageFit?: "contain" | "cover";
+  imagePosition?: string;
+}
+
+export interface TeamMember {
+  initials: string;
+  name: string;
+  role: string;
+  phone: string;
+  phoneHref: string;
+  email: string;
+  langs: string[];
+}
+
+export interface ProjectTeaser {
+  name: string;
+  image: string;
+  imageFit?: "contain" | "cover";
+  imagePosition?: string;
+}
+
+export interface BlogPost {
+  date: string;
+  title: string;
+  image: string;
+  size: "lg" | "md" | "sm";
+  slug?: string;
+}
+
+import type { Localized } from "./types";
+
+export interface HomeContent {
+  seo: { h1: string; description: string };
+  heroSlides: HeroSlide[];
+  categories: CategoryTeaser[];
+  featuredProducts: ProductTeaser[];
+  howWeWork: {
+    paragraphs: string[];
+    workImage: string;
+    sloganImage: string;
+    sloganText: string;
+  };
+  ctaBand: {
+    promoTitle: string;
+    promoBody: string;
+    promoBullets: { label: string; text: string }[];
+    promoImage: string;
+    ctaTitle: string;
+    ctaBody: string;
+  };
+  team: TeamMember[];
+  projects: ProjectTeaser[];
+  blogPosts: BlogPost[];
+}
+
+/**
+ * Per-section chrome (title/CTA label/eyebrow) shown on the homepage around each
+ * `HomeContent` block. Most strings are verbatim from the real .deploy/index-{lang}.html
+ * pages (Categories/Most Preferred/How we Work?/Our Expert Team/Latest Articles and
+ * their real CTA labels); the "featured project" spotlight and stat-count labels are
+ * v2-only additions with no v1 static-site equivalent, so those are a plain literal
+ * translation of the existing real Turkish microcopy rather than fabricated new copy.
+ */
+export interface SectionChrome {
+  categoriesTitle: string;
+  categoriesCta: string;
+  categoriesEyebrow: string;
+  productsTitle: string;
+  productsCta: string;
+  productsEyebrow: string;
+  statCategoriesLabel: string;
+  statTeamLabel: string;
+  howWeWorkTitle: string;
+  howWeWorkEyebrow: string;
+  featuredProjectTitle: string;
+  featuredProjectEyebrow: string;
+  teamTitle: string;
+  teamCta: string;
+  teamEyebrow: string;
+  projectsTitle: string;
+  projectsCta: string;
+  projectsEyebrow: string;
+  blogTitle: string;
+  blogCta: string;
+  blogEyebrow: string;
+  blogReadMore: string;
+}
+
+/**
+ * Real EN/DE/AR content extracted verbatim from the already-shipped, client-approved
+ * static pages (.deploy/index-{en,de,ar}.html) — Faz 2. `team[].role` is intentionally
+ * left untranslated in every language: the real source site itself never translated
+ * job titles ("Digital Marketing"/"Sales Marketing"/"Export Specialist" stay in
+ * English on the DE/AR pages too), so matching that is following the real data, not
+ * missing a translation.
+ */
+export const homeContent: Localized<HomeContent> = {
+  tr: {
+    seo: {
+      h1: "EveryMaterial | Pleksi Kutu, Cam, Ahşap ve Akrilik Teşhir Ekipmanları",
+      description:
+        "Pleksi kutu, cam, ahşap ve kova teşhir ekipmanlarında profesyonel çözümler. Mağazalar, marketler ve showroomlar için akrilik ve pleksiglas ürünleri.",
+    },
+    heroSlides: [
+      { src: "/assets/img/slider/Bener1.jpg", alt: "EveryMaterial showroom ve üretim" },
+      { src: "/assets/img/slider/Bener2.jpg", alt: "EveryMaterial ürün sergisi" },
+      { src: "/assets/img/slider/site-kapak.jpg", alt: "EveryMaterial" },
+      { src: "/assets/img/slider/bener-cam.jpg", alt: "Cam teşhir ekipmanları" },
+      { src: "/assets/img/slider/ahshap-bener.jpg", alt: "Ahşap teşhir ekipmanları" },
+      { src: "/assets/img/slider/bener-RAF-1.jpg", alt: "Raf sistemleri" },
+      { src: "/assets/img/slider/dolap-bener.jpg", alt: "Dolap ve depolama sistemleri" },
+      { src: "/assets/img/slider/kuruyamis-dolap-bener.jpg", alt: "Kuruyemiş dolabı" },
+    ],
+    categories: [
+      { name: "Pleksi Teşhir Ekipmanları", image: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg" },
+      { name: "Kapaklar", image: "/assets/img/urunkategori/lids-every-material.jpg" },
+      { name: "Ahşap Teşhir Ekipmanları", image: "/assets/img/urunkategori/wooden-display-equipment-every-material.jpg" },
+      { name: "Cam Teşhir Ekipmanları", image: "/assets/img/urunkategori/glass-display-equipment-every-material.jpg" },
+      { name: "Polikarbon Teşhir Ekipmanları", image: "/assets/img/urunkategori/polycarbon-display-equipment-every-material.jpg" },
+      { name: "Market Ekipmanları", image: "/assets/img/urunkategori/market-display-equipment-every-material.jpg" },
+      { name: "Raf Sistemleri", image: "/assets/img/urunkategori/shelf-every-material.jpg" },
+      { name: "Makineler", image: "/assets/img/urunkategori/machines-every-material.jpg" },
+      { name: "Dolaplar ve Depolama Sistemleri", image: "/assets/img/urunkategori/Kategori-dolap.jpg" },
+    ],
+    featuredProducts: [
+      { name: "Mystic Kutu", image: "/assets/img/home/featured-products/mystic-box-portrait.png", imageFit: "cover" },
+      { name: "Mystic Set Kutu", image: "/assets/img/home/featured-products/mystic-set-box-portrait.png", imageFit: "cover" },
+      { name: "Ekstrem Kutu", image: "/assets/img/home/featured-products/extreme-box-portrait.png", imageFit: "cover" },
+      { name: "Ekstrem Set Kutu", image: "/assets/img/home/featured-products/extreme-set-box-portrait.png", imageFit: "cover" },
+      { name: "Silindirik Silo", image: "/assets/img/home/featured-products/cylindrical-silo-portrait.png", imageFit: "cover" },
+      { name: "Dörtgen Silo", image: "/assets/img/home/featured-products/rectangular-silo-portrait.png", imageFit: "cover" },
+      { name: "Bonbon Kutu", image: "/assets/img/home/featured-products/bonbon-box-portrait.png", imageFit: "cover" },
+      { name: "Bonbon Set Kutu", image: "/assets/img/home/featured-products/bonbon-set-box-portrait.png", imageFit: "cover" },
+    ],
+    howWeWork: {
+      paragraphs: [
+        "everymaterial.com olarak, müşteri memnuniyetini en üst düzeye çıkarmak için yenilikçi ve çözüm odaklı bir yaklaşım benimsiyoruz. Hikayemiz, her müşterimizin kendine özgü taleplerine yanıt vermekle başlıyor.",
+        "Bir müşteri bizimle iletişime geçtiğinde, ilk adımımız ihtiyaçlarını anlamak için detaylı bir analiz yapmaktır. Örneğin bir müşteri özel tasarım teşhir ekipmanı veya nadir bulunan gıda ürünleri talep ettiğinde, bu talepler doğrultusunda en uygun tedarikçileri ve çözümleri belirliyoruz. Uzmanlık alanlarımızın ötesinde destek sunarak, müşterilerimizi ihtiyaç duydukları ürünlerle buluşturuyoruz.",
+        "Müşterilerimiz bizimle çalışmanın konforunu ve güvenilirliğini yaşıyor. Her adımda şeffaf bir iletişim sürdürüyor ve sürecin her aşamasında müşterilerimizi bilgilendiriyoruz. Amacımız, en rekabetçi fiyatlarla en yüksek kaliteli ürünleri sunarak müşterilerimizin operasyonlarını kolaylaştırmaktır. Bu nedenle her projeye bir çözüm ortağı olarak yaklaşıyoruz.",
+      ],
+      workImage: "/assets/images/every-material-nasil-calisiyoruz2.jpg",
+      sloganImage: "/assets/images/every-material-slogan.jpeg",
+      sloganText: "Tüm Malzeme İhtiyaçlarınızı Bize Bırakın, Her Şeye Çözümümüz Var.",
+    },
+    ctaBand: {
+      promoTitle: "Pleksi Teşhir Ekipmanları",
+      promoBody:
+        "Mağazanızda Pleksi Teşhir Ekipmanlarımızla ürünlerinizi daha güzel sergileyebilir, müşterilerinize ürün odaklı bir alışveriş deneyimi sunabilirsiniz.",
+      promoBullets: [
+        { label: "Estetik Görünüm", text: "Şeffaf ve modern tasarımıyla mağaza içi görsel estetiği artırır" },
+        { label: "Ürün Sergileme Esnekliği", text: "Farklı boyut ve şekillerde üretilebilen çok yönlü ekipman" },
+        { label: "Dayanıklılık", text: "UV dayanımlı ve uzun ömürlü malzeme" },
+        { label: "Hafiflik", text: "Kolay taşınabilir ve konumlandırılabilir" },
+      ],
+      promoImage: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg",
+      ctaTitle: "Tüm Malzeme İhtiyaçlarınızı Bize Bırakın, Her Şeye Çözümümüz Var.",
+      ctaBody: "Malzeme ihtiyaçlarınız için profesyonel destek sunuyoruz. Size özel çözümler için bizimle iletişime geçin.",
+    },
+    team: [
+      {
+        initials: "MB",
+        name: "Muhammet Bilal Kavras",
+        role: "Digital Marketing",
+        phone: "+90 545 911 10 02",
+        phoneHref: "tel:+905459111002",
+        email: "bilal@everymaterial.com",
+        langs: ["TR", "EN"],
+      },
+      {
+        initials: "HA",
+        name: "Hussein Ali",
+        role: "Sales Marketing",
+        phone: "+90 546 638 21 75",
+        phoneHref: "tel:+905466382175",
+        email: "hussein@everymaterial.com",
+        langs: ["TR", "DE", "AR"],
+      },
+      {
+        initials: "UE",
+        name: "Ugur Enes Ünel",
+        role: "Export Specialist",
+        phone: "+90 547 771 77 78",
+        phoneHref: "tel:+905477717778",
+        email: "ugur@everymaterial.com",
+        langs: ["EN"],
+      },
+      {
+        initials: "AY",
+        name: "Ahmet Yusuf",
+        role: "Sales Marketing",
+        phone: "+49 1521 394 25 86",
+        phoneHref: "tel:+4915213942586",
+        email: "sales1@everymaterial.com",
+        langs: ["DE"],
+      },
+    ],
+    projects: [
+      { name: "Ahşap Standlar", image: "/assets/img/proje/4e64fdac-1438-4f2d-8f5e-255dde274dbd.jpeg", imageFit: "cover" },
+      { name: "Silolar", image: "/assets/img/proje/thumb/silolar.jpg", imageFit: "cover" },
+      { name: "Pleksi Standlar", image: "/assets/img/proje/thumb/pleksi-standlar.jpg" },
+      { name: "Mystic - Mystic Set Kutular", image: "/assets/img/proje/thumb/mystic-set-kutular.jpg" },
+      { name: "Tiptop Kutular", image: "/assets/img/proje/thumb/tiptop-kutular.jpg" },
+      { name: "Kare - Dikdörtgen Kutular", image: "/assets/img/proje/thumb/kare-dikdortgen-kutular.jpg" },
+      { name: "Bonbon Kutular", image: "/assets/img/proje/thumb/bonbon-kutular.jpg" },
+      { name: "Proje 1", image: "/assets/img/proje/thumb/proje-1.jpeg" },
+      { name: "Proje 2", image: "/assets/img/proje/generated/project-2-confectionery-installation.png", imageFit: "cover" },
+    ],
+    blogPosts: [
+      { date: "10 Mayıs 2026", title: "Özel Ölçü Pleksi Kutu Sipariş Rehberi", image: "/assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg", size: "lg" },
+      { date: "9 Mayıs 2026", title: "Pastane ve Şekercilerde Pleksi Kutu Kullanımı", image: "/assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg", size: "md" },
+      { date: "9 Mayıs 2026", title: "Pleksi Kutu Fiyatlarını Etkileyen 7 Faktör", image: "/assets/img/blog/thumb/pleksi-kutu-price.jpg", size: "sm" },
+      { date: "9 Mayıs 2026", title: "Pleksi Kutu Nasıl Üretilir?", image: "/assets/img/blog/thumb/pleksi-kutu-nasil-uretilir.jpeg", size: "sm", slug: "pleksi-kutu-nasil-uretilir" },
+      { date: "25 Nisan 2026", title: "Köpek Mama Kabı", image: "/assets/img/blog/thumb/pleksi-kopek-mama-kabi.jpeg", size: "sm" },
+      { date: "25 Nisan 2026", title: "Kedi Mama Kabı", image: "/assets/img/blog/thumb/pleksi-kedi-mama-kabi_1.jpeg", size: "sm" },
+      { date: "25 Nisan 2026", title: "Pleksi Boru", image: "/assets/img/blog/thumb/pleksi-boru.jpeg", size: "sm" },
+      { date: "25 Nisan 2026", title: "Pleksi Akvaryum", image: "/assets/img/blog/thumb/pleksi-akvaryum.jpeg", size: "sm" },
+      { date: "25 Nisan 2026", title: "Küre Kutu", image: "/assets/img/blog/thumb/kure-kutu.jpg", size: "sm" },
+    ],
+  },
+  en: {
+    seo: {
+      h1: "EveryMaterial | Plexi Box, Glass, Wood & Acrylic Display Equipment",
+      description:
+        "Professional solutions in plexi box, glass, wood and bucket display equipment. Acrylic and plexiglass products for stores, markets and showrooms.",
+    },
+    heroSlides: [
+      { src: "/assets/img/slider/Bener1.jpg", alt: "EveryMaterial showroom and production" },
+      { src: "/assets/img/slider/Bener2.jpg", alt: "EveryMaterial product display" },
+      { src: "/assets/img/slider/site-kapak.jpg", alt: "EveryMaterial" },
+      { src: "/assets/img/slider/bener-cam.jpg", alt: "Glass display equipment" },
+      { src: "/assets/img/slider/ahshap-bener.jpg", alt: "Wooden display equipment" },
+      { src: "/assets/img/slider/bener-RAF-1.jpg", alt: "Shelving systems" },
+      { src: "/assets/img/slider/dolap-bener.jpg", alt: "Cabinets and storage systems" },
+      { src: "/assets/img/slider/kuruyamis-dolap-bener.jpg", alt: "Nut display cabinet" },
+    ],
+    categories: [
+      { name: "Plexiglass Display Equipment", image: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg" },
+      { name: "Lids", image: "/assets/img/urunkategori/lids-every-material.jpg" },
+      { name: "Wooden Display Equipment", image: "/assets/img/urunkategori/wooden-display-equipment-every-material.jpg" },
+      { name: "Glass Display Equipment", image: "/assets/img/urunkategori/glass-display-equipment-every-material.jpg" },
+      { name: "Polycarbonate Display Equipment", image: "/assets/img/urunkategori/polycarbon-display-equipment-every-material.jpg" },
+      { name: "Market Equipment", image: "/assets/img/urunkategori/market-display-equipment-every-material.jpg" },
+      { name: "Shelving Systems", image: "/assets/img/urunkategori/shelf-every-material.jpg" },
+      { name: "Machinery", image: "/assets/img/urunkategori/machines-every-material.jpg" },
+      { name: "Cabinets and Storage Systems", image: "/assets/img/urunkategori/Kategori-dolap.jpg" },
+    ],
+    featuredProducts: [
+      { name: "Mystic Box", image: "/assets/img/home/featured-products/mystic-box-portrait.png", imageFit: "cover" },
+      { name: "Mystic Set Box", image: "/assets/img/home/featured-products/mystic-set-box-portrait.png", imageFit: "cover" },
+      { name: "Extreme Box", image: "/assets/img/home/featured-products/extreme-box-portrait.png", imageFit: "cover" },
+      { name: "Extreme Set Box", image: "/assets/img/home/featured-products/extreme-set-box-portrait.png", imageFit: "cover" },
+      { name: "Cylindrical Silo", image: "/assets/img/home/featured-products/cylindrical-silo-portrait.png", imageFit: "cover" },
+      { name: "Rectangular Silo", image: "/assets/img/home/featured-products/rectangular-silo-portrait.png", imageFit: "cover" },
+      { name: "Bonbon Box", image: "/assets/img/home/featured-products/bonbon-box-portrait.png", imageFit: "cover" },
+      { name: "Bonbon Set Box", image: "/assets/img/home/featured-products/bonbon-set-box-portrait.png", imageFit: "cover" },
+    ],
+    howWeWork: {
+      paragraphs: [
+        "At everymaterial.com, we adopt an innovative and solution-oriented approach to maximize customer satisfaction. Our story begins by responding to the unique demands of each of our customers.",
+        "When a customer contacts us, our first step is to conduct a detailed analysis to understand their needs. For example, if a customer requests custom-designed display equipment or rare food products, we identify the most suitable suppliers and solutions based on these demands. By offering support beyond our areas of expertise, we connect our customers with the products they need.",
+        "Our customers experience the comfort and reliability of working with us. We maintain transparent communication at every step and keep our customers informed throughout each stage of the process. Our goal is to make our customers' operations easier by providing the highest quality products at the most competitive prices. Therefore, we approach every project as a solution partner.",
+      ],
+      workImage: "/assets/images/every-material-nasil-calisiyoruz2.jpg",
+      sloganImage: "/assets/images/every-material-slogan.jpeg",
+      sloganText: "Leave All Your Material Needs to Us, We Have a Solution for Everything.",
+    },
+    ctaBand: {
+      promoTitle: "Plexi Display Equipments",
+      promoBody:
+        "With our Plexi Display Equipment in your store, you can showcase your products more beautifully and provide your customers with product-focused shopping experiences.",
+      promoBullets: [
+        { label: "Aesthetic Appearance", text: "Enhances in-store visual aesthetics with its transparent and modern design" },
+        { label: "Product Display Flexibility", text: "Versatile equipment producible in different sizes and shapes" },
+        { label: "Durability", text: "UV-resistant and long-lasting material" },
+        { label: "Lightweight", text: "Easy to transport and position" },
+      ],
+      promoImage: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg",
+      ctaTitle: "Leave All Your Material Needs to Us, We Have a Solution for Everything.",
+      ctaBody: "We offer professional support for your material needs. Contact us for tailored solutions.",
+    },
+    team: [
+      {
+        initials: "MB",
+        name: "Muhammet Bilal Kavras",
+        role: "Digital Marketing",
+        phone: "+90 545 911 10 02",
+        phoneHref: "tel:+905459111002",
+        email: "bilal@everymaterial.com",
+        langs: ["TR", "EN"],
+      },
+      {
+        initials: "HA",
+        name: "Hussein Ali",
+        role: "Sales Marketing",
+        phone: "+90 546 638 21 75",
+        phoneHref: "tel:+905466382175",
+        email: "hussein@everymaterial.com",
+        langs: ["TR", "DE", "AR"],
+      },
+      {
+        initials: "UE",
+        name: "Ugur Enes Ünel",
+        role: "Export Specialist",
+        phone: "+90 547 771 77 78",
+        phoneHref: "tel:+905477717778",
+        email: "ugur@everymaterial.com",
+        langs: ["EN"],
+      },
+      {
+        initials: "AY",
+        name: "Ahmet Yusuf",
+        role: "Sales Marketing",
+        phone: "+49 1521 394 25 86",
+        phoneHref: "tel:+4915213942586",
+        email: "sales1@everymaterial.com",
+        langs: ["DE"],
+      },
+    ],
+    projects: [
+      { name: "Wooden Stands", image: "/assets/img/proje/4e64fdac-1438-4f2d-8f5e-255dde274dbd.jpeg", imageFit: "cover" },
+      { name: "Silos", image: "/assets/img/proje/thumb/silolar.jpg", imageFit: "cover" },
+      { name: "Plexi Stands", image: "/assets/img/proje/thumb/pleksi-standlar.jpg" },
+      { name: "Mystic - Mystic Set Boxes", image: "/assets/img/proje/thumb/mystic-set-kutular.jpg" },
+      { name: "Tiptop Boxes", image: "/assets/img/proje/thumb/tiptop-kutular.jpg" },
+      { name: "Square - Rectangular Boxes", image: "/assets/img/proje/thumb/kare-dikdortgen-kutular.jpg" },
+      { name: "Bonbon Boxes", image: "/assets/img/proje/thumb/bonbon-kutular.jpg" },
+      { name: "Project 1", image: "/assets/img/proje/thumb/proje-1.jpeg" },
+      { name: "Project 2", image: "/assets/img/proje/generated/project-2-confectionery-installation.png", imageFit: "cover" },
+    ],
+    blogPosts: [
+      { date: "May 10, 2026", title: "Custom-Sized Plexiglass Box Order Guide", image: "/assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg", size: "lg" },
+      { date: "May 9, 2026", title: "Use of Plexiglass Boxes in Patisseries and Confectioneries", image: "/assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg", size: "md" },
+      { date: "May 9, 2026", title: "7 Factors Affecting Plexiglass Box Prices", image: "/assets/img/blog/thumb/pleksi-kutu-price.jpg", size: "sm" },
+      { date: "May 9, 2026", title: "How Are Plexiglass Boxes Manufactured", image: "/assets/img/blog/thumb/pleksi-kutu-nasil-uretilir.jpeg", size: "sm", slug: "pleksi-kutu-nasil-uretilir" },
+      { date: "Apr 25, 2026", title: "Dog Food Bowl", image: "/assets/img/blog/thumb/pleksi-kopek-mama-kabi.jpeg", size: "sm" },
+      { date: "Apr 25, 2026", title: "Cat Food Bowl", image: "/assets/img/blog/thumb/pleksi-kedi-mama-kabi_1.jpeg", size: "sm" },
+      { date: "Apr 25, 2026", title: "Plexiglass Tube", image: "/assets/img/blog/thumb/pleksi-boru.jpeg", size: "sm" },
+      { date: "Apr 25, 2026", title: "Plexi Dome Aquarium", image: "/assets/img/blog/thumb/pleksi-akvaryum.jpeg", size: "sm" },
+      { date: "Apr 25, 2026", title: "Sphere Box", image: "/assets/img/blog/thumb/kure-kutu.jpg", size: "sm" },
+    ],
+  },
+  de: {
+    seo: {
+      h1: "EveryMaterial | Plexi-Box, Glas, Holz & Acryl Präsentationsgeräte",
+      description:
+        "Professionelle Lösungen für Plexi-Box-, Glas-, Holz- und Kübel-Präsentationsgeräte. Acryl- und Plexiglasprodukte für Geschäfte, Märkte und Showrooms.",
+    },
+    heroSlides: [
+      { src: "/assets/img/slider/Bener1.jpg", alt: "EveryMaterial Showroom und Produktion" },
+      { src: "/assets/img/slider/Bener2.jpg", alt: "EveryMaterial Produktpräsentation" },
+      { src: "/assets/img/slider/site-kapak.jpg", alt: "EveryMaterial" },
+      { src: "/assets/img/slider/bener-cam.jpg", alt: "Glas-Präsentationsgeräte" },
+      { src: "/assets/img/slider/ahshap-bener.jpg", alt: "Holz-Präsentationsgeräte" },
+      { src: "/assets/img/slider/bener-RAF-1.jpg", alt: "Regalsysteme" },
+      { src: "/assets/img/slider/dolap-bener.jpg", alt: "Schränke und Lagersysteme" },
+      { src: "/assets/img/slider/kuruyamis-dolap-bener.jpg", alt: "Nussvitrine" },
+    ],
+    categories: [
+      { name: "Plexiglas-Präsentationsgeräte", image: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg" },
+      { name: "Deckel", image: "/assets/img/urunkategori/lids-every-material.jpg" },
+      { name: "Holz-Präsentationsgeräte", image: "/assets/img/urunkategori/wooden-display-equipment-every-material.jpg" },
+      { name: "Glas-Präsentationsgeräte", image: "/assets/img/urunkategori/glass-display-equipment-every-material.jpg" },
+      { name: "Polycarbonat-Präsentationsgeräte", image: "/assets/img/urunkategori/polycarbon-display-equipment-every-material.jpg" },
+      { name: "Marktausstattung", image: "/assets/img/urunkategori/market-display-equipment-every-material.jpg" },
+      { name: "Regalsysteme", image: "/assets/img/urunkategori/shelf-every-material.jpg" },
+      { name: "Maschinen", image: "/assets/img/urunkategori/machines-every-material.jpg" },
+      { name: "Schränke und Lagersysteme", image: "/assets/img/urunkategori/Kategori-dolap.jpg" },
+    ],
+    featuredProducts: [
+      { name: "Mystic Box", image: "/assets/img/home/featured-products/mystic-box-portrait.png", imageFit: "cover" },
+      { name: "Mystic Set Box", image: "/assets/img/home/featured-products/mystic-set-box-portrait.png", imageFit: "cover" },
+      { name: "Extreme Box", image: "/assets/img/home/featured-products/extreme-box-portrait.png", imageFit: "cover" },
+      { name: "Extreme Set Box", image: "/assets/img/home/featured-products/extreme-set-box-portrait.png", imageFit: "cover" },
+      { name: "Zylindrischer Silo", image: "/assets/img/home/featured-products/cylindrical-silo-portrait.png", imageFit: "cover" },
+      { name: "Rechteckiger Silo", image: "/assets/img/home/featured-products/rectangular-silo-portrait.png", imageFit: "cover" },
+      { name: "Bonbon Box", image: "/assets/img/home/featured-products/bonbon-box-portrait.png", imageFit: "cover" },
+      { name: "Bonbon Set Box", image: "/assets/img/home/featured-products/bonbon-set-box-portrait.png", imageFit: "cover" },
+    ],
+    howWeWork: {
+      paragraphs: [
+        "Bei everymaterial.com verfolgen wir einen innovativen und lösungsorientierten Ansatz, um die Kundenzufriedenheit zu maximieren. Unsere Geschichte beginnt damit, auf die individuellen Anforderungen jedes einzelnen Kunden einzugehen.",
+        "Wenn ein Kunde mit uns Kontakt aufnimmt, besteht unser erster Schritt darin, eine detaillierte Analyse durchzuführen, um seine Bedürfnisse zu verstehen. Wenn ein Kunde beispielsweise individuell gestaltete Präsentationsgeräte oder seltene Lebensmittelprodukte anfragt, ermitteln wir die am besten geeigneten Lieferanten und Lösungen auf Basis dieser Anforderungen. Indem wir Unterstützung weit über unsere Fachgebiete hinaus anbieten, verbinden wir unsere Kunden mit den Produkten, die sie benötigen.",
+        "Unsere Kunden erleben den Komfort und die Zuverlässigkeit der Zusammenarbeit mit uns. Wir pflegen bei jedem Schritt eine transparente Kommunikation und halten unsere Kunden während des gesamten Prozesses auf dem Laufenden. Unser Ziel ist es, die Abläufe unserer Kunden zu erleichtern, indem wir die hochwertigsten Produkte zu den wettbewerbsfähigsten Preisen anbieten. Deshalb betrachten wir jedes Projekt als Lösungspartner.",
+      ],
+      workImage: "/assets/images/every-material-nasil-calisiyoruz2.jpg",
+      sloganImage: "/assets/images/every-material-slogan.jpeg",
+      sloganText: "Überlassen Sie uns all Ihre Materialbedürfnisse, wir haben für alles eine Lösung.",
+    },
+    ctaBand: {
+      promoTitle: "Plexi-Präsentationsgeräte",
+      promoBody:
+        "Mit unseren Plexi-Präsentationsgeräten in Ihrem Geschäft können Sie Ihre Produkte schöner präsentieren und Ihren Kunden ein produktorientiertes Einkaufserlebnis bieten.",
+      promoBullets: [
+        { label: "Ästhetisches Erscheinungsbild", text: "Verbessert die visuelle Ästhetik im Geschäft durch transparentes und modernes Design" },
+        { label: "Flexibilität bei der Produktpräsentation", text: "Vielseitige Ausrüstung, herstellbar in verschiedenen Größen und Formen" },
+        { label: "Langlebigkeit", text: "UV-beständiges und langlebiges Material" },
+        { label: "Leichtgewicht", text: "Einfach zu transportieren und zu positionieren" },
+      ],
+      promoImage: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg",
+      ctaTitle: "Überlassen Sie uns all Ihre Materialbedürfnisse, wir haben für alles eine Lösung.",
+      ctaBody: "Wir bieten professionelle Unterstützung für Ihre Materialbedürfnisse. Kontaktieren Sie uns für maßgeschneiderte Lösungen.",
+    },
+    team: [
+      {
+        initials: "MB",
+        name: "Muhammet Bilal Kavras",
+        role: "Digital Marketing",
+        phone: "+90 545 911 10 02",
+        phoneHref: "tel:+905459111002",
+        email: "bilal@everymaterial.com",
+        langs: ["TR", "EN"],
+      },
+      {
+        initials: "HA",
+        name: "Hussein Ali",
+        role: "Sales Marketing",
+        phone: "+90 546 638 21 75",
+        phoneHref: "tel:+905466382175",
+        email: "hussein@everymaterial.com",
+        langs: ["TR", "DE", "AR"],
+      },
+      {
+        initials: "UE",
+        name: "Ugur Enes Ünel",
+        role: "Export Specialist",
+        phone: "+90 547 771 77 78",
+        phoneHref: "tel:+905477717778",
+        email: "ugur@everymaterial.com",
+        langs: ["EN"],
+      },
+      {
+        initials: "AY",
+        name: "Ahmet Yusuf",
+        role: "Sales Marketing",
+        phone: "+49 1521 394 25 86",
+        phoneHref: "tel:+4915213942586",
+        email: "sales1@everymaterial.com",
+        langs: ["DE"],
+      },
+    ],
+    projects: [
+      { name: "Holzständer", image: "/assets/img/proje/4e64fdac-1438-4f2d-8f5e-255dde274dbd.jpeg", imageFit: "cover" },
+      { name: "Silos", image: "/assets/img/proje/thumb/silolar.jpg", imageFit: "cover" },
+      { name: "Plexi-Ständer", image: "/assets/img/proje/thumb/pleksi-standlar.jpg" },
+      { name: "Mystic - Mystic Set Boxen", image: "/assets/img/proje/thumb/mystic-set-kutular.jpg" },
+      { name: "Tiptop Boxen", image: "/assets/img/proje/thumb/tiptop-kutular.jpg" },
+      { name: "Quadratische - Rechteckige Boxen", image: "/assets/img/proje/thumb/kare-dikdortgen-kutular.jpg" },
+      { name: "Bonbon Boxen", image: "/assets/img/proje/thumb/bonbon-kutular.jpg" },
+      { name: "Projekt 1", image: "/assets/img/proje/thumb/proje-1.jpeg" },
+      { name: "Projekt 2", image: "/assets/img/proje/generated/project-2-confectionery-installation.png", imageFit: "cover" },
+    ],
+    blogPosts: [
+      { date: "10. Mai 2026", title: "Bestellratgeber für Plexiglas-Boxen nach Maß", image: "/assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg", size: "lg" },
+      { date: "9. Mai 2026", title: "Verwendung von Plexiglasboxen in Konditoreien und Süßwarengeschäften", image: "/assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg", size: "md" },
+      { date: "9. Mai 2026", title: "7 Faktoren, die die Preise von Plexiglasboxen beeinflussen", image: "/assets/img/blog/thumb/pleksi-kutu-price.jpg", size: "sm" },
+      { date: "9. Mai 2026", title: "Wie werden Plexiglasboxen hergestellt", image: "/assets/img/blog/thumb/pleksi-kutu-nasil-uretilir.jpeg", size: "sm", slug: "pleksi-kutu-nasil-uretilir" },
+      { date: "25. Apr 2026", title: "Hundenapf", image: "/assets/img/blog/thumb/pleksi-kopek-mama-kabi.jpeg", size: "sm" },
+      { date: "25. Apr 2026", title: "Katzennapf", image: "/assets/img/blog/thumb/pleksi-kedi-mama-kabi_1.jpeg", size: "sm" },
+      { date: "25. Apr 2026", title: "Plexiglasrohr", image: "/assets/img/blog/thumb/pleksi-boru.jpeg", size: "sm" },
+      { date: "25. Apr 2026", title: "Plexi-Kuppel-Aquarium", image: "/assets/img/blog/thumb/pleksi-akvaryum.jpeg", size: "sm" },
+      { date: "25. Apr 2026", title: "Kugelbox", image: "/assets/img/blog/thumb/kure-kutu.jpg", size: "sm" },
+    ],
+  },
+  ar: {
+    seo: {
+      h1: "EveryMaterial | صناديق بليكسي، زجاج، خشب ومعدات عرض أكريليك",
+      description:
+        "حلول احترافية لمعدات عرض صناديق بليكسي والزجاج والخشب والأحواض. منتجات أكريليك وبليكسي غلاس للمتاجر والأسواق وصالات العرض.",
+    },
+    heroSlides: [
+      { src: "/assets/img/slider/Bener1.jpg", alt: "صالة عرض ومصنع EveryMaterial" },
+      { src: "/assets/img/slider/Bener2.jpg", alt: "عرض منتجات EveryMaterial" },
+      { src: "/assets/img/slider/site-kapak.jpg", alt: "EveryMaterial" },
+      { src: "/assets/img/slider/bener-cam.jpg", alt: "معدات عرض زجاجية" },
+      { src: "/assets/img/slider/ahshap-bener.jpg", alt: "معدات عرض خشبية" },
+      { src: "/assets/img/slider/bener-RAF-1.jpg", alt: "أنظمة الرفوف" },
+      { src: "/assets/img/slider/dolap-bener.jpg", alt: "الخزائن وأنظمة التخزين" },
+      { src: "/assets/img/slider/kuruyamis-dolap-bener.jpg", alt: "خزانة عرض المكسرات" },
+    ],
+    categories: [
+      { name: "معدات عرض بليكسي", image: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg" },
+      { name: "الأغطية", image: "/assets/img/urunkategori/lids-every-material.jpg" },
+      { name: "معدات عرض خشبية", image: "/assets/img/urunkategori/wooden-display-equipment-every-material.jpg" },
+      { name: "معدات عرض زجاجية", image: "/assets/img/urunkategori/glass-display-equipment-every-material.jpg" },
+      { name: "معدات عرض بولي كربونات", image: "/assets/img/urunkategori/polycarbon-display-equipment-every-material.jpg" },
+      { name: "معدات السوق", image: "/assets/img/urunkategori/market-display-equipment-every-material.jpg" },
+      { name: "أنظمة الرفوف", image: "/assets/img/urunkategori/shelf-every-material.jpg" },
+      { name: "الآلات", image: "/assets/img/urunkategori/machines-every-material.jpg" },
+      { name: "الخزائن وأنظمة التخزين", image: "/assets/img/urunkategori/Kategori-dolap.jpg" },
+    ],
+    featuredProducts: [
+      { name: "صندوق ميستيك", image: "/assets/img/home/featured-products/mystic-box-portrait.png", imageFit: "cover" },
+      { name: "طقم صندوق ميستيك", image: "/assets/img/home/featured-products/mystic-set-box-portrait.png", imageFit: "cover" },
+      { name: "صندوق إكستريم", image: "/assets/img/home/featured-products/extreme-box-portrait.png", imageFit: "cover" },
+      { name: "طقم صندوق إكستريم", image: "/assets/img/home/featured-products/extreme-set-box-portrait.png", imageFit: "cover" },
+      { name: "سيلو أسطواني", image: "/assets/img/home/featured-products/cylindrical-silo-portrait.png", imageFit: "cover" },
+      { name: "سيلو مستطيل", image: "/assets/img/home/featured-products/rectangular-silo-portrait.png", imageFit: "cover" },
+      { name: "صندوق بونبون", image: "/assets/img/home/featured-products/bonbon-box-portrait.png", imageFit: "cover" },
+      { name: "طقم صندوق بونبون", image: "/assets/img/home/featured-products/bonbon-set-box-portrait.png", imageFit: "cover" },
+    ],
+    howWeWork: {
+      paragraphs: [
+        "في everymaterial.com، نتبنى نهجًا مبتكرًا وموجهًا نحو الحلول لتحقيق أقصى قدر من رضا العملاء. تبدأ قصتنا بالاستجابة للمتطلبات الفريدة لكل عميل من عملائنا.",
+        "عندما يتواصل معنا أحد العملاء، تكون خطوتنا الأولى إجراء تحليل مفصل لفهم احتياجاته. على سبيل المثال، إذا طلب عميل معدات عرض ذات تصميم مخصص أو منتجات غذائية نادرة، فإننا نحدد الموردين والحلول الأنسب بناءً على هذه المتطلبات. من خلال تقديم الدعم إلى ما هو أبعد من مجالات خبرتنا، نربط عملاءنا بالمنتجات التي يحتاجونها.",
+        "يختبر عملاؤنا الراحة والموثوقية في العمل معنا. نحافظ على تواصل شفاف في كل خطوة ونُبقي عملاءنا على اطلاع طوال كل مرحلة من مراحل العملية. هدفنا هو تسهيل عمليات عملائنا من خلال تقديم أعلى المنتجات جودة بأكثر الأسعار تنافسية. لذلك نتعامل مع كل مشروع كشريك حل.",
+      ],
+      workImage: "/assets/images/every-material-nasil-calisiyoruz2.jpg",
+      sloganImage: "/assets/images/every-material-slogan.jpeg",
+      sloganText: "اتركوا جميع احتياجاتكم من المواد لنا، لدينا حل لكل شيء.",
+    },
+    ctaBand: {
+      promoTitle: "معدات عرض بليكسي",
+      promoBody:
+        "مع معدات عرض بليكسي في متجرك، يمكنك عرض منتجاتك بشكل أجمل وتقديم تجارب تسوق تركز على المنتج لعملائك.",
+      promoBullets: [
+        { label: "المظهر الجمالي", text: "يعزز الجماليات البصرية داخل المتجر بتصميمه الشفاف والعصري" },
+        { label: "مرونة عرض المنتج", text: "معدات متعددة الاستخدامات يمكن إنتاجها بأحجام وأشكال مختلفة" },
+        { label: "المتانة", text: "مادة مقاومة للأشعة فوق البنفسجية وطويلة الأمد" },
+        { label: "خفيفة الوزن", text: "سهلة النقل والتموضع" },
+      ],
+      promoImage: "/assets/img/urunkategori/acyrlic-display-equipment-every-material.jpg",
+      ctaTitle: "اتركوا جميع احتياجاتكم من المواد لنا، لدينا حل لكل شيء.",
+      ctaBody: "نقدم دعمًا احترافيًا لاحتياجاتكم من المواد. تواصلوا معنا للحصول على حلول مخصصة.",
+    },
+    team: [
+      {
+        initials: "MB",
+        name: "Muhammet Bilal Kavras",
+        role: "Digital Marketing",
+        phone: "+90 545 911 10 02",
+        phoneHref: "tel:+905459111002",
+        email: "bilal@everymaterial.com",
+        langs: ["TR", "EN"],
+      },
+      {
+        initials: "HA",
+        name: "Hussein Ali",
+        role: "Sales Marketing",
+        phone: "+90 546 638 21 75",
+        phoneHref: "tel:+905466382175",
+        email: "hussein@everymaterial.com",
+        langs: ["TR", "DE", "AR"],
+      },
+      {
+        initials: "UE",
+        name: "Ugur Enes Ünel",
+        role: "Export Specialist",
+        phone: "+90 547 771 77 78",
+        phoneHref: "tel:+905477717778",
+        email: "ugur@everymaterial.com",
+        langs: ["EN"],
+      },
+      {
+        initials: "AY",
+        name: "Ahmet Yusuf",
+        role: "Sales Marketing",
+        phone: "+49 1521 394 25 86",
+        phoneHref: "tel:+4915213942586",
+        email: "sales1@everymaterial.com",
+        langs: ["DE"],
+      },
+    ],
+    projects: [
+      { name: "أرفف خشبية", image: "/assets/img/proje/4e64fdac-1438-4f2d-8f5e-255dde274dbd.jpeg", imageFit: "cover" },
+      { name: "صوامع", image: "/assets/img/proje/thumb/silolar.jpg", imageFit: "cover" },
+      { name: "أرفف بليكسي", image: "/assets/img/proje/thumb/pleksi-standlar.jpg" },
+      { name: "ميستيك - أطقم ميستيك", image: "/assets/img/proje/thumb/mystic-set-kutular.jpg" },
+      { name: "صناديق تيبتوب", image: "/assets/img/proje/thumb/tiptop-kutular.jpg" },
+      { name: "صناديق مربعة - مستطيلة", image: "/assets/img/proje/thumb/kare-dikdortgen-kutular.jpg" },
+      { name: "صناديق بونبون", image: "/assets/img/proje/thumb/bonbon-kutular.jpg" },
+      { name: "المشروع 1", image: "/assets/img/proje/thumb/proje-1.jpeg" },
+      { name: "المشروع 2", image: "/assets/img/proje/generated/project-2-confectionery-installation.png", imageFit: "cover" },
+    ],
+    blogPosts: [
+      { date: "10 مايو 2026", title: "دليل طلب صندوق بليكسي بمقاس مخصص", image: "/assets/img/blog/thumb/ozel-olcu-pleksi-kutu.jpg", size: "lg" },
+      { date: "9 مايو 2026", title: "استخدام صناديق بليكسي في المخابز والحلويات", image: "/assets/img/blog/thumb/sekerleme-pastane-pleksi-kutu.jpg", size: "md" },
+      { date: "9 مايو 2026", title: "7 عوامل تؤثر على أسعار صناديق بليكسي", image: "/assets/img/blog/thumb/pleksi-kutu-price.jpg", size: "sm" },
+      { date: "9 مايو 2026", title: "كيف تُصنع صناديق بليكسي؟", image: "/assets/img/blog/thumb/pleksi-kutu-nasil-uretilir.jpeg", size: "sm", slug: "pleksi-kutu-nasil-uretilir" },
+      { date: "25 أبريل 2026", title: "وعاء طعام الكلاب", image: "/assets/img/blog/thumb/pleksi-kopek-mama-kabi.jpeg", size: "sm" },
+      { date: "25 أبريل 2026", title: "وعاء طعام القطط", image: "/assets/img/blog/thumb/pleksi-kedi-mama-kabi_1.jpeg", size: "sm" },
+      { date: "25 أبريل 2026", title: "أنبوب بليكسي", image: "/assets/img/blog/thumb/pleksi-boru.jpeg", size: "sm" },
+      { date: "25 أبريل 2026", title: "حوض سمك بليكسي قبة", image: "/assets/img/blog/thumb/pleksi-akvaryum.jpeg", size: "sm" },
+      { date: "25 أبريل 2026", title: "صندوق كروي", image: "/assets/img/blog/thumb/kure-kutu.jpg", size: "sm" },
+    ],
+  },
+};
+
+export const sectionChrome: Localized<SectionChrome> = {
+  tr: {
+    categoriesTitle: "Kategoriler",
+    categoriesCta: "Tüm Kategoriler",
+    categoriesEyebrow: "01 / Kategoriler",
+    productsTitle: "En Çok Tercih Edilenler",
+    productsCta: "Tümünü Gör",
+    productsEyebrow: "02 / Ürünler",
+    statCategoriesLabel: "Ürün Kategorisi",
+    statTeamLabel: "Uzman Ekip Üyesi",
+    howWeWorkTitle: "Nasıl Çalışıyoruz?",
+    howWeWorkEyebrow: "03 / Süreç",
+    featuredProjectTitle: "Öne Çıkan Proje",
+    featuredProjectEyebrow: "04 / Projeler",
+    teamTitle: "Uzman Ekibimiz",
+    teamCta: "Tüm Ekibimiz",
+    teamEyebrow: "05 / Ekip",
+    projectsTitle: "Tüm Projeler",
+    projectsCta: "Tüm Projeler",
+    projectsEyebrow: "06 / Tüm Projeler",
+    blogTitle: "Son Yazılar",
+    blogCta: "Tümünü Gör",
+    blogEyebrow: "07 / Blog",
+    blogReadMore: "Devamını Oku",
+  },
+  en: {
+    categoriesTitle: "Categories",
+    categoriesCta: "All Categories",
+    categoriesEyebrow: "01 / Categories",
+    productsTitle: "Most Preferred",
+    productsCta: "View All",
+    productsEyebrow: "02 / Products",
+    statCategoriesLabel: "Product Categories",
+    statTeamLabel: "Expert Team Members",
+    howWeWorkTitle: "How we Work?",
+    howWeWorkEyebrow: "03 / Process",
+    featuredProjectTitle: "Featured Project",
+    featuredProjectEyebrow: "04 / Projects",
+    teamTitle: "Our Expert Team",
+    teamCta: "Our Entire Team",
+    teamEyebrow: "05 / Team",
+    projectsTitle: "All Projects",
+    projectsCta: "All Projects",
+    projectsEyebrow: "06 / All Projects",
+    blogTitle: "Latest Articles",
+    blogCta: "View All",
+    blogEyebrow: "07 / Blog",
+    blogReadMore: "Read Article",
+  },
+  de: {
+    categoriesTitle: "Kategorien",
+    categoriesCta: "Alle Kategorien",
+    categoriesEyebrow: "01 / Kategorien",
+    productsTitle: "Am meisten bevorzugt",
+    productsCta: "Alle Anzeigen",
+    productsEyebrow: "02 / Produkte",
+    statCategoriesLabel: "Produktkategorien",
+    statTeamLabel: "Erfahrene Teammitglieder",
+    howWeWorkTitle: "Wie wir arbeiten?",
+    howWeWorkEyebrow: "03 / Prozess",
+    featuredProjectTitle: "Vorzeigeprojekt",
+    featuredProjectEyebrow: "04 / Projekte",
+    teamTitle: "Unser Expertenteam",
+    teamCta: "Unser gesamtes Team",
+    teamEyebrow: "05 / Team",
+    projectsTitle: "Alle Projekte",
+    projectsCta: "Alle Projekte",
+    projectsEyebrow: "06 / Alle Projekte",
+    blogTitle: "Neueste Artikel",
+    blogCta: "Alle Anzeigen",
+    blogEyebrow: "07 / Blog",
+    blogReadMore: "Artikel lesen",
+  },
+  ar: {
+    categoriesTitle: "الفئات",
+    categoriesCta: "جميع الفئات",
+    categoriesEyebrow: "01 / الفئات",
+    productsTitle: "الأكثر تفضيلاً",
+    productsCta: "عرض الكل",
+    productsEyebrow: "02 / المنتجات",
+    statCategoriesLabel: "فئات المنتجات",
+    statTeamLabel: "أعضاء الفريق الخبراء",
+    howWeWorkTitle: "كيف نعمل؟",
+    howWeWorkEyebrow: "03 / العملية",
+    featuredProjectTitle: "مشروع مميز",
+    featuredProjectEyebrow: "04 / المشاريع",
+    teamTitle: "فريقنا من الخبراء",
+    teamCta: "فريقنا بالكامل",
+    teamEyebrow: "05 / الفريق",
+    projectsTitle: "جميع المشاريع",
+    projectsCta: "جميع المشاريع",
+    projectsEyebrow: "06 / جميع المشاريع",
+    blogTitle: "أحدث المقالات",
+    blogCta: "عرض الكل",
+    blogEyebrow: "07 / المدونة",
+    blogReadMore: "متابعة القراءة",
+  },
+};
