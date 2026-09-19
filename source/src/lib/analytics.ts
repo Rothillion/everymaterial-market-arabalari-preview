@@ -2,4 +2,5 @@
 export function trackWhatsAppContact() {
   window.fbq?.("track", "Contact");
   window.ttq?.track("Contact");
+  window.gtag?.("event", "conversion", { send_to: "AW-17488424457/GXzsCK3ZyqEbEInckJNB" });
 }

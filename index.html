@@ -32,8 +32,24 @@
         ttq.page();
       }(window, document, 'ttq');
     </script>
-    <script type="module" crossorigin src="/assets/main-BmjLdYR0.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/globals-D173CJW-.js">
+
+    <!--
+      Google tag — same GA4 (G-BF22WXVM1C) and Google Ads (AW-17488424457) IDs already
+      live on the current production site. Conversion action AW-17488424457/GXzsCK3ZyqEbEInckJNB
+      is wired to the real WhatsApp contact click in src/lib/analytics.ts (the live site's
+      copy of this tag has been misconfigured with no pings since 2026-01-27 — this wiring
+      fixes that by firing it from a real user action instead of a stale/orphaned trigger).
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF22WXVM1C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BF22WXVM1C');
+      gtag('config', 'AW-17488424457');
+    </script>
+    <script type="module" crossorigin src="/assets/main-BjK0tc3I.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/globals-wyBlDAk7.js">
     <link rel="modulepreload" crossorigin href="/assets/home-CETtRJe0.js">
     <link rel="stylesheet" crossorigin href="/assets/globals-DuzdxYxA.css">
   </head>
