@@ -1,7 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { siteContent } from "../content/site";
 import { contactContent } from "../content/contact";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -134,7 +134,7 @@ export function ContactPage({ lang }: { lang: Lang }) {
         <div className="relative z-10 w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row px-6 lg:px-10 py-16 lg:py-24 gap-12 lg:gap-0">
           <div className="w-full lg:w-1/2 flex flex-col justify-center lg:pe-16">
             <nav className="flex items-center gap-2 mb-8 font-mono text-xs uppercase tracking-[0.2em] text-onNavy-muted">
-              <a href="/" className="hover:text-white transition-colors">{c.breadcrumbHome}</a>
+              <a href={homeHref(lang)} className="hover:text-white transition-colors">{c.breadcrumbHome}</a>
               <span className="opacity-50" aria-hidden="true">/</span>
               <span className="text-white">{c.breadcrumbCurrent}</span>
             </nav>

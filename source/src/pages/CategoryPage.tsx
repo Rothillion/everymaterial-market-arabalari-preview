@@ -5,7 +5,7 @@ import { catalogContent } from "../content/catalog";
 import { categoryContent } from "../content/categoryContent";
 import { staggerChildren, staggerItem } from "../motion/variants";
 import { useScrollReveal } from "../motion/useScrollReveal";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -53,7 +53,17 @@ export function CategoryPage({ lang, familySlug }: { lang: Lang; familySlug: str
     return family.products.filter((p) => volumeBucket(p.volumeLabel) === filter);
   }, [family, filter]);
 
-  if (!family) return null;
+  if (!family) {
+    return (
+      <div className="bg-gradient-to-b from-[#fbfcfe] via-[#eef4fb] to-[#d9e6f5] min-h-screen">
+        <SiteHeader lang={lang} activePage="catalog" onLangChange={(l) => (window.location.href = `/katalog-${l}.html`)} />
+        <main className="max-w-[900px] mx-auto px-6 py-32 text-center">
+          <p className="text-navy">404</p>
+        </main>
+        <SiteFooter lang={lang} />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gradient-to-b from-[#fbfcfe] via-[#eef4fb] to-[#d9e6f5] min-h-screen">
@@ -66,7 +76,7 @@ export function CategoryPage({ lang, familySlug }: { lang: Lang; familySlug: str
         </div>
         <div className="max-w-[1400px] mx-auto relative z-10">
           <nav className="flex items-center gap-3 mb-6 font-mono text-xs uppercase tracking-[0.2em] text-onNavy-muted">
-            <a href="/" className="hover:text-white transition-colors">{catalog.breadcrumbHome}</a>
+            <a href={homeHref(lang)} className="hover:text-white transition-colors">{catalog.breadcrumbHome}</a>
             <span className="opacity-50" aria-hidden="true">/</span>
             <a href={`/katalog-${lang}.html`} className="hover:text-white transition-colors">{catalog.breadcrumbCurrent}</a>
             <span className="opacity-50" aria-hidden="true">/</span>

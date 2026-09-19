@@ -7,7 +7,7 @@ import { rememberCatalogSelection } from "../content/productCatalogLookup";
 import { getProductImageClass } from "../media/productMedia";
 import { staggerChildren, staggerItem } from "../motion/variants";
 import { useScrollReveal } from "../motion/useScrollReveal";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -119,7 +119,7 @@ export function CatalogPage({ lang }: { lang: Lang }) {
       <section className="pt-32 pb-10 px-6 lg:px-10 bg-navy-deep">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex items-center gap-2 text-sm text-onNavy-muted mb-3">
-            <a href="/" className="hover:text-white transition-colors">
+            <a href={homeHref(lang)} className="hover:text-white transition-colors">
               {t.breadcrumbHome}
             </a>
             <span className="text-onNavy-faint" aria-hidden="true">

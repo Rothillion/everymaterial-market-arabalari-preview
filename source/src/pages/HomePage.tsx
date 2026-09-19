@@ -76,6 +76,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         title={chrome.featuredProjectTitle}
         eyebrow={chrome.featuredProjectEyebrow}
         heroProject={home.projects[0]}
+        heroProjectHref={`/proje-ahsap-standlar-${lang}.html`}
         detailProject={home.projects[1]}
         promoTitle={home.ctaBand.promoTitle}
         promoBody={home.ctaBand.promoBody}

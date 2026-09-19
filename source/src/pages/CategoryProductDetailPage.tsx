@@ -8,7 +8,7 @@ import {
   readCatalogSelection,
   rememberCatalogSelection,
 } from "../content/productCatalogLookup";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { getProductImageClass, type ProductImageRole } from "../media/productMedia";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
@@ -73,8 +73,6 @@ export function CategoryProductDetailPage({ lang }: { lang: Lang }) {
     );
   }, [lang, slug]);
 
-  if (slug === null) return null;
-
   if (!found) {
     return (
       <div className="bg-gradient-to-b from-[#fbfcfe] via-[#eef4fb] to-[#d9e6f5] min-h-screen overflow-x-hidden">
@@ -113,7 +111,7 @@ export function CategoryProductDetailPage({ lang }: { lang: Lang }) {
         </div>
         <div className="max-w-[1400px] mx-auto relative z-10">
           <nav className="flex items-center gap-3 mb-4 font-mono text-xs uppercase tracking-[0.2em] text-onNavy-muted flex-wrap">
-            <a href="/" className="hover:text-white transition-colors">{t.breadcrumbHome}</a>
+            <a href={homeHref(lang)} className="hover:text-white transition-colors">{t.breadcrumbHome}</a>
             <span className="opacity-50" aria-hidden="true">/</span>
             <a href={`/kategoriler-${lang}.html?slug=${categorySlug}`} className="hover:text-white transition-colors">{categoryName}</a>
           </nav>

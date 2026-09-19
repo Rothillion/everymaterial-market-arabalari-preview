@@ -1,0 +1,1 @@
+import{c as o,j as e,r,M as n}from"./globals-BGyGRIAp.js";import{L as a,l as s}from"./legal-drfBxnX9.js";o.createRoot(document.getElementById("root")).render(e.jsx(r.StrictMode,{children:e.jsx(n,{reducedMotion:"user",children:e.jsx(a,{lang:"de",content:s.de.kvkk,navigateHref:t=>`/kvkk-${t}.html`})})}));

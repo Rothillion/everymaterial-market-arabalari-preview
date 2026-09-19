@@ -60,6 +60,7 @@ export function ProjectOrbit({
               type="button"
               onMouseEnter={() => setActiveIndex(i)}
               onFocus={() => setActiveIndex(i)}
+              onClick={() => setActiveIndex(i)}
               aria-label={item.name}
               aria-current={isActive}
               animate={{ flexGrow: isActive ? 8 : 1 }}

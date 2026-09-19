@@ -6,7 +6,7 @@ import { homeContent } from "../content/home";
 import { CATEGORY_SLUGS } from "../content/productCategoryContent";
 import { staggerChildren, staggerItem } from "../motion/variants";
 import { useScrollReveal } from "../motion/useScrollReveal";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -76,7 +76,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
         </div>
         <div className="max-w-[1440px] mx-auto relative z-10">
           <nav className="flex items-center gap-3 mb-6 md:mb-8 font-mono text-xs uppercase tracking-[0.2em] text-onNavy-muted">
-            <a href="/" className="hover:text-white transition-colors">
+            <a href={homeHref(lang)} className="hover:text-white transition-colors">
               {about.breadcrumbHome}
             </a>
             <span className="opacity-50" aria-hidden="true">

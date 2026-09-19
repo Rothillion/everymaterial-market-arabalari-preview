@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { siteContent } from "../content/site";
 import { catalogContent } from "../content/catalog";
 import { productDetails } from "../content/productDetails";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -50,8 +50,6 @@ export function ProductDetailPage({ lang }: { lang: Lang }) {
     return null;
   }, [catalog, slug]);
 
-  if (slug === null) return null;
-
   if (!found) {
     return (
       <div className="bg-gradient-to-b from-[#fbfcfe] via-[#eef4fb] to-[#d9e6f5] min-h-screen overflow-x-hidden">
@@ -92,7 +90,7 @@ export function ProductDetailPage({ lang }: { lang: Lang }) {
         </div>
         <div className="max-w-[1400px] mx-auto relative z-10">
           <nav className="flex items-center gap-3 mb-4 font-mono text-xs uppercase tracking-[0.2em] text-onNavy-muted flex-wrap">
-            <a href="/" className="hover:text-white transition-colors">{catalog.breadcrumbHome}</a>
+            <a href={homeHref(lang)} className="hover:text-white transition-colors">{catalog.breadcrumbHome}</a>
             <span className="opacity-50" aria-hidden="true">/</span>
             <a href={`/kategori-${lang}.html?aile=${family.slug}`} className="hover:text-white transition-colors">{family.name}</a>
             <span className="opacity-50" aria-hidden="true">/</span>

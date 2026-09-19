@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { siteContent } from "../content/site";
 import { projectsContent, type Project } from "../content/projects";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -107,7 +107,7 @@ export function ProjectsPage({ lang }: { lang: Lang }) {
       <main className="pt-32 pb-24 px-6 lg:px-10 relative overflow-hidden">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <nav className="flex items-center justify-center gap-2 mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[#5b6b7d]">
-            <a href="/" className="hover:text-accent-deep transition-colors">{c.breadcrumbHome}</a>
+            <a href={homeHref(lang)} className="hover:text-accent-deep transition-colors">{c.breadcrumbHome}</a>
             <span className="opacity-50" aria-hidden="true">/</span>
             <span className="text-accent-deep font-bold">{c.breadcrumbCurrent}</span>
           </nav>

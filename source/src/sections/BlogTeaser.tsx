@@ -92,17 +92,23 @@ export function BlogTeaser({
                   src={post.image}
                   alt={post.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-700 ${post.slug ? "group-hover:scale-105" : ""}`}
                 />
               </div>
               <div className="pt-4 flex flex-col gap-2">
                 <span className="text-[11.5px] font-mono font-semibold text-[#8a97a8]">{post.date}</span>
-                <h3 className="font-display text-[15px] font-bold text-navy leading-snug group-hover:text-accent-deep transition-colors">
+                <h3
+                  className={`font-display text-[15px] font-bold text-navy leading-snug transition-colors ${
+                    post.slug ? "group-hover:text-accent-deep" : ""
+                  }`}
+                >
                   {post.title}
                 </h3>
-                <span className="text-xs font-bold text-accent-deep">
-                  {readMoreLabel} <span aria-hidden="true" className="inline-block rtl:rotate-180">→</span>
-                </span>
+                {post.slug && (
+                  <span className="text-xs font-bold text-accent-deep">
+                    {readMoreLabel} <span aria-hidden="true" className="inline-block rtl:rotate-180">→</span>
+                  </span>
+                )}
               </div>
             </motion.a>
           ))}

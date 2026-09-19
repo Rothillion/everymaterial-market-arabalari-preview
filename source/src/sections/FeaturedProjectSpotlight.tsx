@@ -7,6 +7,7 @@ export function FeaturedProjectSpotlight({
   title,
   eyebrow,
   heroProject,
+  heroProjectHref,
   detailProject,
   promoTitle,
   promoBody,
@@ -15,6 +16,7 @@ export function FeaturedProjectSpotlight({
   title: string;
   eyebrow?: string;
   heroProject: ProjectTeaser;
+  heroProjectHref?: string;
   detailProject: ProjectTeaser;
   promoTitle: string;
   promoBody: string;
@@ -41,17 +43,27 @@ export function FeaturedProjectSpotlight({
         className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-0 relative"
       >
         <motion.div variants={staggerItem} className="md:col-span-8 relative z-10">
-          <div className="group relative aspect-[16/9] overflow-hidden rounded-lg bg-[#f2f5f8]">
-            <img
-              src={heroProject.image}
-              alt={heroProject.name}
-              className={`w-full h-full ${heroProject.imageFit === "cover" ? "object-cover" : "object-contain"} transition-transform duration-1000 group-hover:scale-105`}
-              style={{ objectPosition: heroProject.imagePosition ?? "center" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 to-transparent flex items-end p-8">
-              <h3 className="text-white text-2xl md:text-3xl font-display font-bold uppercase">{heroProject.name}</h3>
-            </div>
-          </div>
+          {(() => {
+            const Tag = heroProjectHref ? "a" : "div";
+            return (
+              <Tag
+                href={heroProjectHref}
+                className={`group relative block aspect-[16/9] overflow-hidden rounded-lg bg-[#f2f5f8] ${heroProjectHref ? "cursor-pointer" : ""}`}
+              >
+                <img
+                  src={heroProject.image}
+                  alt={heroProject.name}
+                  className={`w-full h-full ${heroProject.imageFit === "cover" ? "object-cover" : "object-contain"} transition-transform duration-1000 ${
+                    heroProjectHref ? "group-hover:scale-105" : ""
+                  }`}
+                  style={{ objectPosition: heroProject.imagePosition ?? "center" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 to-transparent flex items-end p-8">
+                  <h3 className="text-white text-2xl md:text-3xl font-display font-bold uppercase">{heroProject.name}</h3>
+                </div>
+              </Tag>
+            );
+          })()}
         </motion.div>
 
         <motion.div
@@ -72,7 +84,6 @@ export function FeaturedProjectSpotlight({
 
         <motion.div
           variants={staggerItem}
-          whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.3 }}
           className="md:col-span-5 md:-mt-20 relative z-30"
         >

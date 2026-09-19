@@ -4,7 +4,7 @@ import { siteContent } from "../content/site";
 import { projectDetailContent } from "../content/projects";
 import { staggerChildren, staggerItem } from "../motion/variants";
 import { useScrollReveal } from "../motion/useScrollReveal";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
@@ -40,7 +40,7 @@ export function ProjectDetailAhsapStandlarPage({ lang }: { lang: Lang }) {
         </div>
         <div className="max-w-[1200px] mx-auto relative z-10">
           <nav className="flex items-center gap-3 mb-6 font-mono text-xs uppercase tracking-[0.2em] text-onNavy-muted flex-wrap">
-            <a href="/" className="hover:text-white transition-colors">{c.breadcrumbHome}</a>
+            <a href={homeHref(lang)} className="hover:text-white transition-colors">{c.breadcrumbHome}</a>
             <span className="opacity-50" aria-hidden="true">/</span>
             <a href={`/projeler-${lang}.html`} className="hover:text-white transition-colors">{c.breadcrumbProjects}</a>
             <span className="opacity-50" aria-hidden="true">/</span>

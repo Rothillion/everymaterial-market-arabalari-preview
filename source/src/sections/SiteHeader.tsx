@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { siteContent } from "../content/site";
 import { CATEGORY_SLUGS, HIDDEN_FROM_NAV_SLUGS } from "../content/productCategoryContent";
-import type { Lang } from "../content/types";
+import { homeHref, type Lang } from "../content/types";
 import { Button } from "../ui/Button";
 import { LanguageSwitcher } from "../ui/LanguageSwitcher";
 import { trackWhatsAppContact } from "../lib/analytics";
@@ -64,7 +64,7 @@ export function SiteHeader({
       }`}
     >
       <div className="flex items-center justify-between gap-6 px-5 py-3">
-        <a href="/" className="shrink-0">
+        <a href={homeHref(lang)} className="shrink-0">
           <img
             src={
               scrolled
@@ -76,7 +76,7 @@ export function SiteHeader({
           />
         </a>
         <nav className="hidden lg:flex items-center gap-5">
-          <a className={navLinkClass("home")} href="/">
+          <a className={navLinkClass("home")} href={homeHref(lang)}>
             {c.nav.home}
           </a>
           <div className="relative group flex items-center h-full">
@@ -166,7 +166,7 @@ export function SiteHeader({
             className="lg:hidden fixed inset-0 top-0 z-40 bg-navy-deep/98 backdrop-blur-md overflow-y-auto"
           >
             <div className="flex flex-col gap-1 px-6 pt-28 pb-10 max-w-md mx-auto">
-              <a onClick={closeMobile} className="py-3 text-lg font-semibold uppercase tracking-wide text-white border-b border-white/10" href="/">
+              <a onClick={closeMobile} className="py-3 text-lg font-semibold uppercase tracking-wide text-white border-b border-white/10" href={homeHref(lang)}>
                 {c.nav.home}
               </a>
               <div className="py-3 border-b border-white/10">
