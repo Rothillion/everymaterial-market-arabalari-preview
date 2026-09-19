@@ -1,1 +1,0 @@
-import{c as r,j as e,r as o,M as t}from"./globals-CtAHncU4.js";import{T as s}from"./TeamPage-DF6OHMhf.js";r.createRoot(document.getElementById("root")).render(e.jsx(o.StrictMode,{children:e.jsx(t,{reducedMotion:"user",children:e.jsx(s,{lang:"ar"})})}));
