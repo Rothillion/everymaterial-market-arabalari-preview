@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { siteContent } from "../content/site";
 import { CATEGORY_SLUGS, HIDDEN_FROM_NAV_SLUGS } from "../content/productCategoryContent";
@@ -25,6 +25,19 @@ export function SiteHeader({
     .filter((cat) => !HIDDEN_FROM_NAV_SLUGS.has(cat.slug));
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
+  const [corporateOpen, setCorporateOpen] = useState(false);
+  const categoriesRef = useRef<HTMLDivElement>(null);
+  const corporateRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function onClick(e: MouseEvent) {
+      if (categoriesRef.current && !categoriesRef.current.contains(e.target as Node)) setCategoriesOpen(false);
+      if (corporateRef.current && !corporateRef.current.contains(e.target as Node)) setCorporateOpen(false);
+    }
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -51,13 +64,14 @@ export function SiteHeader({
           : "text-white/85 hover:text-white"
     }`;
 
-  const dropdownLabelClass = `text-[13px] font-semibold uppercase tracking-wide cursor-default pb-0.5 ${
+  const dropdownLabelClass = `text-[13px] font-semibold uppercase tracking-wide pb-0.5 ${
     scrolled ? "text-navy/80" : "text-white/85"
   }`;
 
   return (
+    <>
     <header
-      className={`fixed top-3 md:top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1320px] z-50 rounded-xl border transition-colors duration-300 ${
+      className={`fixed top-3 md:top-4 inset-x-0 mx-auto w-[95%] max-w-[1320px] z-50 rounded-xl border transition-colors duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-md border-navy/10 shadow-lg"
           : "bg-navy-deep/70 backdrop-blur-md border-white/15"
@@ -79,16 +93,24 @@ export function SiteHeader({
           <a className={navLinkClass("home")} href={homeHref(lang)}>
             {c.nav.home}
           </a>
-          <div className="relative group flex items-center h-full">
-            <span className={dropdownLabelClass}>{c.nav.categoriesLabel}</span>
+          <div ref={categoriesRef} className="relative group flex items-center h-full">
+            <button
+              type="button"
+              onClick={() => setCategoriesOpen((v) => !v)}
+              aria-expanded={categoriesOpen}
+              className={`${dropdownLabelClass} cursor-pointer`}
+            >
+              {c.nav.categoriesLabel}
+            </button>
             {/* pt-2 (not a margin) keeps the gap between trigger and panel inside this
                 hoverable box, so the mouse doesn't fall out of :hover crossing it. */}
-            <div className="absolute top-full start-0 pt-2 hidden group-hover:block min-w-[230px]">
+            <div className={`absolute top-full start-0 pt-2 min-w-[230px] ${categoriesOpen ? "block" : "hidden group-hover:block"}`}>
               <div className="bg-white border border-navy/10 rounded-lg shadow-xl p-2">
                 {visibleCategories.map(({ name, slug }) => (
                   <a
                     key={name}
                     href={`/kategoriler-${lang}.html?slug=${slug}`}
+                    onClick={() => setCategoriesOpen(false)}
                     className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep"
                   >
                     {name}
@@ -97,17 +119,24 @@ export function SiteHeader({
               </div>
             </div>
           </div>
-          <div className="relative group flex items-center h-full">
-            <span className={dropdownLabelClass}>{c.nav.corporateLabel}</span>
-            <div className="absolute top-full start-0 pt-2 hidden group-hover:block min-w-[200px]">
+          <div ref={corporateRef} className="relative group flex items-center h-full">
+            <button
+              type="button"
+              onClick={() => setCorporateOpen((v) => !v)}
+              aria-expanded={corporateOpen}
+              className={`${dropdownLabelClass} cursor-pointer`}
+            >
+              {c.nav.corporateLabel}
+            </button>
+            <div className={`absolute top-full start-0 pt-2 min-w-[200px] ${corporateOpen ? "block" : "hidden group-hover:block"}`}>
               <div className="bg-white border border-navy/10 rounded-lg shadow-xl p-2">
-                <a href={`/about-${lang}.html`} className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep">
+                <a href={`/about-${lang}.html`} onClick={() => setCorporateOpen(false)} className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep">
                   {c.nav.about}
                 </a>
-                <a href={`/gelismeler-${lang}.html`} className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep">
+                <a href={`/gelismeler-${lang}.html`} onClick={() => setCorporateOpen(false)} className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep">
                   {c.nav.updates}
                 </a>
-                <a href={`/team-${lang}.html`} className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep">
+                <a href={`/team-${lang}.html`} onClick={() => setCorporateOpen(false)} className="block px-3 py-2 rounded-md text-sm text-navy hover:bg-accent/10 hover:text-accent-deep">
                   {c.nav.team}
                 </a>
               </div>
@@ -155,7 +184,8 @@ export function SiteHeader({
           </button>
         </div>
       </div>
-      <AnimatePresence>
+    </header>
+    <AnimatePresence>
         {mobileOpen && (
           <motion.div
             id="mobile-nav-panel"
@@ -223,7 +253,7 @@ export function SiteHeader({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </header>
+    </AnimatePresence>
+    </>
   );
 }

@@ -77,10 +77,12 @@ export function BlogTeaser({
           onScroll={handleScroll}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-2 px-6 lg:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {posts.map((post, i) => (
-            <motion.a
+          {posts.map((post, i) => {
+            const Tag = post.slug ? motion.a : motion.div;
+            return (
+            <Tag
               key={post.title}
-              href={post.slug ? `/blogdetay-${post.slug}-${lang}.html` : ctaHref}
+              href={post.slug ? `/blogdetay-${post.slug}-${lang}.html` : undefined}
               variants={staggerItem}
               className="group flex-none w-[85%] sm:w-[320px] md:w-[360px] snap-start"
             >
@@ -110,8 +112,9 @@ export function BlogTeaser({
                   </span>
                 )}
               </div>
-            </motion.a>
-          ))}
+            </Tag>
+            );
+          })}
         </div>
 
         <div className="mx-6 lg:mx-10 mt-6 h-[2px] bg-navy/10 rounded-full overflow-hidden" aria-hidden="true">

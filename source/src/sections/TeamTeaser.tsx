@@ -63,7 +63,7 @@ export function TeamTeaser({
                 </p>
                 <h3 className="font-display text-lg font-bold text-navy leading-tight">{m.name}</h3>
               </div>
-              <div className="opacity-0 -translate-x-2 transition-all duration-300 delay-100 group-hover:opacity-100 group-hover:translate-x-0 space-y-2">
+              <div className="opacity-0 -translate-x-2 transition-all duration-300 delay-100 group-hover:opacity-100 group-hover:translate-x-0 group-focus-within:opacity-100 group-focus-within:translate-x-0 space-y-2">
                 <a href={m.phoneHref} className="block text-[12px] font-mono text-navy">
                   ☎ {m.phone}
                 </a>

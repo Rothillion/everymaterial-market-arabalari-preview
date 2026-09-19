@@ -1,0 +1,1 @@
+import{c as t,j as r,r as e,M as o}from"./globals-9eKwk7Bi.js";import{P as a}from"./ProjectDetailAhsapStandlarPage-Btlwl6rm.js";import"./projects-CC7r5G_N.js";t.createRoot(document.getElementById("root")).render(r.jsx(e.StrictMode,{children:r.jsx(o,{reducedMotion:"user",children:r.jsx(a,{lang:"ar"})})}));

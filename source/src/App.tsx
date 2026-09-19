@@ -11,9 +11,20 @@ function initialLang(): Lang {
 export default function App() {
   const [lang, setLang] = useState<Lang>(initialLang);
 
+  function handleLangChange(l: Lang) {
+    setLang(l);
+    const url = new URL(window.location.href);
+    if (l === "tr") {
+      url.searchParams.delete("lang");
+    } else {
+      url.searchParams.set("lang", l);
+    }
+    window.history.replaceState({}, "", url);
+  }
+
   return (
     <>
-      <HomePage lang={lang} onLangChange={setLang} />
+      <HomePage lang={lang} onLangChange={handleLangChange} />
       <WhatsAppButton lang={lang} />
     </>
   );

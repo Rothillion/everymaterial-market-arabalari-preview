@@ -120,13 +120,13 @@ export const legalContent: Localized<LegalContent> = {
       breadcrumbCurrent: "Çerez Politikası",
       pageTitle: "Çerez Politikası",
       updatedLabel: "Son Güncelleme",
-      updatedDate: "5 Ağustos 2026",
+      updatedDate: "19 Eylül 2026",
       intro: "Bu politika, everymaterial.com web sitesinde çerez (cookie) kullanımına ilişkin bilgi vermek amacıyla hazırlanmıştır.",
       sections: [
         {
           heading: "Bu Site Çerez Kullanıyor mu?",
           paragraphs: [
-            "Hayır. Bu web sitesi şu anda ziyaretçi takibi, analiz veya reklam amaçlı herhangi bir çerez kullanmamaktadır. Sitede Google Analytics, reklam pikseli veya benzeri bir izleme aracı bulunmamaktadır.",
+            "Evet. Sitede reklam performansını ölçmek amacıyla Meta (Facebook/Instagram) Pixel çalışmaktadır; bu araç tarayıcınıza çerez yerleştirebilir ve ziyaret bilgilerinizi Meta ile paylaşabilir. Bu veri işleme Meta'nın kendi gizlilik politikasına tabidir. Sitede şu anda Google Analytics veya başka bir analiz aracı bulunmamaktadır.",
           ],
         },
         {
@@ -144,7 +144,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "Politika Güncellemeleri",
           paragraphs: [
-            "İleride sitemizde analiz veya pazarlama amaçlı çerezler kullanılmaya başlanması halinde, bu politika güncellenecek ve gerekli çerez onay mekanizması eklenecektir.",
+            "Sitede kullanılan çerez/izleme araçları değiştikçe bu politika güncellenir; en güncel hâli için sayfa üstündeki tarihi kontrol edebilirsiniz.",
           ],
         },
       ],
@@ -241,13 +241,13 @@ export const legalContent: Localized<LegalContent> = {
       breadcrumbCurrent: "Cookie Policy",
       pageTitle: "Cookie Policy",
       updatedLabel: "Last Updated",
-      updatedDate: "August 5, 2026",
+      updatedDate: "September 19, 2026",
       intro: "This policy explains cookie usage on the everymaterial.com website.",
       sections: [
         {
           heading: "Does This Site Use Cookies?",
           paragraphs: [
-            "No. This website does not currently use any cookies for visitor tracking, analytics, or advertising purposes. There is no Google Analytics, advertising pixel, or similar tracking tool on this site.",
+            "Yes. This site runs the Meta (Facebook/Instagram) Pixel to measure advertising performance; it may place cookies in your browser and share your visit information with Meta. That data processing is subject to Meta's own privacy policy. There is no Google Analytics or other analytics tool on this site at this time.",
           ],
         },
         {
@@ -265,7 +265,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "Policy Updates",
           paragraphs: [
-            "If analytics or marketing cookies are introduced on this site in the future, this policy will be updated and an appropriate cookie consent mechanism will be added.",
+            "This policy is updated whenever the cookies/tracking tools used on this site change; check the date at the top of the page for the latest version.",
           ],
         },
       ],
@@ -362,13 +362,13 @@ export const legalContent: Localized<LegalContent> = {
       breadcrumbCurrent: "Cookie-Richtlinie",
       pageTitle: "Cookie-Richtlinie",
       updatedLabel: "Letzte Aktualisierung",
-      updatedDate: "5. August 2026",
+      updatedDate: "19. September 2026",
       intro: "Diese Richtlinie erläutert die Verwendung von Cookies auf der Website everymaterial.com.",
       sections: [
         {
           heading: "Verwendet diese Website Cookies?",
           paragraphs: [
-            "Nein. Diese Website verwendet derzeit keine Cookies zu Zwecken der Besucherverfolgung, Analyse oder Werbung. Es sind kein Google Analytics, kein Werbepixel oder ähnliches Tracking-Tool auf dieser Seite vorhanden.",
+            "Ja. Diese Website nutzt das Meta (Facebook/Instagram) Pixel, um die Werbeleistung zu messen; es kann Cookies in Ihrem Browser setzen und Ihre Besuchsinformationen mit Meta teilen. Diese Datenverarbeitung unterliegt der eigenen Datenschutzrichtlinie von Meta. Google Analytics oder ein anderes Analyse-Tool ist derzeit nicht auf dieser Seite vorhanden.",
           ],
         },
         {
@@ -386,7 +386,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "Aktualisierungen dieser Richtlinie",
           paragraphs: [
-            "Sollten künftig Analyse- oder Marketing-Cookies auf dieser Website eingeführt werden, wird diese Richtlinie aktualisiert und ein entsprechender Cookie-Einwilligungsmechanismus hinzugefügt.",
+            "Diese Richtlinie wird aktualisiert, sobald sich die auf dieser Website verwendeten Cookies/Tracking-Tools ändern; das Datum oben auf der Seite zeigt den aktuellen Stand.",
           ],
         },
       ],
@@ -483,13 +483,13 @@ export const legalContent: Localized<LegalContent> = {
       breadcrumbCurrent: "سياسة ملفات تعريف الارتباط",
       pageTitle: "سياسة ملفات تعريف الارتباط",
       updatedLabel: "آخر تحديث",
-      updatedDate: "5 أغسطس 2026",
+      updatedDate: "19 سبتمبر 2026",
       intro: "توضح هذه السياسة استخدام ملفات تعريف الارتباط (الكوكيز) على موقع everymaterial.com.",
       sections: [
         {
           heading: "هل يستخدم هذا الموقع ملفات تعريف الارتباط؟",
           paragraphs: [
-            "لا. لا يستخدم هذا الموقع حالياً أي ملفات تعريف ارتباط لأغراض تتبع الزوار أو التحليلات أو الإعلانات. لا يوجد على هذا الموقع أي أداة من نوع Google Analytics أو بكسل إعلاني أو أي أداة تتبع مشابهة.",
+            "نعم. يستخدم هذا الموقع بكسل Meta (فيسبوك/إنستغرام) لقياس أداء الإعلانات؛ قد يضع هذا الأداة ملفات تعريف ارتباط في متصفحكم ويشارك معلومات زيارتكم مع Meta. تخضع معالجة هذه البيانات لسياسة الخصوصية الخاصة بـ Meta. لا توجد حالياً أداة Google Analytics أو أي أداة تحليل أخرى على هذا الموقع.",
           ],
         },
         {
@@ -507,7 +507,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "تحديثات السياسة",
           paragraphs: [
-            "في حال بدء استخدام ملفات تعريف ارتباط لأغراض التحليل أو التسويق على هذا الموقع مستقبلاً، سيتم تحديث هذه السياسة وإضافة آلية موافقة مناسبة على ملفات تعريف الارتباط.",
+            "يتم تحديث هذه السياسة كلما تغيرت أدوات ملفات تعريف الارتباط/التتبع المستخدمة على هذا الموقع؛ يُرجى مراجعة التاريخ أعلى الصفحة للاطلاع على أحدث نسخة.",
           ],
         },
       ],

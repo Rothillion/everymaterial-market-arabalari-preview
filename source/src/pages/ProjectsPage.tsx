@@ -131,7 +131,12 @@ export function ProjectsPage({ lang }: { lang: Lang }) {
         </div>
 
         {/* Desktop radial layout */}
-        <div className="relative w-full max-w-[1400px] mx-auto hidden md:block" style={{ minHeight: filter === "store" ? "480px" : "1100px" }}>
+        <div
+          className="relative w-full max-w-[1400px] mx-auto hidden md:block"
+          style={{
+            minHeight: filter === "store" ? `${storeProjects.length * 416 + Math.max(storeProjects.length - 1, 0) * 32}px` : "1100px",
+          }}
+        >
           {(filter === "all" || filter === "store") && (
             <div className="absolute start-1/2 -translate-x-1/2 rtl:translate-x-1/2 top-0 flex flex-col items-center gap-8 z-20">
               {storeProjects.map((p) => (
