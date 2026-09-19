@@ -126,7 +126,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "Bu Site Çerez Kullanıyor mu?",
           paragraphs: [
-            "Evet. Sitede reklam performansını ölçmek amacıyla Meta (Facebook/Instagram) Pixel çalışmaktadır; bu araç tarayıcınıza çerez yerleştirebilir ve ziyaret bilgilerinizi Meta ile paylaşabilir. Bu veri işleme Meta'nın kendi gizlilik politikasına tabidir. Sitede şu anda Google Analytics veya başka bir analiz aracı bulunmamaktadır.",
+            "Evet. Sitede reklam performansını ölçmek amacıyla Meta (Facebook/Instagram) Pixel ve TikTok Pixel çalışmaktadır; bu araçlar tarayıcınıza çerez yerleştirebilir ve ziyaret bilgilerinizi ilgili platformla (Meta veya TikTok) paylaşabilir. Bu veri işleme, kullanılan platformun kendi gizlilik politikasına tabidir. Sitede şu anda Google Analytics veya başka bir analiz aracı bulunmamaktadır.",
           ],
         },
         {
@@ -247,7 +247,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "Does This Site Use Cookies?",
           paragraphs: [
-            "Yes. This site runs the Meta (Facebook/Instagram) Pixel to measure advertising performance; it may place cookies in your browser and share your visit information with Meta. That data processing is subject to Meta's own privacy policy. There is no Google Analytics or other analytics tool on this site at this time.",
+            "Yes. This site runs the Meta (Facebook/Instagram) Pixel and the TikTok Pixel to measure advertising performance; these tools may place cookies in your browser and share your visit information with the respective platform (Meta or TikTok). That data processing is subject to each platform's own privacy policy. There is no Google Analytics or other analytics tool on this site at this time.",
           ],
         },
         {
@@ -368,7 +368,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "Verwendet diese Website Cookies?",
           paragraphs: [
-            "Ja. Diese Website nutzt das Meta (Facebook/Instagram) Pixel, um die Werbeleistung zu messen; es kann Cookies in Ihrem Browser setzen und Ihre Besuchsinformationen mit Meta teilen. Diese Datenverarbeitung unterliegt der eigenen Datenschutzrichtlinie von Meta. Google Analytics oder ein anderes Analyse-Tool ist derzeit nicht auf dieser Seite vorhanden.",
+            "Ja. Diese Website nutzt das Meta (Facebook/Instagram) Pixel und das TikTok Pixel, um die Werbeleistung zu messen; diese Tools können Cookies in Ihrem Browser setzen und Ihre Besuchsinformationen mit der jeweiligen Plattform (Meta oder TikTok) teilen. Diese Datenverarbeitung unterliegt der jeweiligen Datenschutzrichtlinie der Plattform. Google Analytics oder ein anderes Analyse-Tool ist derzeit nicht auf dieser Seite vorhanden.",
           ],
         },
         {
@@ -489,7 +489,7 @@ export const legalContent: Localized<LegalContent> = {
         {
           heading: "هل يستخدم هذا الموقع ملفات تعريف الارتباط؟",
           paragraphs: [
-            "نعم. يستخدم هذا الموقع بكسل Meta (فيسبوك/إنستغرام) لقياس أداء الإعلانات؛ قد يضع هذا الأداة ملفات تعريف ارتباط في متصفحكم ويشارك معلومات زيارتكم مع Meta. تخضع معالجة هذه البيانات لسياسة الخصوصية الخاصة بـ Meta. لا توجد حالياً أداة Google Analytics أو أي أداة تحليل أخرى على هذا الموقع.",
+            "نعم. يستخدم هذا الموقع بكسل Meta (فيسبوك/إنستغرام) وبكسل TikTok لقياس أداء الإعلانات؛ قد تضع هذه الأدوات ملفات تعريف ارتباط في متصفحكم وتشارك معلومات زيارتكم مع المنصة المعنية (Meta أو TikTok). تخضع معالجة هذه البيانات لسياسة الخصوصية الخاصة بكل منصة. لا توجد حالياً أداة Google Analytics أو أي أداة تحليل أخرى على هذا الموقع.",
           ],
         },
         {
