@@ -6,6 +6,7 @@ import type { Lang } from "../content/types";
 const FLAG: Record<Lang, string> = { tr: "🇹🇷", en: "🇬🇧", de: "🇩🇪", ar: "🇸🇦" };
 const LABEL: Record<Lang, string> = { tr: "Türkçe", en: "English", de: "Deutsch", ar: "العربية" };
 const CODE: Record<Lang, string> = { tr: "TR", en: "EN", de: "DE", ar: "AR" };
+const SWITCHER_LABEL: Record<Lang, string> = { tr: "Dil seçimi", en: "Language selection", de: "Sprachauswahl", ar: "اختيار اللغة" };
 
 /**
  * Real language switcher — changes the app's active `Lang`, which drives the fully
@@ -39,9 +40,9 @@ export function LanguageSwitcher({
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        aria-label="Dil seçimi"
+        aria-label={SWITCHER_LABEL[lang]}
         aria-expanded={open}
-        className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-bold tracking-wide transition-colors ${
+        className={`flex items-center gap-1.5 min-h-11 rounded-full border px-2.5 py-1.5 text-xs font-bold tracking-wide transition-colors ${
           dark
             ? "border-navy/15 text-navy/80 hover:border-navy/30"
             : "border-white/25 text-white/85 hover:border-white/50"

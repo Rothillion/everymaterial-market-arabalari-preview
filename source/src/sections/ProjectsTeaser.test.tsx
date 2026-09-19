@@ -11,6 +11,7 @@ describe("ProjectsTeaser", () => {
         title="Projelerimiz"
         ctaLabel="Tüm Projeler"
         ctaHref="/projeler-tr.html"
+        projectLabel="Proje"
       />,
     );
     homeContent.tr.projects.forEach((project) => {

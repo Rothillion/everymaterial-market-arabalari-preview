@@ -7,12 +7,14 @@ export function ProjectsTeaser({
   ctaLabel,
   ctaHref,
   eyebrow,
+  projectLabel,
 }: {
   projects: ProjectTeaser[];
   title: string;
   ctaLabel: string;
   ctaHref: string;
   eyebrow?: string;
+  projectLabel: string;
 }) {
-  return <ProjectOrbit items={projects} title={title} ctaLabel={ctaLabel} ctaHref={ctaHref} eyebrow={eyebrow} />;
+  return <ProjectOrbit items={projects} title={title} ctaLabel={ctaLabel} ctaHref={ctaHref} eyebrow={eyebrow} projectLabel={projectLabel} />;
 }

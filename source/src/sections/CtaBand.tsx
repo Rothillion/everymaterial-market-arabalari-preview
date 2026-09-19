@@ -84,7 +84,7 @@ export function CtaBand({
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             transition={{ duration: 0.15 }}
-            className="relative inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-hover text-white rounded-full px-6 py-4 text-lg font-bold w-full transition-colors"
+            className="relative inline-flex items-center justify-center gap-3 bg-accent-deep hover:bg-accent-deepHover text-white rounded-full px-6 py-4 text-lg font-bold w-full transition-colors"
           >
             ☎ {phone}
           </motion.a>

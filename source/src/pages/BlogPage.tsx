@@ -36,7 +36,7 @@ function FeaturedCard({ post, lang, readMoreLabel, excerpt }: { post: BlogPost; 
         {excerpt && <p className="text-sm text-[#5b6b7d] leading-relaxed mb-6 line-clamp-3">{excerpt}</p>}
         {post.hasDetail && (
           <span className="inline-flex items-center gap-1.5 text-accent-deep font-bold text-sm mt-auto">
-            {readMoreLabel} <span className="rtl:rotate-180">→</span>
+            {readMoreLabel} <span className="inline-block rtl:rotate-180">→</span>
           </span>
         )}
       </div>
@@ -69,7 +69,7 @@ function PostCard({ post, lang, readMoreLabel }: { post: BlogPost; lang: Lang; r
         {post.excerpt && <p className="text-[13px] text-[#5b6b7d] leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>}
         {post.hasDetail && (
           <span className="inline-flex items-center gap-1.5 text-accent-deep font-bold text-[13px] mt-auto w-fit">
-            {readMoreLabel} <span className="rtl:rotate-180">→</span>
+            {readMoreLabel} <span className="inline-block rtl:rotate-180">→</span>
           </span>
         )}
       </div>

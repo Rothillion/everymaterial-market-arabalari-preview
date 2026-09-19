@@ -3,6 +3,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { heroReveal, staggerChildren, staggerItem } from "../motion/variants";
 import { Button } from "../ui/Button";
 import type { HeroSlide } from "../content/home";
+import type { Lang } from "../content/types";
+
+const SLIDE_LABEL: Record<Lang, string> = { tr: "Slayt", en: "Slide", de: "Folie", ar: "شريحة" };
 
 export function Hero({
   slides,
@@ -12,6 +15,7 @@ export function Hero({
   catalogHref,
   callLabel,
   callHref,
+  lang,
 }: {
   slides: HeroSlide[];
   seoH1: string;
@@ -20,6 +24,7 @@ export function Hero({
   catalogHref: string;
   callLabel: string;
   callHref: string;
+  lang: Lang;
 }) {
   const [active, setActive] = useState(0);
   const shouldReduceMotion = useReducedMotion();
@@ -84,16 +89,20 @@ export function Hero({
           </svg>
         </div>
 
-        <div className="absolute bottom-8 end-8 flex gap-2 z-10">
+        <div className="absolute bottom-8 end-8 flex z-10">
           {slides.map((slide, i) => (
             <button
               key={slide.src}
-              aria-label={`Slayt ${i + 1}`}
+              aria-label={`${SLIDE_LABEL[lang]} ${i + 1}`}
               onClick={() => setActive(i)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                i === active ? "bg-accent" : "bg-white/40"
-              }`}
-            />
+              className="w-11 h-11 -mx-3.5 flex items-center justify-center"
+            >
+              <span
+                className={`block w-2 h-2 rounded-full transition-colors ${
+                  i === active ? "bg-accent" : "bg-white/40"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </motion.section>

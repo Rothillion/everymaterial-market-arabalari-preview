@@ -35,7 +35,7 @@ describe("SiteHeader", () => {
     render(<SiteHeader lang="tr" activePage="home" onLangChange={() => {}} />);
     expect(document.getElementById("mobile-nav-panel")).not.toBeInTheDocument();
 
-    fireEvent.click(screen.getByLabelText("Menüyü aç"));
+    fireEvent.click(screen.getByLabelText("Menü"));
     const panel = document.getElementById("mobile-nav-panel");
     expect(panel).toBeInTheDocument();
     const panelScope = within(panel!);
@@ -43,6 +43,6 @@ describe("SiteHeader", () => {
     expect(panelScope.getByText("Kapaklar")).toBeInTheDocument();
 
     fireEvent.click(panelScope.getByText("Blog"));
-    expect(screen.getByLabelText("Menüyü aç")).toHaveAttribute("aria-expanded", "false");
+    expect(screen.getByLabelText("Menü")).toHaveAttribute("aria-expanded", "false");
   });
 });

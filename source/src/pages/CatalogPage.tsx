@@ -176,7 +176,7 @@ export function CatalogPage({ lang }: { lang: Lang }) {
               href={`/kategoriler-${lang}.html?slug=${family.slug}`}
               className="shrink-0 font-mono text-xs font-bold uppercase tracking-widest text-accent-deep hover:text-accent-deepHover transition-colors"
             >
-              {family.name} →
+              {family.name} <span className="inline-block rtl:rotate-180">→</span>
             </a>
           </div>
 

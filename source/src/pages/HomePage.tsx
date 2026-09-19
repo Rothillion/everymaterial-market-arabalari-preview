@@ -47,6 +47,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         catalogHref={`/katalog-${lang}.html`}
         callLabel={site.nav.callButton}
         callHref={site.contact.phoneHref}
+        lang={lang}
       />
       <CategoryGrid
         categories={visibleCategories}
@@ -63,6 +64,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         ctaHref={`/katalog-${lang}.html`}
         eyebrow={chrome.productsEyebrow}
         dir={site.meta.dir}
+        lang={lang}
       />
       <StatementBand
         text={home.howWeWork.sloganText}
@@ -95,6 +97,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         ctaLabel={chrome.projectsCta}
         ctaHref={`/projeler-${lang}.html`}
         eyebrow={chrome.projectsEyebrow}
+        projectLabel={chrome.projectLabel}
       />
       <CtaBand {...home.ctaBand} phone={site.contact.phone} phoneHref={site.contact.phoneHref} />
       <BlogTeaser

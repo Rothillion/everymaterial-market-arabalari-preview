@@ -12,10 +12,10 @@ import { WhatsAppButton } from "../ui/WhatsAppButton";
 import { ScrollProgress } from "../ui/ScrollProgress";
 
 const CHROME = {
-  tr: { filterLabel: "Kapasiteye Göre Filtrele", all: "Tümü", small: "≤100L", mid: "101–150L", large: "151L+", count: (n: number) => `${n} ürün gösteriliyor`, seeAll: "Kataloğa Dön" },
-  en: { filterLabel: "Filter by Capacity", all: "All", small: "≤100L", mid: "101–150L", large: "151L+", count: (n: number) => `Showing ${n} products`, seeAll: "Back to Catalog" },
-  de: { filterLabel: "Nach Kapazität filtern", all: "Alle", small: "≤100L", mid: "101–150L", large: "151L+", count: (n: number) => `${n} Produkte werden angezeigt`, seeAll: "Zurück zum Katalog" },
-  ar: { filterLabel: "تصفية حسب السعة", all: "الكل", small: "≤100 لتر", mid: "101–150 لتر", large: "+151 لتر", count: (n: number) => `عرض ${n} منتج`, seeAll: "العودة إلى الكتالوج" },
+  tr: { filterLabel: "Kapasiteye Göre Filtrele", all: "Tümü", small: "≤100L", mid: "101–150L", large: "151L+", count: (n: number) => `${n} ürün gösteriliyor`, seeAll: "Kataloğa Dön", volumeLabel: "Hacim", weightLabel: "Ağırlık", materialLabel: "Malzeme" },
+  en: { filterLabel: "Filter by Capacity", all: "All", small: "≤100L", mid: "101–150L", large: "151L+", count: (n: number) => `Showing ${n} products`, seeAll: "Back to Catalog", volumeLabel: "Volume", weightLabel: "Weight", materialLabel: "Material" },
+  de: { filterLabel: "Nach Kapazität filtern", all: "Alle", small: "≤100L", mid: "101–150L", large: "151L+", count: (n: number) => `${n} Produkte werden angezeigt`, seeAll: "Zurück zum Katalog", volumeLabel: "Volumen", weightLabel: "Gewicht", materialLabel: "Material" },
+  ar: { filterLabel: "تصفية حسب السعة", all: "الكل", small: "≤100 لتر", mid: "101–150 لتر", large: "+151 لتر", count: (n: number) => `عرض ${n} منتج`, seeAll: "العودة إلى الكتالوج", volumeLabel: "الحجم", weightLabel: "الوزن", materialLabel: "الخامة" },
 } as const;
 
 function volumeBucket(volumeLabel: string): "small" | "mid" | "large" | null {
@@ -131,17 +131,17 @@ export function CategoryPage({ lang, familySlug }: { lang: Lang; familySlug: str
                 <h3 className="font-display text-[15px] font-bold text-navy leading-tight">{p.name}</h3>
                 <div className="flex flex-col text-[12.5px] text-[#5b6b7d]">
                   <div className="flex justify-between border-b border-navy/10 py-1.5">
-                    <span>Hacim</span>
+                    <span>{t.volumeLabel}</span>
                     <span className="font-semibold text-navy">{p.volumeLabel}</span>
                   </div>
                   {p.weightKg != null && (
                     <div className="flex justify-between border-b border-navy/10 py-1.5">
-                      <span>Ağırlık</span>
+                      <span>{t.weightLabel}</span>
                       <span className="font-semibold text-navy">{p.weightKg} kg</span>
                     </div>
                   )}
                   <div className="flex justify-between py-1.5">
-                    <span>Malzeme</span>
+                    <span>{t.materialLabel}</span>
                     <span className="font-semibold text-navy">{p.material}</span>
                   </div>
                 </div>

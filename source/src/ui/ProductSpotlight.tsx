@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useScrollReveal } from "../motion/useScrollReveal";
+import type { Lang } from "../content/types";
 
 export interface SpotlightItem {
   name: string;
@@ -8,6 +9,10 @@ export interface SpotlightItem {
   imageFit?: "contain" | "cover";
   imagePosition?: string;
 }
+
+const SHOW_PRODUCT_LABEL: Record<Lang, string> = { tr: "Ürünü göster", en: "Show product", de: "Produkt anzeigen", ar: "عرض المنتج" };
+const PREV_LABEL: Record<Lang, string> = { tr: "Önceki ürün", en: "Previous product", de: "Vorheriges Produkt", ar: "المنتج السابق" };
+const NEXT_LABEL: Record<Lang, string> = { tr: "Sonraki ürün", en: "Next product", de: "Nächstes Produkt", ar: "المنتج التالي" };
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -40,6 +45,7 @@ export function ProductSpotlight({
   ctaHref = "#",
   eyebrow,
   dir = "ltr",
+  lang,
 }: {
   items: SpotlightItem[];
   title: string;
@@ -47,6 +53,7 @@ export function ProductSpotlight({
   ctaHref?: string;
   eyebrow?: string;
   dir?: "ltr" | "rtl";
+  lang: Lang;
 }) {
   const { ref, isInView } = useScrollReveal();
   const [active, setActive] = useState(0);
@@ -118,7 +125,7 @@ export function ProductSpotlight({
                   <button
                     type="button"
                     onClick={() => setActive(i)}
-                    aria-label={`Ürünü göster: ${item.name}`}
+                    aria-label={`${SHOW_PRODUCT_LABEL[lang]}: ${item.name}`}
                     className="absolute inset-0"
                   />
                 )}
@@ -162,17 +169,17 @@ export function ProductSpotlight({
 
         <button
           type="button"
-          aria-label="Önceki ürün"
+          aria-label={PREV_LABEL[lang]}
           onClick={() => go(-1)}
-          className="absolute start-2 md:start-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-navy/10 text-navy flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
+          className="absolute start-2 md:start-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white shadow-lg border border-navy/10 text-navy flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
         >
           <span className="inline-block rtl:rotate-180">‹</span>
         </button>
         <button
           type="button"
-          aria-label="Sonraki ürün"
+          aria-label={NEXT_LABEL[lang]}
           onClick={() => go(1)}
-          className="absolute end-2 md:end-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-navy/10 text-navy flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
+          className="absolute end-2 md:end-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white shadow-lg border border-navy/10 text-navy flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
         >
           <span className="inline-block rtl:rotate-180">›</span>
         </button>

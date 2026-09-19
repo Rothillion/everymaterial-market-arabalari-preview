@@ -164,7 +164,7 @@ export function SiteHeader({
           </Button>
           <button
             type="button"
-            aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}
+            aria-label={c.nav.menuAria}
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav-panel"
             onClick={() => setMobileOpen((v) => !v)}

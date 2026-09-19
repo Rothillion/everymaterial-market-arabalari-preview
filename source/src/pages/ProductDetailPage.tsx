@@ -207,7 +207,7 @@ export function ProductDetailPage({ lang }: { lang: Lang }) {
             {t.quote}
           </a>
           <a href={`/kategori-${lang}.html?aile=${family.slug}`} className="text-center text-sm font-semibold text-[#5b6b7d] hover:text-accent-deep transition-colors">
-            ← {t.back}
+            <span className="inline-block rtl:rotate-180">←</span> {t.back}
           </a>
         </div>
       </main>

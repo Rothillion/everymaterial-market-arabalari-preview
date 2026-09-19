@@ -15,6 +15,7 @@ describe("Hero", () => {
         catalogHref="#"
         callLabel={siteContent.tr.nav.callButton}
         callHref={siteContent.tr.contact.phoneHref}
+        lang="tr"
       />,
     );
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(

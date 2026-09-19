@@ -76,7 +76,7 @@ export function UpdatesPage({ lang }: { lang: Lang }) {
             href={`/blog-${lang}.html`}
             className="inline-flex items-center gap-2 bg-accent-deep hover:bg-accent-deepHover text-white font-bold text-sm uppercase tracking-widest rounded-full px-8 py-4 transition-colors"
           >
-            {c.emptyCta} <span className="rtl:rotate-180">→</span>
+            {c.emptyCta} <span className="inline-block rtl:rotate-180">→</span>
           </motion.a>
         </motion.div>
       </main>

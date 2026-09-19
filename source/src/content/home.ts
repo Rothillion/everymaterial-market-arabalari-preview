@@ -93,6 +93,7 @@ export interface SectionChrome {
   projectsTitle: string;
   projectsCta: string;
   projectsEyebrow: string;
+  projectLabel: string;
   blogTitle: string;
   blogCta: string;
   blogEyebrow: string;
@@ -618,6 +619,7 @@ export const sectionChrome: Localized<SectionChrome> = {
     projectsTitle: "Tüm Projeler",
     projectsCta: "Tüm Projeler",
     projectsEyebrow: "06 / Tüm Projeler",
+    projectLabel: "Proje",
     blogTitle: "Son Yazılar",
     blogCta: "Tümünü Gör",
     blogEyebrow: "07 / Blog",
@@ -642,6 +644,7 @@ export const sectionChrome: Localized<SectionChrome> = {
     projectsTitle: "All Projects",
     projectsCta: "All Projects",
     projectsEyebrow: "06 / All Projects",
+    projectLabel: "Project",
     blogTitle: "Latest Articles",
     blogCta: "View All",
     blogEyebrow: "07 / Blog",
@@ -666,6 +669,7 @@ export const sectionChrome: Localized<SectionChrome> = {
     projectsTitle: "Alle Projekte",
     projectsCta: "Alle Projekte",
     projectsEyebrow: "06 / Alle Projekte",
+    projectLabel: "Projekt",
     blogTitle: "Neueste Artikel",
     blogCta: "Alle Anzeigen",
     blogEyebrow: "07 / Blog",
@@ -690,6 +694,7 @@ export const sectionChrome: Localized<SectionChrome> = {
     projectsTitle: "جميع المشاريع",
     projectsCta: "جميع المشاريع",
     projectsEyebrow: "06 / جميع المشاريع",
+    projectLabel: "مشروع",
     blogTitle: "أحدث المقالات",
     blogCta: "عرض الكل",
     blogEyebrow: "07 / المدونة",

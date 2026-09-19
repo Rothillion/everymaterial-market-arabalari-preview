@@ -24,12 +24,14 @@ export function ProjectOrbit({
   ctaLabel,
   ctaHref = "#",
   eyebrow,
+  projectLabel,
 }: {
   items: OrbitItem[];
   title: string;
   ctaLabel: string;
   ctaHref?: string;
   eyebrow?: string;
+  projectLabel: string;
 }) {
   const { ref, isInView } = useScrollReveal();
   const [activeIndex, setActiveIndex] = useState(0);
@@ -89,7 +91,7 @@ export function ProjectOrbit({
               {isActive ? (
                 <span className="absolute start-4 end-4 bottom-4 md:start-6 md:end-6 md:bottom-6">
                   <span className="block font-mono text-[11px] font-bold uppercase tracking-widest text-accent mb-1">
-                    Proje {pad(i + 1)}
+                    {projectLabel} {pad(i + 1)}
                   </span>
                   <span className="block font-display text-xl md:text-2xl font-extrabold text-white leading-tight">
                     {item.name}
