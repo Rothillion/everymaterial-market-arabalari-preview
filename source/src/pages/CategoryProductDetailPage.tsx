@@ -37,14 +37,14 @@ function useQuerySlug() {
 
 export function prepareCategoryProductLanguageNavigation(
   targetLang: Lang,
-  product: { slug: string; visualKey: string },
+  product: { permalink: string; visualKey: string },
 ): string {
   rememberCatalogSelection({
     lang: targetLang,
-    slug: product.slug,
+    slug: product.permalink,
     visualKey: product.visualKey,
   });
-  return `/kategori-urun-${targetLang}.html?slug=${product.slug}`;
+  return `/kategori-urun-${targetLang}.html?slug=${product.permalink}`;
 }
 
 /**
@@ -198,8 +198,8 @@ export function CategoryProductDetailPage({ lang }: { lang: Lang }) {
             {related.map((sibling) => (
               <a
                 key={sibling.visualKey}
-                href={`/kategori-urun-${lang}.html?slug=${sibling.slug}`}
-                onClick={() => rememberCatalogSelection({ lang, slug: sibling.slug, visualKey: sibling.visualKey })}
+                href={`/kategori-urun-${lang}.html?slug=${sibling.permalink}`}
+                onClick={() => rememberCatalogSelection({ lang, slug: sibling.permalink, visualKey: sibling.visualKey })}
                 className="group bg-white/70 backdrop-blur-md border border-navy/10 hover:border-accent/40 rounded-xl overflow-hidden transition-colors"
               >
                 <div className="aspect-[4/3] bg-white/60 overflow-hidden">

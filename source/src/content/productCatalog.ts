@@ -20,6 +20,16 @@ export interface RawProductCategoryEntry {
 export interface ProductCategoryEntry extends RawProductCategoryEntry {
   visualKey: string;
   media: ProductImage[];
+  /**
+   * URL-safe unique identifier for this entry: equals `slug` for the first product with
+   * a given slug in its family, and `${slug}-${occurrence}` for later ones. 81 records
+   * across 10 slug groups share a base `slug` in the real extracted data (duplicate/variant
+   * photos of the same named product) — `permalink` disambiguates the `?slug=` query param
+   * so each one resolves to itself instead of falling back to the first match. Routing must
+   * use `permalink`, not `slug`; `slug` stays untouched since the manifest/visualKey lookup
+   * below is keyed on the original (family, slug, occurrence) triple.
+   */
+  permalink: string;
 }
 
 interface RawProductCategoryFamily {
@@ -993,6 +1003,7 @@ function normalizeProductCatalog(
           return {
             ...product,
             visualKey,
+            permalink: occurrence > 1 ? `${product.slug}-${occurrence}` : product.slug,
             media: buildProductMedia({
               visualKey,
               alt: product.alt,

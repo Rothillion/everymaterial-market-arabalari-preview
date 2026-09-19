@@ -65,6 +65,15 @@ export function ProductDetailPage({ lang }: { lang: Lang }) {
   }
 
   const { family, product } = found;
+  const familyIndex = catalog.families.findIndex((f) => f.slug === family.slug);
+  const productIndex = family.products.indexOf(product);
+
+  function navigateToLang(l: Lang) {
+    const targetFamily = catalogContent[l].families[familyIndex];
+    const targetProduct = targetFamily?.products[productIndex];
+    window.location.href = targetProduct ? `/urun-${l}.html?slug=${targetProduct.slug}` : `/katalog-${l}.html`;
+  }
+
   const extra = productDetails[lang][product.slug];
   const images = extra?.galleryImages?.length ? extra.galleryImages : [product.image];
   const hasDims = product.widthCm != null && product.lengthCm != null && product.heightCm != null;
@@ -75,7 +84,7 @@ export function ProductDetailPage({ lang }: { lang: Lang }) {
   return (
     <div className="bg-gradient-to-b from-[#fbfcfe] via-[#eef4fb] to-[#d9e6f5] min-h-screen overflow-x-hidden">
       <ScrollProgress />
-      <SiteHeader lang={lang} activePage="catalog" onLangChange={(l) => (window.location.href = `/urun-${l}.html?slug=${product.slug}`)} />
+      <SiteHeader lang={lang} activePage="catalog" onLangChange={navigateToLang} />
 
       <section className="relative overflow-hidden bg-navy-deep pt-32 pb-10 px-6 lg:px-10">
         <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">

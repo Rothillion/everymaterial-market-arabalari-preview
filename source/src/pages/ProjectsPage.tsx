@@ -39,7 +39,13 @@ function Hexagon({
   const Tag = project.hasDetail ? "a" : "div";
   const content = (
     <>
-      <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      <img
+        src={project.image}
+        alt={project.name}
+        className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ${
+          project.hasDetail ? "group-hover:scale-110" : ""
+        }`}
+      />
       <div
         className="absolute inset-0 flex flex-col justify-end items-center text-center p-5 pb-8"
         style={{ background: "linear-gradient(to top, rgba(10,31,51,0.92) 0%, rgba(10,31,51,0.35) 55%, transparent 100%)" }}
@@ -59,7 +65,9 @@ function Hexagon({
   return (
     <Tag
       href={project.hasDetail ? `/proje-${project.slug}-${lang}.html` : undefined}
-      className={`group relative block ${dims} bg-white shadow-lg cursor-pointer transition-transform duration-500 hover:scale-105 border-[6px] border-white/70`}
+      className={`group relative block ${dims} bg-white shadow-lg transition-transform duration-500 border-[6px] border-white/70 ${
+        project.hasDetail ? "cursor-pointer hover:scale-105" : "cursor-default"
+      }`}
       style={{ clipPath: HEX_CLIP, ...style }}
     >
       {content}

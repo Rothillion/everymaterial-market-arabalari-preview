@@ -77,7 +77,7 @@ export function findCatalogProduct(
 
   for (const [categoryIndex, family] of families.entries()) {
     for (const product of family.products) {
-      if (product.slug !== slug) continue;
+      if (product.permalink !== slug) continue;
 
       const match = { categoryIndex, family, product };
       if (product.visualKey === preferredVisualKey) return match;

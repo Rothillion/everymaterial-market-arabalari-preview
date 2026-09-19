@@ -1,1 +1,0 @@
-import{c as e,j as t,r as o,M as r}from"./globals-C7xp5am7.js";import{C as n}from"./ContactPage-Dpsj_yLd.js";e.createRoot(document.getElementById("root")).render(t.jsx(o.StrictMode,{children:t.jsx(r,{reducedMotion:"user",children:t.jsx(n,{lang:"en"})})}));

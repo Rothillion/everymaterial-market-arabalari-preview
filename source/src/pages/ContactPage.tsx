@@ -6,6 +6,7 @@ import { SiteHeader } from "../sections/SiteHeader";
 import { SiteFooter } from "../sections/SiteFooter";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
 import { ScrollProgress } from "../ui/ScrollProgress";
+import { trackWhatsAppContact } from "../lib/analytics";
 
 const CLIP_NAVY_LTR = "polygon(0 0, 55% 0, 40% 100%, 0 100%)";
 const CLIP_NAVY_RTL = "polygon(100% 0, 45% 0, 60% 100%, 100% 100%)";
@@ -65,8 +66,9 @@ function Field({
  * Faz 3h: İletişim — "Futuristic Contact: Diagonal Split" variant picked from a 5-variant
  * Stitch round, ported into the real navy/accent tokens. Real content: form field labels,
  * placeholders and success message from .deploy/iletisim-{lang}.html; phone/email/address
- * reused from site.ts rather than duplicated. The form has no real backend (the original
- * site never had one either — same client-only "message received" behavior is preserved).
+ * reused from site.ts rather than duplicated. Originally had no real backend (matching the
+ * live site's own decorative form) — per user decision 2026-09-19, submit now hands the
+ * filled-in fields off to the site's real WhatsApp number instead of doing nothing.
  */
 export function ContactPage({ lang }: { lang: Lang }) {
   const site = siteContent[lang];
@@ -85,6 +87,23 @@ export function ContactPage({ lang }: { lang: Lang }) {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const data = new FormData(e.currentTarget);
+    const fullName = String(data.get("fullName") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+
+    const lines = [
+      `${c.labelName}: ${fullName}`,
+      `${c.labelEmail}: ${email}`,
+      phone ? `${c.labelPhone}: ${phone}` : null,
+      `${c.labelMessage}: ${message}`,
+    ].filter((line): line is string => line !== null);
+
+    const whatsappHref = `https://wa.me/${site.contact.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(whatsappHref, "_blank", "noopener,noreferrer");
+    trackWhatsAppContact();
     setSubmitted(true);
   }
 

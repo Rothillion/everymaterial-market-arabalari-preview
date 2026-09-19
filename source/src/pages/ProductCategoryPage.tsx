@@ -47,9 +47,7 @@ export function ProductCategoryPage({ lang }: { lang: Lang }) {
     window.location.href = `/kategoriler-${l}.html?slug=${slug ?? ""}`;
   }
 
-  if (slug === null) return null;
-
-  const index = CATEGORY_SLUGS.indexOf(slug as (typeof CATEGORY_SLUGS)[number]);
+  const index = slug === null ? -1 : CATEGORY_SLUGS.indexOf(slug as (typeof CATEGORY_SLUGS)[number]);
   const category = index >= 0 ? homeContent[lang].categories[index] : undefined;
   const family = index >= 0 ? productCatalogContent[lang][index] : undefined;
 
@@ -103,8 +101,8 @@ export function ProductCategoryPage({ lang }: { lang: Lang }) {
                 <motion.a
                   key={p.visualKey}
                   variants={staggerItem}
-                  href={`/kategori-urun-${lang}.html?slug=${p.slug}`}
-                  onClick={() => rememberCatalogSelection({ lang, slug: p.slug, visualKey: p.visualKey })}
+                  href={`/kategori-urun-${lang}.html?slug=${p.permalink}`}
+                  onClick={() => rememberCatalogSelection({ lang, slug: p.permalink, visualKey: p.visualKey })}
                   className="group bg-white/70 backdrop-blur-md border border-navy/10 hover:border-accent/40 rounded-xl overflow-hidden shadow-md flex flex-col transition-colors"
                 >
                   <div className="aspect-[4/3] bg-white/60 flex items-center justify-center overflow-hidden">

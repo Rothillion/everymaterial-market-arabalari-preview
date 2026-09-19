@@ -6,6 +6,7 @@ import { Button } from "./Button";
 export interface BentoItem {
   name: string;
   image: string;
+  href?: string;
 }
 
 const ROW_SIZE = 4;
@@ -47,7 +48,7 @@ function Tile({
 
   return (
     <motion.a
-      href={ctaHref}
+      href={item.href ?? ctaHref}
       variants={staggerItem}
       style={{
         clipPath,

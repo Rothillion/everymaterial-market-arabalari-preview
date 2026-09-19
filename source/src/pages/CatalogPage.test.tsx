@@ -6,14 +6,14 @@ describe("CatalogPage", () => {
   it("renders the real Turkish catalog with the first family's real products", () => {
     render(<CatalogPage lang="tr" />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Ürün Kataloğu");
-    expect(screen.getAllByText("25 Lt Bayraklı Çocuk Alışveriş Arabası").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Bonbon Kutu").length).toBeGreaterThan(0);
   });
 
-  it("switches to the real 'Metal ve Yük Taşıma Arabaları' family on tab click", () => {
+  it("switches to the real 'Kapaklar' family on tab click", () => {
     render(<CatalogPage lang="tr" />);
-    fireEvent.click(screen.getByRole("tab", { name: "Metal ve Yük Taşıma Arabaları" }));
+    fireEvent.click(screen.getByRole("tab", { name: "Kapaklar" }));
     // Appears twice: once in the product card grid, once in the comparison table row.
-    expect(screen.getAllByText("25 Lt Metal Çocuk Arabası").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Bombeli Dikdörtgen Kapak").length).toBeGreaterThan(0);
   });
 
   it("renders real Arabic content and flips the document to RTL", () => {

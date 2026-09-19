@@ -15,16 +15,17 @@ describe("product catalog lookup", () => {
     window.sessionStorage.clear();
   });
 
-  it("selects a duplicate slug by visual key and preserves first-match legacy fallback", () => {
+  it("disambiguates a duplicate slug by permalink, with no visual-key handoff needed", () => {
     const families = productCatalogContent.tr;
     const coffee = families.find((family) => family.slug === "makineler")!;
     const variants = coffee.products.filter((product) => product.slug === "coffee-mill");
 
     expect(variants).toHaveLength(2);
+    expect(variants[0].permalink).toBe("coffee-mill");
+    expect(variants[1].permalink).toBe("coffee-mill-2");
     expect(variants[0].visualKey).not.toBe(variants[1].visualKey);
-    expect(findCatalogProduct(families, "coffee-mill", variants[1].visualKey)?.product.visualKey)
-      .toBe(variants[1].visualKey);
     expect(findCatalogProduct(families, "coffee-mill")?.product.visualKey).toBe(variants[0].visualKey);
+    expect(findCatalogProduct(families, "coffee-mill-2")?.product.visualKey).toBe(variants[1].visualKey);
   });
 
   it("stores one namespaced selection and reads it only for its matching language and slug", () => {

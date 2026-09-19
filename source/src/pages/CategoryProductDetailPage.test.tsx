@@ -6,8 +6,8 @@ import {
   prepareCategoryProductLanguageNavigation,
 } from "./CategoryProductDetailPage";
 
-function renderCoffeeMill(lang: Lang = "tr") {
-  window.history.pushState({}, "", `/kategori-urun-${lang}.html?slug=coffee-mill`);
+function renderCoffeeMill(lang: Lang = "tr", permalink = "coffee-mill") {
+  window.history.pushState({}, "", `/kategori-urun-${lang}.html?slug=${permalink}`);
   return render(<CategoryProductDetailPage lang={lang} />);
 }
 
@@ -23,13 +23,18 @@ describe("CategoryProductDetailPage", () => {
     expect(container.firstElementChild).toHaveClass("overflow-x-hidden");
   });
 
-  it("restores the selected duplicate variant and uses the active image role fit", () => {
-    window.sessionStorage.setItem(
-      "everymaterial:catalog-selection:v1",
-      '{"lang":"tr","slug":"coffee-mill","visualKey":"makineler:coffee-mill:02"}',
-    );
+  it("resolves the first coffee mill variant by its own unique permalink, no handoff state needed", () => {
+    renderCoffeeMill("tr", "coffee-mill");
 
-    renderCoffeeMill();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Kahve Değirmeni");
+    expect(screen.getByTestId("product-main-image")).toHaveAttribute(
+      "src",
+      "/assets/img/urunler/hazir/coffee-mill-a-1-hero.png",
+    );
+  });
+
+  it("resolves the second coffee mill variant by its own unique permalink, no handoff state needed", () => {
+    renderCoffeeMill("tr", "coffee-mill-2");
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Kahve Değirmeni");
     expect(screen.getByTestId("product-main-image")).toHaveAttribute(
@@ -43,42 +48,29 @@ describe("CategoryProductDetailPage", () => {
     expect(screen.getByTestId("product-main-image")).toHaveClass("object-cover");
   });
 
-  it("falls back to the first catalog match when the legacy URL has no handoff state", () => {
-    renderCoffeeMill();
-
-    expect(screen.getByTestId("product-main-image")).toHaveAttribute(
-      "src",
-      "/assets/img/urunler/hazir/coffee-mill-a-1-hero.png",
-    );
-  });
-
-  it("stores the current duplicate variant for the target language before switching", () => {
-    window.sessionStorage.setItem(
-      "everymaterial:catalog-selection:v1",
-      '{"lang":"tr","slug":"coffee-mill","visualKey":"makineler:coffee-mill:02"}',
-    );
-    renderCoffeeMill();
+  it("stores the resolved variant's own permalink for the target language before switching", () => {
+    renderCoffeeMill("tr", "coffee-mill-2");
 
     fireEvent.click(screen.getAllByLabelText("Dil seçimi")[0]);
     fireEvent.click(screen.getByRole("button", { name: "English" }));
 
     expect(window.sessionStorage.getItem("everymaterial:catalog-selection:v1")).toBe(
-      '{"lang":"en","slug":"coffee-mill","visualKey":"makineler:coffee-mill:02"}',
+      '{"lang":"en","slug":"coffee-mill-2","visualKey":"makineler:coffee-mill:02"}',
     );
   });
 
-  it("keeps the exact English legacy target and restores its selected duplicate", () => {
+  it("builds the target-language URL from the variant's own permalink", () => {
     expect(
       prepareCategoryProductLanguageNavigation("en", {
-        slug: "coffee-mill",
+        permalink: "coffee-mill-2",
         visualKey: "makineler:coffee-mill:02",
       }),
-    ).toBe("/kategori-urun-en.html?slug=coffee-mill");
+    ).toBe("/kategori-urun-en.html?slug=coffee-mill-2");
     expect(window.sessionStorage.getItem("everymaterial:catalog-selection:v1")).toBe(
-      '{"lang":"en","slug":"coffee-mill","visualKey":"makineler:coffee-mill:02"}',
+      '{"lang":"en","slug":"coffee-mill-2","visualKey":"makineler:coffee-mill:02"}',
     );
 
-    renderCoffeeMill("en");
+    renderCoffeeMill("en", "coffee-mill-2");
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Coffee Mill");
     expect(screen.getByTestId("product-main-image")).toHaveAttribute(
@@ -87,15 +79,11 @@ describe("CategoryProductDetailPage", () => {
     );
   });
 
-  it("keeps the related card legacy href and hands off its exact sibling variant", () => {
-    window.sessionStorage.setItem(
-      "everymaterial:catalog-selection:v1",
-      '{"lang":"tr","slug":"coffee-mill","visualKey":"makineler:coffee-mill:02"}',
-    );
-    renderCoffeeMill();
+  it("links the related sibling variant by its own unique permalink and hands off its exact visualKey", () => {
+    renderCoffeeMill("tr", "coffee-mill");
 
     const relatedCard = document.querySelector<HTMLAnchorElement>(
-      'a[href="/kategori-urun-tr.html?slug=coffee-mill"]',
+      'a[href="/kategori-urun-tr.html?slug=coffee-mill-2"]',
     );
     expect(relatedCard).not.toBeNull();
     relatedCard!.addEventListener("click", (event) => event.preventDefault(), { once: true });
@@ -103,7 +91,7 @@ describe("CategoryProductDetailPage", () => {
     fireEvent.click(relatedCard!);
 
     expect(window.sessionStorage.getItem("everymaterial:catalog-selection:v1")).toBe(
-      '{"lang":"tr","slug":"coffee-mill","visualKey":"makineler:coffee-mill:01"}',
+      '{"lang":"tr","slug":"coffee-mill-2","visualKey":"makineler:coffee-mill:02"}',
     );
   });
 

@@ -5,7 +5,14 @@ import { homeContent } from "../content/home";
 
 describe("ProjectsTeaser", () => {
   it("renders all 9 real projects as accordion bars, with the first project expanded initially", () => {
-    render(<ProjectsTeaser projects={homeContent.tr.projects} title="Projelerimiz" ctaLabel="Tüm Projeler" />);
+    render(
+      <ProjectsTeaser
+        projects={homeContent.tr.projects}
+        title="Projelerimiz"
+        ctaLabel="Tüm Projeler"
+        ctaHref="/projeler-tr.html"
+      />,
+    );
     homeContent.tr.projects.forEach((project) => {
       expect(screen.getByRole("button", { name: project.name })).toBeInTheDocument();
     });

@@ -10,6 +10,7 @@ describe("FeaturedProducts", () => {
         products={homeContent.tr.featuredProducts}
         title="En Çok Tercih Edilenler"
         ctaLabel="Tümünü Gör"
+        ctaHref="/katalog-tr.html"
       />,
     );
     // Reel shows exactly one active heading (the current product) at a time.
@@ -33,6 +34,7 @@ describe("FeaturedProducts", () => {
         ]}
         title="Featured products"
         ctaLabel="View all"
+        ctaHref="/katalog-tr.html"
       />,
     );
 

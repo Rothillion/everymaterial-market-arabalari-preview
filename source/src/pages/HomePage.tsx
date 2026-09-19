@@ -26,7 +26,9 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
   const site = siteContent[lang];
   const home = homeContent[lang];
   const chrome = sectionChrome[lang];
-  const visibleCategories = home.categories.filter((_, i) => !HIDDEN_FROM_NAV_SLUGS.has(CATEGORY_SLUGS[i]));
+  const visibleCategories = home.categories
+    .map((category, i) => ({ ...category, href: `/kategoriler-${lang}.html?slug=${CATEGORY_SLUGS[i]}` }))
+    .filter((_, i) => !HIDDEN_FROM_NAV_SLUGS.has(CATEGORY_SLUGS[i]));
 
   useEffect(() => {
     document.documentElement.dir = site.meta.dir;
@@ -50,6 +52,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         categories={visibleCategories}
         title={chrome.categoriesTitle}
         ctaLabel={chrome.categoriesCta}
+        ctaHref={`/katalog-${lang}.html`}
         eyebrow={chrome.categoriesEyebrow}
         dir={site.meta.dir}
       />
@@ -57,6 +60,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         products={home.featuredProducts}
         title={chrome.productsTitle}
         ctaLabel={chrome.productsCta}
+        ctaHref={`/katalog-${lang}.html`}
         eyebrow={chrome.productsEyebrow}
         dir={site.meta.dir}
       />
@@ -88,6 +92,7 @@ export function HomePage({ lang, onLangChange }: { lang: Lang; onLangChange: (la
         projects={home.projects}
         title={chrome.projectsTitle}
         ctaLabel={chrome.projectsCta}
+        ctaHref={`/projeler-${lang}.html`}
         eyebrow={chrome.projectsEyebrow}
       />
       <CtaBand {...home.ctaBand} phone={site.contact.phone} phoneHref={site.contact.phoneHref} />
